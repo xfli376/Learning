@@ -541,6 +541,8 @@ $\alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \lambda, \mu, \nu
 
 $\phi, \chi, \psi, \omega, \varphi, \varsigma, \varepsilon,  \nabla, \partial $
 
+#### 定积分线与括号  $\vert $,  $\lvert \rvert$,  $\lt \gt$, $\lang$, $\langle \rangle$, $\lparen \rparen, \lbrack \rbrack, \lbrace, \rbrace$
+
 #### Define
 
 $ \def\foo{x^2} \foo + \foo $
