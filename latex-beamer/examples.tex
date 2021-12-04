@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[12pt,aspectratio=169,mathserif]{beamer} 
+%\batchmode
+
+\usepackage{xeCJK} %导入中文包
+\usepackage{hyperref}
+\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
+\setmainfont{Times New Roman}%  缺省英文字体.
+\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
+\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
+\setCJKmonofont{STFangsong}% 中文等宽字体
+\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
+\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+
+\mode<presentation>
+%设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
+\usetheme{AnnArbor} %主题
+%AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
+%Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
+%Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
+%------------------
+\useoutertheme{infolines} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
+\useinnertheme{default} % default ，circles ，rectangle， rounded
+\usecolortheme{beaver} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+
+%\setbeamertemplate{navigation symbols}{}%empty
+
+\mode
+<all>
+
+
+ %   % 目录
+ %   \AtBeginSection[]
+ %  {
+ %   \begin{frame}<beamer>
+ %       \frametitle{\textbf{目录}}
+ %       \tableofcontents[currentsection]
+ %   \end{frame}
+ %  }
+ %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % \beamerdefaultoverlayspecification{<+->}
+
+
+
+
+%-------------------正文-------------------------%
+\begin{document}  
+
+%题目，作者，学校，日期                
+\author {李小飞}
+\title{\textbf{量子力学与统计物理}}
+\subtitle{Quantum mechanics and statistical physics}
+\institute[电子科技大学]{{\large 光电科学与工程学院}}
+\date{\today}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \frame[plain]{\titlepage}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+        \frametitle{总目录}
+        \tableofcontents
+    \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{一、基本操作}
+
+\begin{frame}
+    \frametitle{}
+    第一部：分基本操作  
+\end{frame}
+
+\frame{\frametitle{本section目录}\tableofcontents[currentsection]}
+
+\subsection{ 支持中文}
+
+\begin{frame}
+    \frametitle{1、设置中文环境}
+    \begin{itemize}
+     \item  导入中文包 \textbackslash usepackage\{ xeCJK \}
+     \item  运行 xelatex
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{2、设置中文字体}
+    \begin{itemize}
+     \item  {\myfont 中文字体 }
+     \item  {\CJKfamily{nicefont} 中文字体}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{abc}
+
+    cde
+
+\end{frame}
+
+\subsection{2.主题}
+\subsection{3.主题}
+\subsection{4.主题}
+
+\section{二、进阶操作}
+\subsection{1.主题}
+\subsection{2.主题}
+\subsection{3.主题}
+\subsection{4.主题}
+
+\section{二、高阶操作}
+\subsection{1.主题}
+\subsection{2.主题}
+\subsection{3.主题}
+\subsection{4.主题}
+
+\end{document}

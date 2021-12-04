@@ -11,58 +11,6 @@ title: "VSCode Reveal intro"
 *here be dragons* {style=background:red;width:500px}
 ::: 
 
----
-
-// @[vine](etVpwB7uHlw)
-
----
-
-### Solar System Exploration, 1950s – 1960s
-
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
-
----
-
-# some Table
-
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-                                              
-New section   |     More      |         Data |
-And more      | With an escaped '\\|'       ||
-[Prototype table]                             
-
---
-
-First header | Second header
--------------|---------------
-List:        | More  \
-- over       | data  \
-- several    |       \
-- lines      | 
-
---
-
-First header | Second header
--------------|---------------
-Merged       | Cell 1
-^^           | Cell 2
-^^           | Cell 3
-
---
-
-
 
 ---
 
