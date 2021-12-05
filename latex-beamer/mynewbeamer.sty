@@ -7,39 +7,41 @@
 \ProvidesPackage{mynewbeamer}[2021/12/01]
 %%%% -------------------------------------------------------------
 
-\usefonttheme[onlymath]{serif}
-\usepackage{tikz}
+%\usefonttheme[onlymath]{serif}
+\usefonttheme{professionalfonts}
+\RequirePackage{tikz}
+\RequirePackage{cutwin}  % 图文混排
+%\usetikzlibrary {3d} 
+%\usetikzlibrary {datavisualization.formats.functions}
 
-\usepackage{tcolorbox}% 绘制彩色框.
-\usepackage{multicol}%  one to muticolumn
-\usepackage{ulem}% ulem: under line for emphasis.
-\usepackage{tabularx}%  智能表格环境.
+\RequirePackage{tcolorbox}% 绘制彩色框.
+\RequirePackage{multicol}%  one to muticolumn
+\RequirePackage{ulem}% ulem: under line for emphasis.
+\RequirePackage{tabularx}%  智能表格环境.
 \RequirePackage{xhfill}% xhfill: 定制化线填充.
-\usepackage{listings}%  for source code printing 
+\RequirePackage{listings}%  for source code printing 
 
-\usepackage{color}  % color content
-\usepackage{xcolor}% \color{red!50!green!20!blue}
-\usepackage{graphicx}
-\usepackage{graphics}
-\usepackage{subfigure}
+\RequirePackage{color}  % color content
+\RequirePackage{xcolor}% \color{red!50!green!20!blue}
+\RequirePackage{graphicx}
+\RequirePackage{graphics}
+\RequirePackage{subfigure}
 
 \RequirePackage{comment}% comment: 提供注释环境
-\usepackage{algorithm,algorithmic}
-\usepackage{amsthm}
-\usepackage{float}                           %HERE!!!!!!!!!!!!!!
+\RequirePackage{algorithm,algorithmic}
+\RequirePackage{amsthm}
+\RequirePackage{float}                           %HERE!!!!!!!!!!!!!!
 
 %\RequirePackage{varioref}% varioref: 交叉引用.
 %\RequirePackage{cleveref}% cleveref: 交叉引用.
 %\RequirePackage[backend=biber,autolang=hyphen,style=gb7714-2015,gbalign=gb7714-2015,%style=gb7714-2015ms
 %gbstyle=false,url=false,doi=false,isbn=false,sorting=none]{biblatex}% biblatex: 参考文献.
 
-\usepackage{xeCJK} %导入中文包
-
+\RequirePackage{xeCJK} %导入中文包
 \RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
-\usefonttheme{professionalfonts}
 \RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
-\setmainfont{Times New Roman}%  缺省英文字体.
 
+\setmainfont{Times New Roman}%  缺省英文字体.
 \setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
 \setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
 \setCJKmonofont{STFangsong}% 中文等宽字体
@@ -66,7 +68,7 @@
 
 %\setbeamertemplate{navigation symbols}{}%empty
 
-% BackgrounB
+% Background
 \pgfdeclareimage[height=6.2ex,width=0.14\paperwidth]{xx}{uestcxx.png}
 \pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{uestclogo.png}
 \usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{myimage}};}
@@ -93,6 +95,23 @@
 \setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
 \setbeamerfont{title in head/foot}{size=\scriptsize}
 \setbeamerfont{framenumber in head/foot}{size=\tiny,series=\bfseries}
+
+% listing 颜色设置
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\bfseries\color{deepblue},
+	emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	numbers=left,
+	numberstyle=\small\color{halfgray},
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	frame=shadowbox,
+}
+
 % 页眉页脚颜色设置.
 \definecolor{uestcxxbg}{RGB}{225,150,63}
 \definecolor{uestcE}{RGB}{255,165,0}
@@ -293,6 +312,8 @@
 	title={\ifblank{#2}{证明}{#2}\@addpunct{.}},% \@addpunct: 
 	after upper={\par\hfill\qed},#1}
 %---------------------------------
+
+\makeatother
 
 \mode
 <all>
