@@ -1,163 +1,20 @@
-\documentclass[12pt,aspectratio=169]{beamer} 
+\documentclass[12pt,hyperref,UTF8,aspectratio=169]{beamer} 
+\usepackage{mynewbeamer}
+% graphics path
+\graphicspath{{../figs/}{../figure/}{../figures/}{../image/}{../images/}{../graphics/}{../graphic/}{../pictures/}{../picture/}}
 
-\usepackage{hyperref} 
-\usepackage{tikz}
-
-\usepackage{tcolorbox}% 绘制彩色框.
-\usepackage{multicol}%  one to muticolumn
-\usepackage{ulem}% ulem: under line for emphasis.
-\usepackage{tabularx}%  智能表格环境.
-\RequirePackage{xhfill}% xhfill: 定制化线填充.
-\usepackage{listings}%  for source code printing 
-
-\usepackage{color}  % color content
-\usepackage{xcolor}% \color{red!50!green!20!blue}
-\usepackage{graphicx}
-\usepackage{graphics}
-\usepackage{subfigure}
-%\graphicspath{{{images} {figs} { }}
-
-\RequirePackage{comment}% comment: 提供注释环境
-
-\RequirePackage{varioref}% varioref: 交叉引用.
-\RequirePackage{cleveref}% cleveref: 交叉引用.
-\RequirePackage[backend=biber,autolang=hyphen,style=gb7714-2015,gbalign=gb7714-2015,%style=gb7714-2015ms
-gbstyle=false,url=false,doi=false,isbn=false,sorting=none]{biblatex}% biblatex: 参考文献.
-
-\usepackage{xeCJK} %导入中文包
-\RequirePackage{fontspec}% fontspec: 字体设置.
-\usepackage{hyperref}
-
-\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
-\usefonttheme{professionalfonts}
-\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
-\setmainfont{Times New Roman}%  缺省英文字体.
-
-\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
-\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
-\setCJKmonofont{STFangsong}% 中文等宽字体
-\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
-\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
-%\setCJKfamilyfont{niceft-S}{MLingWaiMedium-SC}% 
-%\newcommand{\MLWti}{\CJKfontspec{niceft-S}}       %凌慧体-简, 用于手写体
-
-
-
-%----------------------
-%
-% Presentation 环境
-%
-%---------------------
-\mode<presentation>
-%设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
-\usetheme{Antibes} %主题
-%AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
-%Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
-%Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
-%------------------
-\useoutertheme{smoothbars} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
-\useinnertheme{rounded} % default ，circles ，rectangle， rounded
-\usecolortheme{rose} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
-
-
-%\setbeamertemplate{navigation symbols}{}%empty
-
-% BackgrounB
-\pgfdeclareimage[height=0.15\paperheight,width=0.15\paperwidth]{usetcxx}{usetcxx.png}
-\pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{uestclogo.png}
-\usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{myimage}};}
-
-% 半透明化尚未出现的内容.
-%\setbeamercovered{transparent}
-% 幻灯标题字体设置.
-\setbeamerfont{frametitle}{size=\large,series=\bfseries}
-% 封页字体设置.
-\setbeamerfont{title}{size=\Large,series=\bfseries}
-\setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
-\setbeamerfont{author}{size=\normalsize}
-\setbeamerfont{date}{size=\scriptsize}
-
-\setbeamerfont{block title}{size=\normalsize}
-\setbeamerfont{structure}{size=\normalsize,series=\bfseries}
-% 脚注字号设置.
-\setbeamerfont{footnote}{size=\scriptsize}
-% 页眉页脚字体设置
-\setbeamerfont{section in head/foot}{size=\scriptsize,series=\bfseries}
-\setbeamerfont{subsection in head/foot}{size=\scriptsize,series=\bfseries}
-\setbeamerfont{author in head/foot}{size=\scriptsize,series=\bfseries}
-\setbeamerfont{institute in head/foot}{size=\scriptsize,series=\bfseries}
-\setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
-\setbeamerfont{title in head/foot}{size=\scriptsize}
-% itemize 环境序号设置.
-\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
-\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
-\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
-% 参考文献目录字号设置.
-\renewcommand*{\bibfont}{\small}
-
-% ----------------
-% Headline Layout
-% 格式: SECTION (ALL) | NAME OF SCU.
-% ----------------
-\defbeamertemplate{headline}{my headline theme}%
-{%
-	\leavevmode% 离开垂直模式
-	\hbox{%
-		\begin{beamercolorbox}[wd=.8\paperwidth,ht=5.75ex,dp=.25ex]{section in head/foot}%
-			\hspace*{7em}%
-			\usebeamerfont{section in head/foot}\insertsectionnavigationhorizontal{.6\textwidth}{}{}%
-			\hspace*{1.175em}\normalsize\textbf{|}\vskip.02ex%
-		\end{beamercolorbox}%
-		\begin{beamercolorbox}[wd=.2\paperwidth,ht=5.75ex,dp=.25ex,right]{section in head/foot}%
-			\pgfuseimage{uestcxx}\hspace*{2.6em}%
-		\end{beamercolorbox}%
-	}%
-}
-\setbeamertemplate{headline}[my headline theme]
-% ----------------
-
-\mode
-<all>
-
-\RequirePackage{comment}% comment: 提供注释环境
-\usepackage{algorithm,algorithmic}
-\usepackage{amsthm}
-\usepackage{float}                           %HERE!!!!!!!!!!!!!!
-%\newtheorem{proposition}{命题}
-%\newtheorem{theorem}{定理}
-%\newtheorem{definition}{定义}
-%\newtheorem{example}{例}
-\renewcommand\figurename{图}
-\renewcommand\tablename{表}
-\setbeamertemplate{theorems}[numbered]
-
-
-
-
- %   % 目录
- %   \AtBeginSection[]
- %  {
- %   \begin{frame}<beamer>
- %       \frametitle{\textbf{目录}}
- %       \tableofcontents[currentsection]
- %   \end{frame}
- %  }
- %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- % \beamerdefaultoverlayspecification{<+->}
-
-
-
+\hypersetup{pdfpagemode=FullScreen}
 
 %-------------------正文-------------------------%
-%
-%
-\begin{document}  
-%
-%
+%                                               %
+%                                               %
+\begin{document}                                %
+%                                               %
+%                                               %
 %-----------------------------------------------%
 
 %题目，作者，学校，日期                
-\author {\LARGE 李小飞}
+\author {\myfont 李小飞}
 \title{\textbf{\Huge 量子力学与统计物理}}
 \subtitle{Quantum mechanics and statistical physics}
 \institute[电子科技大学]{{\large 光电科学与工程学院}}

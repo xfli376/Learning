@@ -1,0 +1,300 @@
+%% This is  mynewbeamer.sty'.
+%% Version: 2021/12/1 
+%% Auther: xfli
+%% !请勿轻易改动此文档中代码.
+%%%% ----------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mynewbeamer}[2021/12/01]
+%%%% -------------------------------------------------------------
+
+\usefonttheme[onlymath]{serif}
+\usepackage{tikz}
+
+\usepackage{tcolorbox}% 绘制彩色框.
+\usepackage{multicol}%  one to muticolumn
+\usepackage{ulem}% ulem: under line for emphasis.
+\usepackage{tabularx}%  智能表格环境.
+\RequirePackage{xhfill}% xhfill: 定制化线填充.
+\usepackage{listings}%  for source code printing 
+
+\usepackage{color}  % color content
+\usepackage{xcolor}% \color{red!50!green!20!blue}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{subfigure}
+
+\RequirePackage{comment}% comment: 提供注释环境
+\usepackage{algorithm,algorithmic}
+\usepackage{amsthm}
+\usepackage{float}                           %HERE!!!!!!!!!!!!!!
+
+%\RequirePackage{varioref}% varioref: 交叉引用.
+%\RequirePackage{cleveref}% cleveref: 交叉引用.
+%\RequirePackage[backend=biber,autolang=hyphen,style=gb7714-2015,gbalign=gb7714-2015,%style=gb7714-2015ms
+%gbstyle=false,url=false,doi=false,isbn=false,sorting=none]{biblatex}% biblatex: 参考文献.
+
+\usepackage{xeCJK} %导入中文包
+
+\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\usefonttheme{professionalfonts}
+\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
+\setmainfont{Times New Roman}%  缺省英文字体.
+
+\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
+\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
+\setCJKmonofont{STFangsong}% 中文等宽字体
+\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
+\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+
+
+%----------------------
+%
+% Presentation 环境
+%
+%---------------------
+\mode<presentation>
+%设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
+\usetheme{Antibes} %主题
+%AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
+%Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
+%Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
+%------------------
+\useoutertheme{smoothbars} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
+\useinnertheme{rounded} % default ，circles ，rectangle， rounded
+\usecolortheme{rose} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+
+
+%\setbeamertemplate{navigation symbols}{}%empty
+
+% BackgrounB
+\pgfdeclareimage[height=6.2ex,width=0.14\paperwidth]{xx}{uestcxx.png}
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{uestclogo.png}
+\usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{myimage}};}
+
+% 半透明化尚未出现的内容.
+%\setbeamercovered{transparent}
+% 幻灯标题字体设置.
+\setbeamerfont{frametitle}{size=\normalsize,series=\bfseries}
+% 封页字体设置.
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\scriptsize}
+
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamerfont{structure}{size=\normalsize,series=\bfseries}
+% 脚注字号设置.
+\setbeamerfont{footnote}{size=\scriptsize}
+% 页眉页脚字体设置
+\setbeamerfont{section in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{subsection in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{author in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{institute in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{title in head/foot}{size=\scriptsize}
+\setbeamerfont{framenumber in head/foot}{size=\tiny,series=\bfseries}
+% 页眉页脚颜色设置.
+\definecolor{uestcxxbg}{RGB}{225,150,63}
+\definecolor{uestcE}{RGB}{255,165,0}
+% 调色板一设置.
+\setbeamercolor{palette primary}{bg=blue,fg=white}
+% 调色板二设置.
+\setbeamercolor{palette secondary}{bg=uestcxxbg,fg=white!80!black}
+% 调色板三设置.
+\setbeamercolor{palette tertiary}{bg=blue!10!green,fg=white}
+% 调色板四设置.
+\setbeamercolor{palette quaternary}{bg=uestcxxbg,fg=white!80!red}
+
+\setbeamercolor{section in head/foot}{parent=palette primary}
+\setbeamercolor{subsection in head/foot}{parent=tertiary primary}
+\setbeamercolor{title in head/foot}{parent=structure}
+\setbeamercolor{author in head/foot}{parent=palette secondary}
+\setbeamercolor{institute in head/foot}{parent=palette primary}
+\setbeamercolor{date in head/foot}{parent=palette primary}
+\setbeamercolor{framenumber in head/foot}{parent=palette quaternary}
+\setbeamercolor{frametitle}{bg=blue,fg=uestcE}
+
+% itemize 环境序号设置.
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+% 参考文献目录字号设置.
+%\renewcommand*{\bibfont}{\small}
+
+% ----------------
+% Headline Layout
+% 格式: SECTION (ALL) | NAME OF SCU.
+% ----------------
+\defbeamertemplate{headline}{my headline theme}%
+{%
+	\leavevmode% 离开垂直模式
+	\hbox{%
+        \begin{beamercolorbox}[wd=.08\paperwidth,ht=5.75ex,dp=.25ex,center]{author in head/foot}
+            \hspace*{0.001em}%
+            \usebeamerfont{author in head/foot} \insertauthor 
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.06\paperwidth,ht=5.75ex,dp=.25ex,center]{framenumber in head/foot} 
+            \hspace*{0.001em}%
+            \usebeamerfont{framenumber in head/foot} \insertframenumber\,/\,\inserttotalframenumber
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.72\paperwidth,ht=5.75ex,dp=.25ex]{section in head/foot}%
+			\hspace*{0.01em}%
+			\usebeamerfont{section in head/foot}\insertsectionnavigationhorizontal{.6\textwidth}{}{}%
+			\hspace*{1.175em} \vskip.02ex%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.14\paperwidth,ht=5.75ex,dp=.25ex,center]{section in head/foot}%
+			\pgfuseimage{xx}%\hspace*{2.6em}%
+		\end{beamercolorbox}%
+	}%
+}
+\setbeamertemplate{headline}[my headline theme]
+%-----------
+
+\setbeamertemplate{frametitle}{%
+	\vskip-0.002\textheight%
+	\leavevmode%
+    \hspace*{-.08\paperwidth}
+	\hbox{%
+		\begin{beamercolorbox}[wd=0.29\paperwidth,ht=2.75ex,dp=0.25ex,center]{frametitle}%
+			\usebeamerfont{frametitle}\insertframetitle \vskip.025ex%
+		\end{beamercolorbox}%
+	}
+}
+% ----------------
+% Tcolorbox Style Layout
+% 定义了多种 Tcolorbox 的通用 style.
+% ----------------
+\AtBeginDocument{%
+	\tcbset{%
+		tcbstyle/.style={enhanced,drop fuzzy shadow southeast,%
+			left=1.8mm,right=2.1mm,top=3mm,boxsep=-.5mm,%
+			fonttitle=\bfseries,toprule=1mm,leftrule=1mm,%
+			interior style={white,opacity=0.6},%
+			segmentation style={black,solid,opacity=0.2,line width=1pt}},
+		tcbtheostyle/.style={enhanced,drop fuzzy shadow southeast,%
+			width=.93\paperwidth,boxsep=-.5mm,%
+			toprule=4mm,leftrule=1mm,left=1.8mm,right=2.1mm,top=3mm,%
+			attach boxed title to top left={yshift=-5mm,xshift=2mm},%
+			fonttitle=\bfseries,boxed title style={arc=2mm},
+			colback=red!8!white,colframe=red,%
+			boxed title style={colframe=red},colbacktitle=red,coltitle=white},
+		tcbexastyle/.style={enhanced,drop fuzzy shadow southeast,%
+			width=.93\paperwidth,boxsep=-.5mm,%
+			toprule=4mm,leftrule=1mm,left=1.8mm,right=2.1mm,top=3mm,%
+			attach boxed title to top left={yshift=-5mm,xshift=2mm},%
+			fonttitle=\bfseries,boxed title style={arc=2mm},%
+			colback=grey!25!white,colframe=grey,%
+			colbacktitle=grey!25!white,coltitle=black},
+		tcbdefstyle/.style={enhanced,drop fuzzy shadow southeast,%
+			width=.93\paperwidth,boxsep=-.5mm,%
+			toprule=4mm,leftrule=1mm,left=1.8mm,right=2.1mm,top=3mm,%
+			attach boxed title to top left={yshift=-5mm,xshift=2mm},%
+			fonttitle=\bfseries,boxed title style={arc=2mm},%
+			colback=blue!8!white,colframe=blue,%
+			boxed title style={colframe=blue},colbacktitle=blue,coltitle=white},
+		tcblemstyle/.style={enhanced,drop fuzzy shadow southeast,%
+			width=.93\paperwidth,boxsep=-.5mm,%
+			toprule=4mm,leftrule=1mm,left=1.8mm,right=2.1mm,top=3mm,%
+			attach boxed title to top left={yshift=-5mm,xshift=2mm},%
+			fonttitle=\bfseries,boxed title style={arc=2mm},%
+			colback=green!8!white,colframe=green,%
+			boxed title style={colframe=green},colbacktitle=green,coltitle=white},
+		tcbcondstyle/.style={enhanced,drop fuzzy shadow southeast,%
+			width=.93\paperwidth,boxsep=-.5mm,%
+			toprule=4mm,leftrule=1mm,left=1.8mm,right=2.1mm,top=3mm,%
+			attach boxed title to top left={yshift=-5mm,xshift=2mm},%
+			fonttitle=\bfseries,boxed title style={arc=2mm},%
+			colback=yellow!8!white,colframe=yellow,%
+			boxed title style={colframe=yellow},colbacktitle=yellow,coltitle=white},
+		tcbliststyle/.style={enhanced jigsaw,drop fuzzy shadow southeast,%
+			breakable,listing only,size=title,%
+			colframe=red,colback=red!2!white,coltitle=white,coltext=black}
+	}
+}
+% ----------------
+
+
+% -----------------------------------------------------
+%
+% 使用 tcolorbox 重定义中文化的定理环境 英文的去除My
+%
+% ----------------
+% 计数器定义.
+\newcounter{MytheoremCount}
+\newcounter{MyexampleCount}
+\newcounter{MyalgorithmCount}
+\newcounter{MydefinitionCount}
+\newcounter{MyaxiomCount}
+\newcounter{MypropertyCount}
+\newcounter{MypropositionCount}
+\newcounter{MylemmaCount}
+\newcounter{MycorollaryCount}
+\newcounter{MyconditionCount}
+\newcounter{MyconclusionCount}
+\newcounter{MyassumptionCount}
+\newcounter{MyremarkCount}
+
+\newtcolorbox[use counter=MytheoremCount,%
+	number within=section]{Mytheorem}[3][]%
+	{title={定理~\thetcbcounter: #2},label={theo:#3},%
+	opacityback=0.95,tcbtheostyle,#1}
+\newtcolorbox[use counter=MyexampleCount,%
+	number within=section]{Myexample}[3][]%
+	{title={例~\thetcbcounter: #2},label={exam:#3},%
+	opacityback=0.95,tcbexastyle,#1}
+\newtcolorbox[use counter=MyalgorithmCount,%
+	number within=section]{Myalgorithm}[3][]%
+	{title={算法~\thetcbcounter: #2},label={algo:#3},%
+	opacityback=0.95,tcbexastyle,#1}
+\newtcolorbox[use counter=MydefinitionCount,%
+	number within=section]{Mydefinition}[3][]%
+	{title={定义~\thetcbcounter: #2},label={def:#3},%
+	opacityback=0.95,tcbdefstyle,#1}
+\newtcolorbox[use counter=MyaxiomCount,%
+	number within=section]{Myaxiom}[3][]%
+	{title={公理~\thetcbcounter: #2},label={axio:#3},%
+	opacityback=0.95,tcbtheostyle,#1}
+\newtcolorbox[use counter=MypropertyCount,%
+	number within=section]{Myproperty}[3][]%
+	{title={性质~\thetcbcounter: #2},label={prope:#3},%
+	opacityback=0.95,tcbdefstyle,#1}
+\newtcolorbox[use counter=MypropositionCount,%
+	number within=section]{Myproposition}[3][]%
+	{title={命题~\thetcbcounter: #2},label={propo:#3},%
+	opacityback=0.95,tcbdefstyle,#1}
+\newtcolorbox[use counter=MylemmaCount,%
+	number within=section]{Mylemma}[3][]%
+	{title={引理~\thetcbcounter: #2},label={lemm:#3},%
+	opacityback=0.95,tcblemstyle,#1}
+\newtcolorbox[use counter=MycorollaryCount,%
+	number within=section]{Mycorollary}[3][]%
+	{title={推论~\thetcbcounter: #2},label={coro:#3},%
+	opacityback=0.95,tcblemstyle,#1}
+\newtcolorbox[use counter=MyconditionCount,%
+	number within=section]{Mycondition}[3][]%
+	{title={条件~\thetcbcounter: #2},label={cond:#3},%
+	opacityback=0.95,tcbcondstyle,#1}
+\newtcolorbox[use counter=MyconclusionCount,%
+	number within=section]{Myconclusion}[3][]%
+	{title={结论~\thetcbcounter: #2},label={conc:#3},%
+	opacityback=0.95,tcblemstyle,#1}
+\newtcolorbox[use counter=MyassumptionCount,%
+	number within=section]{Myassumption}[3][]%
+	{title={假设~\thetcbcounter: #2},label={assu:#3},%
+	opacityback=0.95,tcbcondstyle,#1}
+% Remark 环境
+\newtcolorbox[use counter=MyremarkCount,no counter]{Myremark}[3][]{%
+	title={注: #2},label={rema:#3},%
+	opacityback=0.95,tcbexastyle,#1}
+% Proof 环境
+\newtcolorbox{Myproof}[2][]{tcbexastyle,opacityback=0.95,%
+	title={\ifblank{#2}{证明}{#2}\@addpunct{.}},% \@addpunct: 
+	after upper={\par\hfill\qed},#1}
+%---------------------------------
+
+\mode
+<all>
+
+
