@@ -1,33 +1,137 @@
-\NeedsTeXFormat{LaTeX2e}
-\documentclass[12pt,aspectratio=169,mathserif]{beamer} 
-%\batchmode
+\documentclass[12pt,aspectratio=169]{beamer} 
+
+\usepackage{hyperref} 
+\usepackage{tikz}
+
+\usepackage{tcolorbox}% 绘制彩色框.
+\usepackage{multicol}%  one to muticolumn
+\usepackage{ulem}% ulem: under line for emphasis.
+\usepackage{tabularx}%  智能表格环境.
+\RequirePackage{xhfill}% xhfill: 定制化线填充.
+\usepackage{listings}%  for source code printing 
+
+\usepackage{color}  % color content
+\usepackage{xcolor}% \color{red!50!green!20!blue}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{subfigure}
+%\graphicspath{{{images} {figs} { }}
+
+\RequirePackage{comment}% comment: 提供注释环境
+
+\RequirePackage{varioref}% varioref: 交叉引用.
+\RequirePackage{cleveref}% cleveref: 交叉引用.
+\RequirePackage[backend=biber,autolang=hyphen,style=gb7714-2015,gbalign=gb7714-2015,%style=gb7714-2015ms
+gbstyle=false,url=false,doi=false,isbn=false,sorting=none]{biblatex}% biblatex: 参考文献.
 
 \usepackage{xeCJK} %导入中文包
+\RequirePackage{fontspec}% fontspec: 字体设置.
 \usepackage{hyperref}
+
 \RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\usefonttheme{professionalfonts}
 \RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
 \setmainfont{Times New Roman}%  缺省英文字体.
+
 \setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
 \setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
 \setCJKmonofont{STFangsong}% 中文等宽字体
 \setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
 \newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+%\setCJKfamilyfont{niceft-S}{MLingWaiMedium-SC}% 
+%\newcommand{\MLWti}{\CJKfontspec{niceft-S}}       %凌慧体-简, 用于手写体
 
+
+
+%----------------------
+%
+% Presentation 环境
+%
+%---------------------
 \mode<presentation>
 %设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
-\usetheme{AnnArbor} %主题
+\usetheme{Antibes} %主题
 %AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
 %Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
 %Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
 %------------------
-\useoutertheme{infolines} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
-\useinnertheme{default} % default ，circles ，rectangle， rounded
-\usecolortheme{beaver} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+\useoutertheme{smoothbars} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
+\useinnertheme{rounded} % default ，circles ，rectangle， rounded
+\usecolortheme{rose} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+
 
 %\setbeamertemplate{navigation symbols}{}%empty
 
+% BackgrounB
+\pgfdeclareimage[height=0.15\paperheight,width=0.15\paperwidth]{usetcxx}{usetcxx.png}
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{uestclogo.png}
+\usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{myimage}};}
+
+% 半透明化尚未出现的内容.
+%\setbeamercovered{transparent}
+% 幻灯标题字体设置.
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+% 封页字体设置.
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\scriptsize}
+
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamerfont{structure}{size=\normalsize,series=\bfseries}
+% 脚注字号设置.
+\setbeamerfont{footnote}{size=\scriptsize}
+% 页眉页脚字体设置
+\setbeamerfont{section in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{subsection in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{author in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{institute in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{title in head/foot}{size=\scriptsize}
+% itemize 环境序号设置.
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+% 参考文献目录字号设置.
+\renewcommand*{\bibfont}{\small}
+
+% ----------------
+% Headline Layout
+% 格式: SECTION (ALL) | NAME OF SCU.
+% ----------------
+\defbeamertemplate{headline}{my headline theme}%
+{%
+	\leavevmode% 离开垂直模式
+	\hbox{%
+		\begin{beamercolorbox}[wd=.8\paperwidth,ht=5.75ex,dp=.25ex]{section in head/foot}%
+			\hspace*{7em}%
+			\usebeamerfont{section in head/foot}\insertsectionnavigationhorizontal{.6\textwidth}{}{}%
+			\hspace*{1.175em}\normalsize\textbf{|}\vskip.02ex%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.2\paperwidth,ht=5.75ex,dp=.25ex,right]{section in head/foot}%
+			\pgfuseimage{uestcxx}\hspace*{2.6em}%
+		\end{beamercolorbox}%
+	}%
+}
+\setbeamertemplate{headline}[my headline theme]
+% ----------------
+
 \mode
 <all>
+
+\RequirePackage{comment}% comment: 提供注释环境
+\usepackage{algorithm,algorithmic}
+\usepackage{amsthm}
+\usepackage{float}                           %HERE!!!!!!!!!!!!!!
+%\newtheorem{proposition}{命题}
+%\newtheorem{theorem}{定理}
+%\newtheorem{definition}{定义}
+%\newtheorem{example}{例}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\setbeamertemplate{theorems}[numbered]
+
+
 
 
  %   % 目录
@@ -45,11 +149,16 @@
 
 
 %-------------------正文-------------------------%
+%
+%
 \begin{document}  
+%
+%
+%-----------------------------------------------%
 
 %题目，作者，学校，日期                
-\author {李小飞}
-\title{\textbf{量子力学与统计物理}}
+\author {\LARGE 李小飞}
+\title{\textbf{\Huge 量子力学与统计物理}}
 \subtitle{Quantum mechanics and statistical physics}
 \institute[电子科技大学]{{\large 光电科学与工程学院}}
 \date{\today}
@@ -72,7 +181,7 @@
 
 \frame{\frametitle{本section目录}\tableofcontents[currentsection]}
 
-\subsection{ 支持中文}
+\subsection{支持中文}
 
 \begin{frame}
     \frametitle{1、设置中文环境}
@@ -91,20 +200,144 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{abc}
+    \frametitle{3、设置logo背景}
 
-    cde
+    完成
 
 \end{frame}
 
-\subsection{2.主题}
+\begin{frame}
+    \frametitle{colorbox}
+    \fcolorbox{gray}{yellow}{test}
+
+\end{frame}
+
+
+\subsection{公式}
+\begin{frame}
+    \frametitle{1、在线公式}
+
+    \begin{itemize}
+        \item<2-> 表格转换: Excel2\LaTeX~(\href{https://www.ctan.org/tex-archive/support/excel2latex/}{CTAN Excel2\LaTeX});
+        \item<2-> 在线公式: \href{https://www.latexlive.com/}{LaTeX公式编辑器},~\href{https://mathpix.com/}{Mathpix}~ \href{https://mathf.itewqq.cn/}{图片在线转LaTeX}.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{添加线}
+	\begin{multicols}{2}
+		\verb|\uline|\hfill 下划线\qquad\uline{混}\\
+		\verb|\uuline|\hfill 双下划线\qquad\uuline{元}\\
+		\verb|\uwave|\hfill 波浪线\qquad\uwave{形}\\
+		\verb|\sout|\hfill 删除线\qquad\sout{翼}\\
+		\verb|\xout|\hfill 斜删除线\qquad\xout{太}\\
+		\verb|\dashuline|\hfill 虚线\qquad\dashuline{极}\\
+		\verb|\dotuline|\hfill 加点\qquad\dotuline{门}
+	\end{multicols}
+\end{frame}
+
 \subsection{3.主题}
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=2.2in]{uestclogo.png}
+    \caption{fig1}
+    \label{fig:side:a}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=2.2in]{uestclogo.png}
+    \caption{fig2}
+    \label{fig:side:b}
+    \end{minipage}
+\end{figure}
+
 \subsection{4.主题}
+
+\begin{frame}
+	\frametitle{表}
+	表格太麻烦了, 掌门说摸摸鱼, 编者觉得不错, 丢一个三线表示例. 当然也可以看看这个手册前面部分表格的源码.
+	\begin{table}[htbp]
+		\centering
+		\caption{一些国风音乐}
+		\label{tab:YixieGfyy}
+		\begin{tabular}{rlc}
+			作曲家 & 歌名 & 门中喜欢的友人 \\
+			李志辉 & 小桥流水人家 & 门主 \\
+			林海 & 无羁(器乐版) & 初号 \\
+			吕秀龄 & 逆伦 & 小初 \\
+			麦振鸿 & 从来只有一个人 & 编者(假的) \\
+		\end{tabular}
+	\end{table}
+\end{frame}
 
 \section{二、进阶操作}
 \subsection{1.主题}
+
+\begin{frame}[fragile]{代码环境演示}
+	\begin{lstlisting}[language=c++]
+        #include <iostream>
+        int main()
+        {
+            std::cout << "Hello, World!" << std::endl;
+        }  
+    \end{lstlisting}
+\end{frame}
+
 \subsection{2.主题}
+
+\begin{frame}[fragile,allowframebreaks]{数学环境}
+	\begin{proof}{}
+		请读者自证.
+	\end{proof}
+	\begin{definition}{马老卷}{MalaoJ}
+		是混元形翼太极门的打砸工, 直系上峰是马凡王, 入门改姓马, 自称老卷, 实则不卷.
+	\end{definition}
+	\begin{lemma}{卷王森林法则}{JuanwangSlfz}
+		源自未知高校学生, 此处略.
+	\end{lemma}
+	\begin{corollary}{狼人杀的重要性}{LangrenSdzyx}
+		编者实习时听公司导师说面试有可能是趣味性游戏, 狼人杀感觉很符合, 所以玩狼人杀吧.
+	\end{corollary}
+\end{frame}
+
+
+\begin{frame} [fragile,allowframebreaks]{数学环境}
+\begin{algorithm}[H]                           % HERE!!!!!!!!!
+\caption{Calculate $y = x^n$}          % give the algorithm a caption
+\label{alg1}      % and a label for \ref{} commands later in the document
+\begin{algorithmic}  % enter the algorithmic environment
+\REQUIRE $n \geq 0 \vee x \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \Leftarrow 1$
+\IF{$n < 0$}
+\STATE $X \Leftarrow 1 / x$
+\STATE $N \Leftarrow -n$
+\ELSE
+\STATE $X \Leftarrow x$
+\STATE $N \Leftarrow n$
+\ENDIF
+\WHILE{$N \neq 0$}
+\IF{$N$ is even}
+\STATE $X \Leftarrow X \times X$
+\STATE $N \Leftarrow N / 2$
+\ELSE[$N$ is odd]
+\STATE $y \Leftarrow y \times X$
+\STATE $N \Leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
 \subsection{3.主题}
+
+\begin{frame}
+    \[ x^2+y^2=1 \]
+    $$ x^2+y^2=1 $$, $ x^2+y^2=1 $, 
+\end{frame}
+
 \subsection{4.主题}
 
 \section{二、高阶操作}
