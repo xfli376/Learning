@@ -15,30 +15,66 @@
 ----
 
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=3 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=2 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [1. Git and github](#1-git-and-github)
-  - [1.1. Git 操作本地库（Repository](#11-git-操作本地库repository)
-  - [1.2. Github 远程操作](#12-github-远程操作)
-- [2. Markdown](#2-markdown)
-  - [2.1. Markdown 基本语法](#21-markdown-基本语法)
-  - [2.2. Markdown 扩展语法](#22-markdown-扩展语法)
-  - [2.3. Markdown 公式输入 (katex)](#23-markdown-公式输入-katex)
-  - [2.4 Mermaid 语法](#24-mermaid-语法)
-  - [2.5 Reveal.js+markdown+vscode 制作PPT](#25-revealjsmarkdownvscode-制作ppt)
-  - [2.6 MPE+reveal.js  做PPT](#26-mperevealjs-做ppt)
+- [1. VScode](#1-vscode)
+- [2. 版本管理工具 Git and github](#2-版本管理工具-git-and-github)
+- [3. Markdown](#3-markdown)
+- [4. 数学公式输入 (katex)](#4-数学公式输入-katex)
+- [5. Mermaid 语法](#5-mermaid-语法)
+- [6. Reveal.js+markdown+vscode 制作PPT](#6-revealjsmarkdownvscode-制作ppt)
+- [7. MPE+reveal.js  做PPT](#7-mperevealjs-做ppt)
+- [8. VSCode+Latex](#8-vscodelatex)
 
 <!-- /code_chunk_output -->
 
+## 1. VScode 
+VS Code是个简化高效的代码编辑器，同时支持如调试、任务执行，版本管理等开发操作。它的目标就是提供一个快速的编码-编译-调试的工具。然后其它的都交给IDE。
 
-## 1. Git and github
+### 快捷键
+cmd+k and ctrl+s  打开快捷键一览表。在这里面、你可以查看、搜索、修改快捷键。
+
+#### 选择复制粘贴撤销(VIM)
+选定： 
+    esc v： 进入行可视模式 +移动光标进行选择
+
+列操作：esc ctrl+v： 进入列可视模式 +移动上/下光标进行列选择, shift+I（A) 插入  
+
+复制： yank（提起） (cmd+c)
+   y： 复制选定块到缓冲区；
+   yy：    复制整行（nyy或者yny ，复制n行，n为数字）；
+   y^：   复制当前到行头的内容；
+   y$：    复制当前到行尾的内容；
+   yw：   复制一个word （nyw或者ynw，复制n个word，n为数字）；
+   yG：    复制至档尾（nyG或者ynG，复制到第n行，例如1yG或者y1G，复制到档尾） 
+
+剪切：delete，(cmd+x)
+    d：     剪切选定块到缓冲区；
+    dd：    剪切整行
+    d^：    剪切至行首
+    d$：     剪切至行尾
+    dw：    剪切一个word
+    dG：     剪切至档尾 
+
+粘贴：put（放下）(cmd+v)
+    p：    贴至游标后
+    P：    贴至游标前
+
+撤销：u (undo) (cmd+z)
+重恢：Ctrl+R
+
+### 常用插件与环境设置
+cmd+p, > Open Settings,打开设置(json)
+
+
+## 2. 版本管理工具 Git and github
 
 - Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目. 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。工作原理分为工作区->add->缓存区->commit->本地库(repository)
 - Github是一个代码托管云平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。创业公司可以用它来托管软件项目。
 
-### 1.1. Git 操作本地库（Repository
+### Git 操作本地库（Repository
 
 #### 建立本地库
 
@@ -107,7 +143,7 @@ git fetch origin
 git branch -u origin/master master		
 git remote set-head origin -a		
 
-### 1.2. Github 远程操作
+### Github 远程操作
 
 #### 在github建立远程库
 
@@ -138,17 +174,23 @@ git fetch origin master
 
 Settings-> Collaborators-> Add collaborator		
 合作者lili  Accept invitation		
-git push origin lili 			 
+git push origin lili 		
 
-## 2. Markdown
+### 在VScode中的环境设置
+
+
+## 3. Markdown
 
 Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档。John Gruber在2004年创造了Markdown语言，现在有了MultiMarkdown、GitHub Flavored Markdown (GFM)、Pandoc、CommonMark等Markdown的变体。   
 **注意**：Markdown 文档中可以直接使用HTML元素！
 
-### 2.1. Markdown 基本语法
+### Markdown 基本语法
 
 These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
 
+#### 注释
+> 表示块注释
+> 
 #### Heading
 
 ```
@@ -233,7 +275,7 @@ in line `code`
 设置图片大小
 <img src="https://www.markdownguide.org/assets/images/tux.png" width="10%">
 
-### 2.2. Markdown 扩展语法
+### Markdown 扩展语法
 
 These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
 
@@ -314,7 +356,7 @@ graph TD;
 Markdown 定义了很多特殊符号，如果要使用这些字符的本义，可以在前面加 “\”   
 \### Escape character
 
-### 2.3. Markdown 公式输入 (katex)
+## 4. 数学公式输入 (katex)
 
 #### 行内公式与行间公式
 
@@ -400,6 +442,18 @@ $
 #### 数学推导
 
 $\rArr$，$\rarr$，$\lrArr$，$\lrarr$，$\nRightarrow$，$\nLeftarrow$，$\nLeftrightarrow$，$\implies$， $\xRightarrow[under]{over}$，$\xrightarrow[under]{over}, \to, \propto, \approx $
+$\Leftrightarrow \nLeftrightarrow \Longleftrightarrow \iff$
+$\Rrightarrow \Lleftarrow$
+$\Rightarrow \nRightarrow \Longrightarrow \implies$
+$\Leftarrow \nLeftarrow \Longleftarrow$
+$\Uparrow \Downarrow \Updownarrow$
+$\leftarrow \rightarrow \nleftarrow \nrightarrow \leftrightarrow $  $\nleftrightarrow \longleftarrow \longrightarrow \longleftrightarrow$
+$\leftrightharpoons \rightleftharpoons$
+$\curvearrowright \circlearrowright$
+$\xleftarrow{left} \xrightarrow{right}$
+$\dagger \ddagger$
+$\uparrow \downarrow \updownarrow \nearrow \searrow \nwarrow \swarrow$
+
 
 $\because, \therefore, \forall, \And, \exists$
 
@@ -551,8 +605,490 @@ $$
 \right.
 $$
 
+#### 声调 / 变音符号
+$\dot{a} \ddot{a} \acute{a} \grave{a}$
 
-### 2.4 Mermaid 语法
+$\check{a} \breve{a} \tilde{a} \bar{a}$ 
+
+$\hat{a} \widehat{a} \vec{a}$
+
+#### 标准函数
+$\exp_a b=a^b \exp b=e^b 10^m$
+
+$\sin a \cos b \tan c \sec d \csc e \cot f$
+
+$\arcsin a \arccos b \arctan c$
+
+$\sinh a \cosh b \tanh c \coth d$
+
+$\operatorname{sh} a \operatorname{ch} b \operatorname{th} c$
+
+$\operatorname{argsh} a \operatorname{argch} b \operatorname{argth} c$
+ 貌似可以将任何字符转换成标准函数的形式。
+
+$\left\vert a\right\vert \min(x,y) \max(x,y)$
+
+#### 界限
+
+$\min x \max y \inf s \sup t$
+
+$\lim u \liminf v \limsup w$
+
+$\dim p \deg q \det m \ker\phi$
+
+#### 投射
+𝑝𝑠:感觉这翻译很奇怪，应该是映射吧。
+
+$\Pr j \hom l \lVert z\rVert \arg z$
+
+#### 微分及导数
+$dt \mathrm{d}t \partial t \nabla\psi$
+
+$\prime \backprime f^\prime f' f'' f^{(3)} \dot{y} \ddot{y}$
+
+#### 类字母符号及常数
+$\infty \aleph \complement \backepsilon \eth \Finv \hbar$
+
+$\Im \imath \jmath \Bbbk \ell \mho \wp \Re \circledS$
+
+#### 模算数
+$a\equiv1\pmod{m}$
+
+$a\bmod b$
+
+$\gcd(m,n) \operatorname{lcm}(m,n)$
+
+$\mid \nmid \shortmid \nshortmid$
+
+
+#### 根号
+$\surd \sqrt{2} \sqrt[n]{} \sqrt[n]{x}$
+
+#### 运算符
+$+ - \pm \mp \dotplus$
+
+$\times \div \divideontimes / \backslash$
+
+$\cdot * \star \circ \bullet$
+
+$\boxplus \boxminus \boxtimes \boxdot$
+
+$\oplus \ominus \otimes \oslash \odot$
+
+$\circleddash \circledcirc \circledast$
+
+$\bigoplus \bigotimes \bigodot$
+
+#### 集合
+$\{ \} \emptyset \varnothing$
+
+$\in \notin \not\in \ni \not\ni$
+
+$\cap \Cap \sqcap \bigcap$
+
+$\cup \Cup \sqcup \bigcup \bigsqcup \uplus \biguplus$
+
+$\setminus \smallsetminus \times$
+
+$\subset \Subset \sqsubset$
+
+$\supset \Supset \sqsupset$
+
+$\subseteq \nsubseteq \subsetneq \varsubsetneq \sqsubseteq$
+
+$\supseteq \nsupseteq \supsetneq \varsupsetneq \sqsupseteq$
+
+$\subseteqq \nsubseteqq \subsetneqq \varsubsetneqq$
+
+$\supseteqq \nsupseteqq \supsetneqq \varsupsetneqq$
+
+#### 关系符号
+$= \ne \neq \equiv \not\equiv
+
+$\doteq \doteqdot \overset{\underset{def}{}}{=} :=$
+
+$\sim \nsim \backsim \thicksim \simeq \backsimeq \eqsim \cong \ncong$
+
+$\approx \thickapprox \approxeq \asymp \propto \varpropto$
+
+$< \nless \ll \not\ll \lll \not\lll \lessdot$
+
+$> \ngtr \gg \not\gg \ggg \not\ggg \gtrdot$
+
+$\le \leq \lneq \leqq \nleq \nleqq \lneqq \lvertneqq$
+
+$\ge \geq \gneq \geqq \ngeq \ngeqq \gneqq \gvertneqq$
+
+$\lessgtr \lesseqgtr \lesseqqgtr \gtrless \gtreqless \gtreqqless$
+
+$\leqslant \nleqslant \eqslantless$
+
+$\geqslant \ngeqslant \eqslantgtr$
+
+$\lesssim \lnsim \lessapprox \lnapprox$
+
+$\gtrsim \gnsim \gtrapprox \gnapprox$
+
+$\prec \nprec \preceq \npreceq \precneqq$
+
+$\succ \nsucc \succeq \nsucceq \succneqq$
+
+$\preccurlyeq \curlyeqprec$
+
+$\succcurlyeq \curlyeqsucc$
+
+$\precsim \precnsim \precapprox \precnapprox$
+
+$\succsim \succnsim \succapprox \succnapprox$
+
+#### 几何符号
+ $\parallel \nparallel \shortparallel \nshortparallel$
+
+ $\perp \angle \sphericalangle \measuredangle 45^\circ$
+
+ $\Box \blacksquare \diamond \Diamond \lozenge \blacklozenge \bigstar$
+
+ $\bigcirc \triangle \bigtriangleup \bigtriangledown$
+
+ $\vartriangle \triangledown \triangleleft \triangleright$
+
+ $\blacktriangle \blacktriangledown \blacktriangleleft \blacktriangleright$
+
+#### 逻辑符号
+ $\forall \exists \nexists$
+
+ $\therefore \because \And$
+
+ $\lor \vee \curlyvee \bigvee$
+
+ $\land \wedge \curlywedge \bigwedge$
+
+ $\bar{q} \bar{abc} \overline{q} \overline{abc}$
+
+ $\lnot \neg \bot \top$
+
+ $\vdash \dashv \vDash \Vdash \models$
+
+ $\Vvdash \nvdash \nVdash \nvDash \nVDash$
+
+ $\ulcorner \urcorner \llcorner \lrcorner$
+
+#### 箭头
+ $\Rrightarrow \Lleftarrow$
+
+ $\Rightarrow \nRightarrow \Longrightarrow \implies$
+
+ $\Leftarrow \nLeftarrow \Longleftarrow$
+
+ $\Leftrightarrow \nLeftrightarrow \Longleftrightarrow \iff$
+
+ $\Uparrow \Downarrow \Updownarrow$
+
+ $\leftarrow \rightarrow \nleftarrow \nrightarrow \leftrightarrow \nleftrightarrow \longleftarrow \longrightarrow \longleftrightarrow$
+ $\gets \to $
+
+ $\uparrow \downarrow \updownarrow \nearrow \searrow \nwarrow \swarrow$
+
+ $\mapsto \longmapsto$
+
+ $\rightharpoonup \rightharpoondown \leftharpoonup \leftharpoondown \upharpoonleft \upharpoonright \downharpoonleft \downharpoonright \leftrightharpoons \rightleftharpoons$
+
+ $\curvearrowleft \circlearrowleft \Lsh \upuparrows \rightrightarrows \rightleftarrows \rightarrowtail \looparrowright$
+
+ $\curvearrowright \circlearrowright \Rsh \downdownarrows \leftleftarrows \leftrightarrows \leftarrowtail \looparrowleft \looparrowright$
+
+ $\hookrightarrow \hookleftarrow \multimap \leftrightsquigarrow \rightsquigarrow \twoheadrightarrow \twoheadleftarrow$
+
+ $\xleftarrow{left} \xrightarrow{right} \xLeftarrow{Left} \xRightarrow{Right} \xleftrightarrow{left\& right} \xLeftrightarrow{Left\& Right}$
+
+#### 特殊符号
+ $\amalg \% \dagger \ddagger \ldots \cdots$
+
+ $\smile \frown \wr$
+
+ $\diamondsuit \heartsuit \clubsuit \spadesuit \Game \flat \natural \sharp$
+
+ $\diagup \diagdown \centerdot \ltimes \rtimes \leftthreetimes \rightthreetimes$
+
+ $\eqcirc \circeq \triangleq \bumpeq \Bumpeq \doteqdot \risingdotseq \fallingdotseq$
+
+ $\intercal \barwedge \veebar \doublebarwedge \between \pitchfork$
+
+ $\vartriangleleft \ntriangleleft \vartriangleright \ntriangleright$
+
+ $\trianglelefteq \ntrianglelefteq \trianglerighteq \ntrianglerighteq$
+
+ $\LaTeX$
+
+
+#### 上标、下标及积分等
+$a^2$
+$a_2$
+$a^{2+2} a_{i,j}$
+$a^2_2$
+${}^2_1\!X^3_4$
+
+#### 导数
+$ (HTML)x' (PNG)x^\prime (错误)x\prime$
+
+#### 导数点
+$\dot{x} \ddot{x}$
+
+#### 向量
+$\vec{x} \overleftarrow{AB} \overrightarrow{AB} \widehat{AB}$
+
+#### 上弧
+$\overset{\frown}{AB}$
+
+#### 上划线
+$\overline{ABC}$
+
+#### 下划线
+$\underline{ABC}$
+
+#### 上括号
+$\overbrace{1+2+\cdots+100}$  
+$\begin{matrix}5050\\\overbrace{1+2+\cdots+100}\end{matrix}$  
+
+#### 下括号
+$\underbrace{1+2+\cdots+100}$  
+$\begin{matrix}\underbrace{1+2+\cdots+100}\\5050\end{matrix}$
+
+#### 求和
+$\sum_{i=1}^na_i \sum\limits_{i=1}^na_i$
+
+#### 求积
+$\prod_{i=1}^na_i \prod\limits_{i=1}^na_i$
+
+#### 上积
+$\coprod_{i=1}^na_i \coprod\limits_{i=1}^na_i$
+
+#### 极限
+$\lim_{n\to\infty}x_n \lim\limits_{n\to\infty}x_n$
+
+
+#### 积分
+$\int_{-N}^{N}e^x\,dx$
+
+#### 双重积分
+$\iint_M^Ndx\,dy$
+
+#### 三重积分
+$\iiint_M^Ndx\,dy\,dz$
+
+
+#### 闭合的曲线、曲面积分
+$\oint_Cx^3\,dx+4y^2\,dy$
+
+#### 交集
+$\bigcap_1^np \bigcap\limits_1^np$
+
+#### 并集
+$\bigcup_1^np \bigcup\limits_1^np$
+
+#### 分数
+$\frac{1}{2}=0.5$
+
+#### 小型分数
+$\tfrac{1}{2}=0.5$
+
+#### 大型分数
+$\dfrac{1}{2}=0.5 \dfrac{1}{x+\dfrac{3}{y+\dfrac{1}{5}}}$
+
+#### 二项式系数
+$\dbinom{n}{m}=\dbinom{n}{n-m}=C_n^m=C_n^{n-m}$
+
+$\tbinom{n}{m}=\tbinom{n}{n-m}=C_n^m=C_n^{n-m}$
+
+$\binom{n}{m}=\binom{n}{n-m}=C_n^m=C_n^{n-m}$
+
+
+#### 矩阵
+$\begin{matrix}a&b\\c&d\end{matrix}$
+
+$\begin{vmatrix}a&b\\c&d\end{vmatrix}$
+
+$\begin{Vmatrix}a&b\\c&d\end{Vmatrix}$
+
+$\begin{bmatrix}a&\cdots&b\\\vdots&\ddots&\vdots\\c&\cdots&d\end{bmatrix} $
+
+$\begin{Bmatrix}a&c\\b&d\end{Bmatrix}$
+
+$\begin{pmatrix}a&c\\b&d\end{pmatrix}$
+
+#### 矩阵嵌套
+ $\begin{vmatrix} \begin{Bmatrix}A & \\ c & d \end{Bmatrix} & x\\ \dfrac{1}{2} & \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \end{vmatrix}$ 
+
+#### 条件定义(如分段函数)
+$f(x)=\begin{cases}x-1&x\leqslant3\\x^2+3x-1&x>3\end{cases}$
+
+#### 方程组
+$\begin{cases}2x+9y-5z=10\\4x+20y+z=24\\x-\dfrac{1}{2}y+3z=8\end{cases}$
+
+#### 多行等式
+$\begin{aligned}f(x) & = (x + 1)^2 \\ & = x^2 + 2x + 1\end{aligned}$  
+$\begin{aligned}a_1 & = 1 \\ a_2 & = 2 \\ & \dots \\ a_n & = n\end{aligned}$
+
+#### 数组 表格
+$\begin{array}{|c|c||c|}x&y&z\\8&2&4\\2&3&9\\10&\dfrac{3}{4}&\sqrt{3}\\a&b&c\end{array}$
+
+#### 希腊字
+$\Alpha\Beta\Gamma\Delta EZH\Theta$
+$\Iota\Kappa\Lambda MN\Xi O\Pi$
+$\Rho\Sigma T\Upsilon\Phi X\Psi\Omega$
+$\alpha\beta\gamma\delta\epsilon\zeta\eta\theta$
+$\iota\kappa\lambda\mu\nu\xi\omicron\pi$
+$\rho\sigma\tau\upsilon\phi\chi\psi\omega$
+$\varepsilon\digamma\varkappa\varpi$
+$\varrho\varsigma\vartheta\varphi$
+
+#### 希伯来符号
+$\aleph\beth\gimel\daleth$
+
+#### 黑板粗体
+$\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+#### 粗体
+$\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathbf{abcdefghijklmnopqrstuvwxyz}$
+$\mathbf{0123456789}$
+
+#### 斜体(英文字母和小写希腊字母默认)
+$\mathit{\Alpha\Beta\Gamma\Delta EZH\Theta}$  
+$\mathit{\Iota\Kappa\Lambda MN\Xi O\Pi}$  
+$\mathit{\Rho\Sigma T\Upsilon\Phi X\Psi\Omega}$  
+$\mathit{0123456789}$  
+
+#### 罗马体
+$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathrm{abcdefghijklmnopqrstuvwxyz}$  
+$\mathrm{0123456789}$
+
+#### 打字机字体
+$\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathtt{abcdefghijklmnopqrstuvwxyz}$  
+$\mathtt{\Alpha\Beta\Gamma\Delta EZH\Theta}$  
+$\mathtt{\Iota\Kappa\Lambda MN\Xi O\Pi}$  
+$\mathtt{\Rho\Sigma T\Upsilon\Phi X\Psi\Omega}$  
+$\mathtt{0123456789}$  
+
+#### 无衬线体
+$\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathsf{abcdefghijklmnopqrstuvwxyz}$  
+$\mathsf{\Alpha\Beta\Gamma\Delta EZH\Theta}$  
+$\mathsf{\Iota\Kappa\Lambda MN\Xi O\Pi}$  
+$\mathsf{\Rho\Sigma T\Upsilon\Phi X\Psi\Omega}$  
+$\mathsf{0123456789}$
+
+#### 手写体 花体
+$\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathcal{0123456789}$
+
+#### FrakturFraktur 体
+$\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\mathfrak{abcdefghijklmnopqrstuvwxyz}$  
+$\mathfrak{0123456789}$
+
+#### 小型非斜体字
+$\scriptstyle\text{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  
+$\scriptstyle\text{abcdefghijklmnopqrstuvwxyz}$  
+$\scriptstyle\text{0123456789}$
+
+
+#### 斜体字符
+ $x y z$
+
+#### 非斜体字符
+$\text{x y z} \text{中文}$
+
+#### 混合斜体与非斜体
+$\text{if }n\text{ is even}$
+
+#### 括号
+$(\dfrac{1}{2}) (\dfrac{1}{x+\dfrac{2}{3}})$
+
+$\left(\dfrac{1}{2}\right) \left(\dfrac{1}{x+\dfrac{2}{3}}\right)$
+
+#### 圆括号  小括号
+$\left(\dfrac{1}{2}\right)$
+
+#### 方括号 中括号
+$\left[\dfrac{1}{2}\right]$
+
+#### 花括号 大括号
+$\left\{\dfrac{1}{2}\right\}$
+
+#### 角括号
+$\left\langle\dfrac{1}{2}\right\rangle$
+
+#### 单竖线  绝对值
+$\left|\dfrac{1}{2}\right|$
+
+#### 双竖线
+$\left\|\dfrac{1}{2}\right\|$
+
+#### 向下取整
+$\left\lfloor\dfrac{1}{2}\right\rfloor$
+
+#### 向上取整
+$\left\lceil\dfrac{1}{2}\right\rceil$
+
+#### 斜线
+$\left/\dfrac{1}{2}\right/$
+
+#### 反斜线
+$\left\backslash\dfrac{1}{2}\right\backslash$
+
+#### 上下箭头
+$\left\uparrow\dfrac{1}{2}\right\uparrow$
+
+$\quad\left\uparrow\dfrac{1}{2}\right\uparrow$
+
+$\left\Downarrow\dfrac{1}{2}\right\Downarrow$
+
+$\left\updownarrow\dfrac{1}{2}\right\updownarrow$
+
+$\left<\dfrac{1}{2}\right/$
+
+$\left(\dfrac{1}{2},1\right]$
+
+$\left(\dfrac{1}{2}\right.$
+
+$\left.\dfrac{1}{2}\right]$
+
+$\Bigg(\bigg[\Big\{\big<x\big>\Big\}\bigg]\Bigg)$
+
+#### 紧贴
+$x\!y$
+
+#### 小空格
+$x\,y$
+
+#### 中等空格
+$x\;y$
+
+#### 大空格
+$x\ y$
+
+#### quad 空格
+ $x\quad y$
+
+#### 两个 quad 空格
+$x\qquad y$
+
+#### 颜色
+
+字体颜色：{`\color{色调}`表达式} \\
+背景颜色：{`\color{文字色调}` `\colorbox{背景色调}{表达式(可以打中文)}`}
+
+$x=\dfrac{-b\pm\sqrt{\color{Red}b^2-4ac}}{\color{Blue}2a}$
+
+$\color{Blue}\colorbox{Yellow}{LaTeX公式大全}$
+
+#### 把数学公式框起来
+$$\boxed{\sum\limits_{i = 1}^{n} i = \dfrac{n(n - 1)}{2}}$$
+
+## 5. Mermaid 语法
 
 Mermaid lets you create diagrams and visualizations using text and code.
 
@@ -803,11 +1339,11 @@ flowchart LR
  
 ---
   
-### 2.5 Reveal.js+markdown+vscode 制作PPT
+## 6. Reveal.js+markdown+vscode 制作PPT
 
 ---
 
-#### 前言
+### 前言
 
 reveal-md 是使用 Markdown 和 HTML 写逼格满满的 PPT 的开源项目
 
@@ -815,7 +1351,7 @@ reveal-md 是使用 Markdown 和 HTML 写逼格满满的 PPT 的开源项目
 
 ---
 
-#### 特点
+### 特点
 
 Reveal.js 可以使用 markdown 语言直接写静态的文本，并可以加入各种 html 语言支持的交互动画,
 reveal.js 是一个开放源代码 HTML 表示框架。它使使用 Web 浏览器的任何人都可以免费创建功能齐全且美观的演示文稿
@@ -1091,11 +1627,11 @@ Reveal.initialize({
 
 ---
 
-### 2.6 MPE+reveal.js  做PPT
+## 7. MPE+reveal.js  做PPT
 
 Markdown Preview Enhanced（MPE） is a SUPER POWERFUL markdown extension for Atom and Visual Studio Code. The goal of this project is to bring you a wonderful markdown writing experience.
 
-#### Features
+### Features
 
 - Automatic scroll sync
 - Import external files
@@ -1120,11 +1656,11 @@ Markdown Preview Enhanced（MPE） is a SUPER POWERFUL markdown extension for At
 - And many more...
 
 
- #### presentation
+ ### presentation
 
  Markdown Preview Enhanced uses reveal.js to render beautiful presentations.
 
-##### presentation themes  
+#### presentation themes  
 - "beige.css"
 - "black.css"
 - "blood.css"
@@ -1138,7 +1674,7 @@ Markdown Preview Enhanced（MPE） is a SUPER POWERFUL markdown extension for At
 - "white.css"
 - "none.css"
 
-##### Presentation Front-Matter
+#### Presentation Front-Matter
 
 You can configure your presentation by adding front-matter to your markdown file.
 
@@ -1156,7 +1692,7 @@ presentation:
 ---
 ```
 
-##### New slide 
+#### New slide 
 ```
 <!-- slide -->
 
@@ -1167,7 +1703,7 @@ Your slides goes here...
 Your slides goes here...
 ```
 
-##### New in-line-number
+#### New in-line-number
 
 ```javascript {.line-numbers}
 function add(x, y) {
@@ -1184,7 +1720,7 @@ function add(x, y) {
 ```javascript {highlight=[1-10,15,20-22]}
 ```
 
-##### ExtendedTable
+#### ExtendedTable
 
 Need to enable enableExtendedTableSyntax in extension settings to get it work.
 
@@ -1195,7 +1731,7 @@ Need to enable enableExtendedTableSyntax in extension settings to get it work.
 | 	 ^   | Text        |
 
 
-##### Emoji & Font-Awesome
+#### Emoji & Font-Awesome
 
 :smile:
 :fa-car:
@@ -1219,8 +1755,546 @@ puml {align="center"}
 
 mermaid {filename="my_mermaid.png"}
 
-##### TOC {ignore=true}
+#### TOC {ignore=true}
 Markdown Preview Enhanced can create TOC for your markdown file. You can press cmd-shift-p then choose Markdown Preview Enhanced: Create Toc to create TOC. Multiple TOCs can be created. To exclude a heading from the TOC, append {ignore=true} after your heading.
 
 
+
+## 8. VSCode+Latex
+
+###  LaTeX Workshop插件与设置
+
+```
+"latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+],
+    
+"latex-workshop.latex.recipes": [
+
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+],
+"latex-workshop.latex.clean.enabled": true,
+"latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.gz"
+],
+"latex-workshop.view.pdf.viewer": "tab",
+"latex-workshop.latex.autoClean.run": "onBuilt",
+"latex-workshop.hover.citation.enabled": false,
+"ltex.additionalRules.languageModel": "zh-cn",
+
+```
+
+###  中文环境与字体
+
+```
+\RequirePackage{xeCJK} %导入中文包
+\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\RequirePackage{amsmath}
+\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
+
+\setmainfont{Times New Roman}%  缺省英文字体.
+\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
+\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
+\setCJKmonofont{STFangsong}% 中文等宽字体
+\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
+\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+
+```
+
+###  LaTex文件类型
+\documentclass[该文件类的属性参数]{文件类}
+\documentclass[options]{article}
+
+#### 三大基础类
+
+article，book和report
+
+#### 构建文档类
+letter,ctexart, ctexbook, ctexrep, proc (学术论文模板), moderncv (个人简历), slides, beamer
+
+#### options 可选参数
+10pt：指定文本的字号，默认为10pt，可选为10pt,11pt,12pt
+a4paper: 指定纸张大小
+titlepage：指定标题，article默认为notitlepage，report和book默认为titlepage
+landscape： 指定排版方向为横向，默认为纵向排版
+onecolumn： 指定单栏排版，默认为onecolumn，可选为onecolumn，twocolumn
+openright：指定新的一章从奇数页开始，也就是右侧，可选为openright ，openany
+fleqn: 指定行间公式为左对齐，默认为居中对齐
+leqno: 指定公式编号在左边，默认在右边
+draft: 指定文稿模式(draft(草稿）、final(终稿))，草稿模式，断行不规则会在行尾添加黑色方块，默认为终稿模式
+openbib: 指定使用开放式书目格式
+oneside: 指定论文的单双面模式，默认是单面印刷，可选为oneside,twoside
+
+### 文档基本结构命令
+
+  \pagestyle{}
+  \pagenumbering{}
+  \title
+  \author
+  \date
+  \maketitle
+  \chapter
+  \section
+  \subsection
+  \subsubsection
+  \paragraph
+  \subparagraph
+  \label
+  \lstinline 
+  \ref
+  \cite
+  \footnote
+  \marginpar 
+  \begin{环境}....\end{环境}
+
+  
+### 常用\begin{} \end{} 环境：
+abstract: 摘要
+array: 公式组
+align: 公式对齐
+aligned：不进行数学环境，子公式不编号
+algorithm: 算法 
+assumption: 假设
+axiom: 公理
+cases: 条件公式
+center: 居中
+corollary: 推论
+condition: 条件
+conclusion: 结论
+description: 说明
+definition: 定义
+enumerate: 枚举
+eqnarray: 方程组
+equation: 方程
+example: 例子
+figure: 图
+flushleft: 左对齐
+flushright: 右对齐
+itemize: 条目
+lemma: 引理
+list: 列表
+listing：代码环境
+lrbox: 盒子
+matrix:矩阵
+bmatrix: 矩阵
+Bmatrix： 矩阵
+pmatrix: 矩阵
+vmatrix:矩阵
+Vmatrix:矩阵
+minipage: 子页
+minted：代码环境  
+proposition: 提议
+property: 性质
+picture: 图片
+proof: 证明
+quotation: 援引环境
+quote: 援引环境
+remark: 评述
+split: 分开
+tabbing: 列表
+table: 表格
+tabular: 表格数据
+thebibliography: 文献
+theorem: 定理
+titlepage: 扉页
+verbatim: 逐字抄录
+verse: 诗歌援引环境
+wrapfigure：图文混排
+
+### 自定义命令
+
+\newcommand{<新命令>}[<参数数量>][<默认值>]{<定义内容>}.
+
+\newcommand{\PRC}{People's Republic of \emph{China}}
+\newcommand{\myname}{Zhonghao Sun\xspace}
+
+\newcommand{\myfont}[1]{\setCJKfamilyfont{font}{#1}\CJKfamily{font}}
+调用方式：
+{\myfont{华文行楷} 华文行楷}
+{\myfont{方正姚体} 方正姚体}
+
+\newcommand{\myfont}[2][华文行楷]
+{\setCJKfamilyfont{CJKfont}{#1}\newfontfamily\nCJKfont{#2}\CJKfamily{CJKfont}\nCJKfont}
+
+{\myfont[方正姚体]{Lucida Handwriting} Hello World. 这是我的字体}
+
+
+
+
+### 重定义已有命令
+
+\renewcommand{<已有命令>}[<参数数量>][<默认值>]{<定义内容>}
+
+\renewcommand{\abstractname}{简介} %重新定义的\abstractname在abstract环境中自动调用
+
+
+### 自定义环境
+
+\newenvironment{<新环境>}[<参数数量>][<默认值>]{<开始定义>}{<结束定义>}
+
+\newenvironment{Theorem}{\par\noindent\textbf{定理}\quad}{\par}
+
+
+\newenvironment{Theorem}[1][]{\par\noindent\textbf{定理}(#1)\quad}{\par}
+
+调用方式：
+\begin{Theorem}[可微性定理]
+        设可微函数……
+\end{Theorem}
+
+### 重定义已有环境
+\renewenvrionment{<已有环境>}[<参数数量>][<默认值>]{<开始定义>}{<结束定义>}
+
+
+### cls模板文件
+
+模板文件文件尽量使用官方提供的
+
+### sty文件
+
+把自己需要复用的格式代码放进sty文件里面
+\usepackage{sty文件的文件名，不包含后缀}
+\RequirePackage{mynewbeamer}
+
+
+
+###  beamer设置
+
+#### 文件头
+
+```
+\documentclass[12pt,hyperref,UTF8,aspectratio=169]{beamer} 
+\RequirePackage{mynewbeamer}
+
+\hypersetup{pdfpagemode=FullScreen}
+
+%-------------------正文-------------------------%
+%                                               %
+%                                               %
+\begin{document}                                %
+%                                               %
+%                                               %
+%-----------------------------------------------%
+
+%题目，作者，学校，日期                
+\author{\myfont 李小飞}
+\title{\textbf{\Huge 基础研究星火计划结题报告}}
+\subtitle{Final Report on Fundamental Research Spark Program of UESTC}
+\institute[电子科技大学]{{\large 光电科学与工程学院}}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \frame[plain]{\titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{主要内容}
+    \begin{enumerate}
+    \item 项目基本情况 
+    \item 项目完成情况
+    \item 展望
+    \end{enumerate}    
+\end{frame}
+
+\end{document}
+
+```
+
+#### mynewbeamer.sty 文件的内容
+
+```
+%% This is  mynewbeamer.sty'.
+%% Version: 2021/12/1 
+%% Auther: xfli
+%% !请勿轻易改动此文档中代码.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ProvidesPackage{你自己编写的包名}
+%\RequirePackage[支持的参数]{你需要引用的包名}
+%\newcommand{自定义的命令}
+%\newenvironment{自定义的环境}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mynewbeamer}[2021/12/01]
+%-------------------------------------------------------------
+
+%\usefonttheme[onlymath]{serif}
+\usefonttheme{professionalfonts}
+\RequirePackage{tikz}
+\RequirePackage{cutwin}  % 图文混排
+%\usetikzlibrary {3d} 
+%\usetikzlibrary {datavisualization.formats.functions}
+
+\RequirePackage{tcolorbox}% 绘制彩色框.
+\RequirePackage{multicol}%  one to muticolumn
+\RequirePackage{ulem}% ulem: under line for emphasis.
+\RequirePackage{tabularx}%  智能表格环境.
+\RequirePackage{xhfill}% xhfill: 定制化线填充.
+\RequirePackage{listings}%  for source code printing 
+
+\RequirePackage{color}  % color content
+\RequirePackage{xcolor}% \color{red!50!green!20!blue}
+\RequirePackage{graphicx}
+\RequirePackage{graphics}
+\RequirePackage{subfigure}
+
+\RequirePackage{comment}% comment: 提供注释环境
+\RequirePackage{algorithm,algorithmic}
+\RequirePackage{amsthm}
+\RequirePackage{float}         
+\usepackage[dvipdfmx]{media9} %放电影
+\usepackage{wrapfig}          %图文混排
+
+
+%\RequirePackage{varioref}% varioref: 交叉引用.
+%\RequirePackage{cleveref}% cleveref: 交叉引用.
+%\RequirePackage[backend=biber,autolang=hyphen,style=gb7714-2015,gbalign=gb7714-2015,%style=gb7714-2015ms
+%gbstyle=false,url=false,doi=false,isbn=false,sorting=none]{biblatex}% biblatex: 参考文献.
+
+\RequirePackage{xeCJK} %导入中文包
+\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\RequirePackage{amsmath}
+\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
+
+\setmainfont{Times New Roman}%  缺省英文字体.
+\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
+\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
+\setCJKmonofont{STFangsong}% 中文等宽字体
+\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
+\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+
+%----------------------
+%
+% Presentation 环境
+%
+%---------------------
+\mode<presentation>
+%设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
+\usetheme{Antibes} %主题
+%AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
+%Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
+%Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
+%------------------
+\useoutertheme{smoothbars} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
+\useinnertheme{rounded} % default ，circles ，rectangle， rounded
+\usecolortheme{rose} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+
+
+%\setbeamertemplate{navigation symbols}{}%empty
+
+% Background
+\pgfdeclareimage[height=6.2ex,width=0.14\paperwidth]{xx}{images/uestcxx.png}
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{images/uestclogo.png}
+\usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{myimage}};}
+
+% 半透明化尚未出现的内容.
+%\setbeamercovered{transparent}
+% 幻灯标题字体设置.
+\setbeamerfont{frametitle}{size=\normalsize,series=\bfseries}
+% 封页字体设置.
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\scriptsize}
+
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamerfont{structure}{size=\normalsize,series=\bfseries}
+% 脚注字号设置.
+\setbeamerfont{footnote}{size=\scriptsize}
+% 页眉页脚字体设置
+\setbeamerfont{section in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{subsection in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{author in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{institute in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{title in head/foot}{size=\scriptsize}
+\setbeamerfont{framenumber in head/foot}{size=\tiny,series=\bfseries}
+
+% listing 颜色设置
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\bfseries\color{deepblue},
+	emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	numbers=left,
+	numberstyle=\small\color{halfgray},
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	frame=shadowbox,
+}
+
+% 页眉页脚颜色设置.
+\definecolor{uestcxxbg}{RGB}{225,150,63}
+\definecolor{uestcE}{RGB}{255,165,0}
+% 调色板一设置.
+\setbeamercolor{palette primary}{bg=blue,fg=white}
+% 调色板二设置.
+\setbeamercolor{palette secondary}{bg=uestcxxbg,fg=white!80!black}
+% 调色板三设置.
+\setbeamercolor{palette tertiary}{bg=blue!10!green,fg=white}
+% 调色板四设置.
+\setbeamercolor{palette quaternary}{bg=uestcxxbg,fg=white!80!red}
+
+\setbeamercolor{section in head/foot}{parent=palette primary}
+\setbeamercolor{subsection in head/foot}{parent=tertiary primary}
+\setbeamercolor{title in head/foot}{parent=structure}
+\setbeamercolor{author in head/foot}{parent=palette secondary}
+\setbeamercolor{institute in head/foot}{parent=palette primary}
+\setbeamercolor{date in head/foot}{parent=palette primary}
+\setbeamercolor{framenumber in head/foot}{parent=palette quaternary}
+\setbeamercolor{frametitle}{bg=blue,fg=uestcE}
+
+% itemize 环境序号设置.
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+
+ % To Do List
+ %\newcommand{\wontfix} {\item[\rlap{\raisebox{2.0ex}{\hspace{0.4ex}  \small \color{red} $\times$}} \color{blue}$\square$]}%
+ %\newcommand{\done} {\item[\rlap{\raisebox{2.0ex}{\hspace{0.4ex} \small \color{red} $\surd$}} \color{blue} $\square$]}%
+ \newcommand{\done} {\item[\color{blue} \faCheckSquareO ]}
+ \newcommand{\todo} {\item[\color{blue} \faSquareO ]}
+ \newcommand{\wontfix} {\item[\color{red} \faTimesCircleO ]}
+ 
+ 
+
+% 参考文献目录字号设置.
+%\renewcommand*{\bibfont}{\small}
+
+% ----------------
+% Headline Layout
+% 格式: SECTION (ALL) | NAME OF SCU.
+% ----------------
+\defbeamertemplate{headline}{my headline theme}%
+{%
+	\leavevmode% 离开垂直模式
+	\hbox{%
+        \begin{beamercolorbox}[wd=.08\paperwidth,ht=5.75ex,dp=.25ex,center]{author in head/foot}
+            \hspace*{0.001em}%
+            \usebeamerfont{author in head/foot} \insertauthor 
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.06\paperwidth,ht=5.75ex,dp=.25ex,center]{framenumber in head/foot} 
+            \hspace*{0.001em}%
+            \usebeamerfont{framenumber in head/foot} \insertframenumber\,/\,\inserttotalframenumber
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.72\paperwidth,ht=5.75ex,dp=.25ex]{section in head/foot}%
+			\hspace*{0.01em}%
+			\usebeamerfont{section in head/foot}\insertsectionnavigationhorizontal{.6\textwidth}{}{}%
+			\hspace*{1.175em} \vskip.02ex%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.14\paperwidth,ht=5.75ex,dp=.25ex,center]{section in head/foot}%
+			\pgfuseimage{xx}%\hspace*{2.6em}%
+		\end{beamercolorbox}%
+	}%
+}
+\setbeamertemplate{headline}[my headline theme]
+%-----------
+
+\setbeamertemplate{frametitle}{%
+	\vskip-0.002\textheight%
+	\leavevmode%
+    \hspace*{-.08\paperwidth}
+	\hbox{%
+		\begin{beamercolorbox}[wd=0.29\paperwidth,ht=2.75ex,dp=0.25ex,center]{frametitle}%
+			\usebeamerfont{frametitle}\insertframetitle \vskip.025ex%
+		\end{beamercolorbox}%
+	}
+}
+
+% -----------------------------------------------------
+%
+
+
+\makeatother
+
+\mode
+<all>
+
+```
 
