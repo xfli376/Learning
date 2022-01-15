@@ -1,0 +1,148 @@
+%% This is  myletter.sty'.
+%% Version: 2022/01/10 
+%% Auther: xfli
+%% !请勿轻易改动此文档中代码.
+%%%% ----------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myletter}[2022/01/10]
+%%%% -------------------------------------------------------------
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{gfsdidot} % Use the GFS Didot font: http://www.tug.dk/FontCatalogue/gfsdidot/
+\usepackage{microtype} % Improves typography
+
+\pagestyle{empty} % Suppress headers and footers
+
+\setlength\parindent{1cm} % Paragraph indentation
+
+% Create a new command for the horizontal rule in the document which allows thickness specification
+\makeatletter
+\newcommand{\vhrulefill}[1]{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions
+
+\geometry{
+	top=1cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\logo}[1]{\renewcommand{\logo}{#1}}
+\newcommand{\Who}[1]{\renewcommand{\Who}{#1}}
+\newcommand{\Title}[1]{\renewcommand{\Title}{#1}}
+\newcommand{\headerlineone}[1]{\renewcommand{\headerlineone}{#1}}
+\newcommand{\headerlinetwo}[1]{\renewcommand{\headerlinetwo}{#1}}
+\newcommand{\authordetails}[1]{\renewcommand{\authordetails}{#1}}
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR DETAILS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\authordetailsblock}{
+	\hspace{\fill} % Move the author details to the far right
+	\parbox[t]{0.5\textwidth}{ % Box holding the author details; width value specifies where it starts and ends, increase to move details left
+		\normalsize {Dr. \Who} \\ [0.002\textheight]% Author name
+		\footnotesize % Use a smaller font size for the details
+		\textit{\authordetails} % The author details text, all italicised
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR INFORMATION
+%----------------------------------------------------------------------------------------
+
+\Who{Xiao-Fei LI} % Your name
+
+\Title{, professor} % Your title, leave blank for no title
+
+\authordetails{
+	School of optoelectronic science \\and engineering of UESTC,\\ % Your department/institution
+	4th scientific research build, \\qingshuihe campus,\\ % Your address
+	Chengdu China 611731.\\ % Your city, zip code, country, etc
+	Email: xf.li@uestc.edu.cn\\ % Your email address
+	%Phone: (000) 111-1111\\ % Your phone number
+	%URL: LaTeXTemplates.com % Your URL
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADER CONTENTS
+%----------------------------------------------------------------------------------------
+
+\logo{uestclogo-cn.jpeg} % Logo filename, your logo should have square dimensions (i.e. roughly the same width and height), if it does not, you will need to adjust spacing within the HEADER STRUCTURE block in structure.tex (read the comments carefully!)
+
+\headerlineone{University of Electronic Science } % Top header line, leave blank if you only want the bottom line
+
+\headerlinetwo{and Technology of China} % Bottom header line
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	HEADER STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\address{
+	\includegraphics[width=1in]{\logo} % Include the logo of author institution
+	\hspace{0.82\textwidth} % Position of the institution logo, increase to move left, decrease to move right
+	\vskip -0.1\textheight~\\ % Position of the large header text in relation to the institution logo, increase to move down, decrease to move up
+	\Large\hspace{0.2\textwidth}\headerlineone\hfill ~\\[0.006\textheight] % First line of institution name, adjust hspace if your logo is wide
+	\hspace{0.2\textwidth}\headerlinetwo\hfill \normalsize ~\\[-0.008\textheight] % Second line of institution name, adjust hspace if your logo is wide
+	%\makebox[0ex][r]{\textbf{\Who\Title}}\hspace{0.01\textwidth} % Print author name and title with a little whitespace to the right
+	%~\\[-0.01\textheight] % Reduce the whitespace above the horizontal rule
+	\hspace{0.2\textwidth}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
+	\authordetailsblock % Include the letter author's details on the right side of the page under the horizontal rule
+	\hspace{-0.25\textwidth} % Horizontal position of the author details block, increase to move left, decrease to move right
+	\vspace{-0.1\textheight} % Move the date and letter content up for a more compact look
+}
+
+%----------------------------------------------------------------------------------------
+%	COMPOSE THE ENTIRE HEADER
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\opening}[1]{
+	{\centering\fromaddress\vspace{0.05\textheight} \\ % Print the header and from address here, add whitespace to move date down
+	\hspace*{\longindentation}\hspace*{\fill}\par} % Print today's date, remove \today to not display it
+	{\raggedright \toname \\ \toaddress \par} % Print the to name and address
+	\vspace{1cm} % White space after the to address
+	\noindent #1 % Print the opening line
+}
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE STRUCTURE
+
+%\signature{
+%	\vspace{2.5mm} 
+%	\includegraphics[width=1in]{s3.jpg} % Include the logo of author institution
+%	\hspace{0.82\textwidth} % Position of the institution logo, increase to move left, decrease to move right
+%	\vskip -0.1\textheight~\\ % Position of the large header text in relation to the institution logo, increase to move down, decrease to move up
+%	\makebox[0ex][r]{\textbf{\Who\Title}}\hspace{0.01\textwidth} % Print author name and title with a little whitespace to the right
+%}%----------------------------------------------------------------------------------------
+
+\renewcommand{\closing}[1]{
+	%\vspace{3.0mm} % Some whitespace after the letter content and before the signature
+	\noindent % Stop paragraph indentation% Move the signature right to the value of 
+	\hspace{0.6\textwidth} % Print author name and title with a little whitespace to the right
+	\parbox{\indentedwidth}{
+		\raggedright
+		#1 % Print the signature text 
+		\signature{
+			\includegraphics[width=2.2in]{s3.jpg} % Include the logo of author institution
+			\textit{\Who\Title}
+			}\\	
+		\vskip 0.6cm % Whitespace between the closing text and author's name for a physical signature
+		\fromsig  \\ \vspace{0.3em} % Prints the value of \signature{}, i.e. author name and title 
+		~~\hspace{0.3em}\today
+	} 
+	
+}

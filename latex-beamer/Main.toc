@@ -1,2 +1,0 @@
-\beamer@sectionintoc {1}{tikz}{3}{0}{1}
-\beamer@sectionintoc {2}{区块环境}{4}{0}{2}
