@@ -11,10 +11,24 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{公式加框}
+  \frametitle{公式加框 boxed}
   \begin{equation}
     \boxed{\rho(\nu, T) d \nu=\frac{8 \pi}{c^{3}} \frac{h \nu^{3}}{e^{h \nu / K T}-1} d \nu}
   \end{equation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{内容加框boxedminipage}
+  \begin{boxedminipage}{0.9\linewidth}
+   % \vspace{-15pt}
+    \[\begin{aligned}
+    & \text{若}X_i\sim N(\mu_i,\sigma_i^2)\, i=1,2,\cdots,\text{且它们相互独立,则其线性组合:}\\
+    & c_0+c_1X_1+c_2X_2+\cdots+c_nX_n\sim N(\mu,\sigma^2)\\
+    & \text{其中}c_1,c_2,\cdots,c_n \text{是不全为0的常数,两个参数为:}\\
+    & \mu=c_0+c_1\mu_1+\cdots+c_n\mu_n,\qquad \sigma^2=c_1^2\sigma_1^2+c_2^2\sigma_2^2+\cdots+c_n^2\sigma_n^2
+    \end{aligned}\]
+    \vspace{2pt}
+    \end{boxedminipage}
 \end{frame}
 
 \begin{frame}{Font feature test}
@@ -73,7 +87,7 @@
 
 \begin{frame}{Math}
   \begin{equation*}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n} \right) ^n
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n} \right)^n
   \end{equation*}
 \end{frame}
 
@@ -174,6 +188,17 @@
 \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{}
+  \tikzboxtitle{Fermat's Last Theorem}
+  \centering
+  \tikzbox[0.5]{
+       Fermat's Last Theorem states that
+       \[ x^n + y^n = z^n\]
+       has no non-zero integer solutions for $x$, $y$ and $z$ when $n > 2$.
+  }
+\end{frame}
 
 \section{区块环境}
 
