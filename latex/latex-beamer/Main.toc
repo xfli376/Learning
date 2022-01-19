@@ -1,3 +1,3 @@
 \beamer@sectionintoc {1}{Regular Feature}{3}{0}{1}
-\beamer@sectionintoc {2}{tikz}{11}{0}{2}
-\beamer@sectionintoc {3}{区块环境}{15}{0}{3}
+\beamer@sectionintoc {2}{tikz}{12}{0}{2}
+\beamer@sectionintoc {3}{区块环境}{16}{0}{3}
