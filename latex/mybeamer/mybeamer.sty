@@ -1,0 +1,461 @@
+%% This is  mybeamer.sty'.
+%% Version: 2021/12/1 
+%% Auther: xfli
+%% !请勿轻易改动此文档中代码.
+%%%% ----------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mybeamer}[2021/12/01]
+%%%% -------------------------------------------------------------
+
+%\usefonttheme[onlymath]{serif}
+\usepackage{lipsum}
+\usefonttheme{professionalfonts}
+\RequirePackage{tikz}
+\usepackage{pgfplots}
+\RequirePackage{cutwin}  % 图文混排
+\usetikzlibrary {3d} 
+\usetikzlibrary {datavisualization.formats.functions}
+\usetikzlibrary{shapes,snakes,shadows}
+
+
+\RequirePackage{tcolorbox}% 绘制彩色框.
+\tcbuselibrary{most}
+\RequirePackage{multicol}%  one to muticolumn
+\RequirePackage{ulem}% ulem: under line for emphasis.
+\RequirePackage{tabularx}%  智能表格环境.
+\RequirePackage{xhfill}% xhfill: 定制化线填充.
+\RequirePackage{listings}%  for source code printing 
+
+\RequirePackage{color}  % color content
+\RequirePackage{xcolor}% \color{red!50!green!20!blue}
+\RequirePackage{graphicx}
+\RequirePackage{graphics}
+\RequirePackage{subfigure}
+\usepackage{boxedminipage}
+
+\RequirePackage{comment}% comment: 提供注释环境cs
+\usepackage[ruled]{algorithm2e} % 算法宏包
+\RequirePackage{amsthm} % 定理环境专用
+\RequirePackage{float}         
+\usepackage[dvipdfmx]{media9} %放电影
+\usepackage{wrapfig}          %图文混排
+\usepackage{booktabs}         %表格线
+
+\RequirePackage{xeCJK} %导入中文包
+\RequirePackage{unicode-math}% unicode-math: opentype 数学字体.
+\RequirePackage{amsmath}
+\RequirePackage{fontawesome}% fontawesome: 提供可缩放矢量图标.
+
+\setmainfont{Times New Roman}%  缺省英文字体.
+\setCJKmainfont[ItalicFont={STKaitiSC-Regular}, BoldFont={STHeitiSC-Light}]{SimSong-Regular}% 衬线字体 缺省中文字体
+\setCJKsansfont[BoldFont={STXihei}]{WeibeiSC-Bold} %sansfont 是无衬线字体，用于标题。
+\setCJKmonofont{KaiTi}% 中文等宽字体
+\setCJKfamilyfont{nicefont}{DFWaWaSC-W5}% 这里先把DFWaWaSC-W5导入CJK家族字体，后面用\CJKfamily{nicefont}调用。
+\newcommand{\myfont}{\CJKfamily{nicefont}}%這一步是使用简化的\myfont
+
+
+
+
+ 
+% 中文化环境 
+\renewcommand\contentsname{目录}
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+\renewcommand\refname{参考文献}
+\renewcommand\indexname{索引}
+\renewcommand\figurename{图}
+\renewcommand\abstractname{摘要}
+\renewcommand\partname{部分}
+\renewcommand\appendixname{附录} 
+\renewcommand\tablename{表}
+\renewcommand\algorithmcfname{\bf 算法}
+\renewcommand\today{\number\year 年\number\month 月\number\day 日}
+\renewcommand\proofname{\bf 证明}
+
+% 颜色设置
+\definecolor{deepblue}{RGB}{0, 0, 128}
+\definecolor{mediumblue}{RGB}{0, 0, 205}
+\definecolor{deepred}{RGB}{139, 0, 0}
+\definecolor{mediumred}{RGB}{205, 0, 0}
+\definecolor{deepgreen}{RGB}{0, 139, 69}
+\definecolor{halfgray}{cmyk}{0.82,0.79,0.57,0.26}
+\definecolor{uestcxxbg}{RGB}{225,150,63}
+\definecolor{uestcE}{RGB}{255,165,0}
+% 锦绣红 CMYK(12,92,95,20).
+\definecolor{JXred}{cmyk}{0.12, 0.92, 0.95, 0.20}
+% 优雅灰 CMYK(47,37,37,20).
+\definecolor{YYgrey}{cmyk}{0.47, 0.37, 0.37, 0.00}
+% 宝石蓝 CMYK(100,60,0,15).
+\definecolor{BSblue}{cmyk}{1.00, 0.60, 0.00, 0.15}
+% 荷叶绿 CMYK(100,0,90,15).
+\definecolor{HYgreen}{cmyk}{1.00, 0.00, 0.90, 0.15}
+% 银杏黄 CMYK(0,40,100,15).
+\definecolor{YXyellow}{RGB}{255, 185, 15}
+%银杏叶绿
+\definecolor{YXYgreen}{RGB}{0, 205, 0}
+% 石榴红 CMYK(3, 97, 100, 0)
+\definecolor{Garnetred}{cmyk}{0.00, 0.40, 1.00, 0.15}
+% ----------------
+%
+%\tcbbtitle{The title}
+%\tcbb[0.68]{The contains}
+%
+%-----------------
+
+\newcommand{\tcbbtitle}[1]{\renewcommand{\tcbbtitle}{#1}}
+\newcommand{\tcbb}[2][0.68]{
+\tikzstyle{mybox} = [draw=mediumblue, fill=YXyellow, text=white, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=mediumblue, text=white, ellipse]
+\noindent
+\begin{tikzpicture}[transform shape, rotate=10, baseline=-3.5cm]
+\node [mybox] (box) {
+   \begin{minipage}[t!]{#1\textwidth}
+	   #2
+   \end{minipage}
+    };
+\node[fancytitle] at (box.north) {\faCoffee \tcbbtitle};
+\end{tikzpicture}
+}
+%--------------------
+
+
+% ----------------
+% Tcolorbox Layout
+% 定义的四个Tcolorbox.
+% ----------------
+\newtcolorbox{tcolorbox1}[2][1]{width=(\linewidth-1pt)/#1,%
+	title={\faFire #2},%
+colframe=uestcE!88!black,colback=red!1!white,fonttitle=\mdseries,}
+\newtcolorbox{tcolorbox2}[2][1]{width=(\linewidth-1pt)/#1, %
+	title={\faPiedPiper #2},%
+colframe=blue!95!black,colback=blue!1!white,fonttitle=\mdseries,}
+\newtcolorbox{tcolorbox3}[1][]{
+  enhanced,
+  frame code={
+    \fill[draw=white,top color=white,bottom color=YXyellow]
+      ([xshift=-20pt]title.north west) --
+      (title.south west) --
+      (title.south east) --
+      ([xshift=20pt]title.north east) -- cycle;
+    \draw[YXyellow,line width=0.6mm,rounded corners]
+      (frame.north west) --
+      (frame.south west) --
+      ([xshift=-20pt]title.north west) --
+      (title.south west) --
+      (title.south east) --
+      ([xshift=20pt]title.north east) --
+      (frame.south east) --
+      (frame.north east);
+  },
+  coltitle=red!70!black,
+  colback=white,
+  attach boxed title to bottom center,
+  boxed title style={empty},
+  fonttitle=\mdseries\sffamily,
+  title=\strut \faDiamond #1,
+}
+
+\newtcolorbox{tcolorbox4}[1][]{
+  enhanced,
+  skin=enhancedlast jigsaw,
+  attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
+  fonttitle=\mdseries\sffamily,
+  colbacktitle=deepgreen,
+  colframe=deepblue,
+  interior style={
+    top color=blue!10,
+    bottom color=red!10
+  },
+  boxed title style={
+    empty,
+    arc=0pt,
+    outer arc=0pt,
+    boxrule=0pt
+  },
+  underlay boxed title={
+    \fill[blue!60!white]
+      (title.north west) --
+      (title.north east) --
+      +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm) --
+      ([xshift=4mm,yshift=0.5mm]frame.north east) --
+      +(0mm,-1mm) --
+      (title.south west) -- cycle;
+    \fill[blue!60!white!30!black]
+      ([yshift=-0.5mm]frame.north west) --
+      +(-0.4,0) --
+      +(0,-0.3) -- cycle;
+    \fill[blue!60!white!30!black]
+      ([yshift=-0.5mm]frame.north east) --
+      +(0,-0.3) --
+      +(0.4,0) -- cycle;
+  },
+  title={\faEnvira #1},
+}
+
+
+%---------------
+
+ % To Do List
+
+\newcommand{\Item} {\item[\color{YXyellow} \scriptsize {\faSquare} ]}
+\newcommand{\done} {\item[\color{deepgreen} \faCheckSquareO ]}
+\newcommand{\IItem} {\item[\color{uestcE} \scriptsize {\faCircle} ]}
+\newcommand{\todo} {\item[\color{deepblue} \faSquareO ]}
+\newcommand{\wontfix} {\item[\color{deepred} \faTimesCircleO ]}
+% ----------------
+
+% 设置四选项命令 \xxxx
+\usepackage{ifthen}
+\newlength{\la}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xxxx}[4]{\\ \vspace{0.3em}%  
+\settowidth{\la}{A.~#1~~~}  
+\settowidth{\lb}{B.~#2~~~}  
+\settowidth{\lc}{C.~#3~~~}  
+\settowidth{\ld}{D.~#4~~~}  % 得到四个选项的宽度
+\ifthenelse{\lengthtest{\la > \lb}}  
+{\setlength{\lmax}{\la}}  
+{\setlength{\lmax}{\lb}}  
+\ifthenelse{\lengthtest{\lmax > \lc}}
+{}  
+{\setlength{\lmax}{\lc}}    
+\ifthenelse{\lengthtest{\lmax > \ld}} 
+{} 
+{\setlength{\lmax}{\ld}}    % 得到最宽的那一个
+\setlength{\lhalf}{0.50\linewidth}  
+\setlength{\lquarter}{0.25\linewidth}  
+\ifthenelse{\lengthtest{\lmax > \lhalf}}  
+{\noindent{}A.~#1 \\ B.~#2 \\ C.~#3 \\ D.~#4 }
+{\ifthenelse{\lengthtest{\lmax > \lquarter}}  
+{\noindent
+\makebox[\lhalf][l]{A.~#1~~~}%    
+\makebox[\lhalf][l]{B.~#2~~~}  \\ %  
+\makebox[\lhalf][l]{C.~#3~~~}%    
+\makebox[\lhalf][l]{D.~#4~~~}}%    
+{\noindent
+\makebox[\lquarter][l]{A.~#1~~~}%      
+\makebox[\lquarter][l]{B.~#2~~~}\\   %  
+\makebox[\lquarter][l]{C.~#3~~~}%      
+\makebox[\lquarter][l]{D.~#4~~~}}}
+\\ \vspace{0.3em}
+}
+
+
+%%------------------------
+%
+% Define Other Commonds
+%
+%------------------------%
+
+
+% Presentation 环境
+%
+%---------------------
+\mode<presentation>
+%设置Beamer主题----- 效果见 https://hartwork.org/beamer-theme-matrix/
+\usetheme{Antibes} %主题
+%AnnArbor， Antibes， Bergen， Berkeley， Berlin， Boadilla， cambridgeUS， Copenhagen，
+%Darmstadt， default，Dresden，Frankfurt，Goettingen，Hannover，Ilmenau，JuanLesPins，Luebeck，
+%Madrid， Malmoe， Marburg， Montpellier，PaloAlto，Pittsburgh，Rochester，Singapore，Szeged，Warsaw
+%------------------
+\useoutertheme{smoothbars} %smoothbars， tree， sidebar， shadow， split， miniframes， infolines， default
+\useinnertheme{rounded} % default ，circles ，rectangle， rounded
+
+\usecolortheme{rose} % beaver,beetle, albatross,default, crane, dolphin, dove, mfly, lily, orchid,mrose, seagull, seahorse, whale, wolverine
+
+
+%\setbeamertemplate{navigation symbols}{}%empty
+
+% Background
+% 校训
+\pgfdeclareimage[height=6.2ex,width=0.14\paperwidth]{xx}{images/uestcxx.png}
+% logo
+
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{springimage}{images/uestclogo-8.png}
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{autumnimage}{images/uestclogo-9.png}
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{normalimage}{images/uestclogo-7.png}
+\usebackgroundtemplate{\tikz\node[opacity=0.15,inner sep=0] {\pgfuseimage{normalimage}};}
+
+\newcommand\Background[1][0.5]{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt,outer sep=0pt,opacity=1.0]
+  at (current page.center)
+  {\includegraphics[width=\paperwidth,height=\paperheight]{images/uestclogo-#1.png}};
+\end{tikzpicture}%
+}
+
+% 幻灯标题字体设置.
+\setbeamerfont{frametitle}{size=\normalsize,series=\mdseries}
+\setbeamerfont{block title}{size=\normalsize,series=\mdseries}
+\setbeamerfont{structure}{size=\normalsize,series=\mdseries}
+% 脚注字号设置.
+\setbeamerfont{footnote}{size=\scriptsize}
+% 页眉页脚字体设置
+\setbeamerfont{section in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{subsection in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{author in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{institute in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{date in head/foot}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{title in head/foot}{size=\scriptsize}
+\setbeamerfont{framenumber in head/foot}{size=\tiny,series=\bfseries}
+
+% listing 
+\lstset{%
+  language=[LaTeX]{TeX},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries\color{deepblue},
+  emphstyle=\ttfamily\color{deepred},    % Custom highlighting s
+  stringstyle=\color{deepgreen},
+  numbers=left,
+  rulesepcolor=\color{red!20!green!20!blue!20},
+  frame=shadowbox,
+  numbers=none,
+  numberstyle=\tiny\ttfamily,
+  stepnumber=2,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=none,
+  framerule=1pt,
+  tabsize=2,
+  rulesep=5em,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  framexleftmargin=0em,
+  framexrightmargin=0em,
+  xleftmargin=0em,
+  xrightmargin=0em,
+  aboveskip=1em,
+  belowskip=1em,
+  morekeywords={usetheme,institute,maketitle,%
+                plain,setbeamercolor,setsansfont,setmonofont},
+}% 
+
+% 调色板一设置.
+\setbeamercolor{palette primary}{bg=blue,fg=white}
+\setbeamercolor{palette secondary}{bg=YXyellow,fg=white}
+\setbeamercolor{palette tertiary}{bg=blue,fg=YXyellow}
+\setbeamercolor{palette quaternary}{bg=uestcxxbg,fg=white!80!red}
+
+\setbeamercolor{section in head/foot}{parent=palette primary}
+\setbeamercolor{subsection in head/foot}{parent=palette primary}
+\setbeamercolor{title in head/foot}{parent=structure}
+\setbeamercolor{author in head/foot}{parent=palette quaternary}
+\setbeamercolor{institute in head/foot}{parent=palette primary}
+\setbeamercolor{date in head/foot}{parent=palette primary}
+\setbeamercolor{framenumber in head/foot}{parent=palette quaternary}
+\setbeamercolor{frametitle}{bg=blue,fg=uestcE}
+
+% itemize 环境序号设置.
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+
+%首页设置
+
+%% 封页字体设置.
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{author}{size=\large,series=\mdseries}
+\setbeamerfont{date}{size=\normalsize,series=\mdseries}
+\setbeamercolor{title}{parent=palette tertiary}
+\setbeamercolor{author}{fg=deepblue}
+\setbeamercolor{institute}{fg=deepblue}
+\setbeamercolor{date}{fg=deepblue}
+
+
+% ----------------
+% Headline Layout
+% ----------------
+\defbeamertemplate{headline}{my headline theme}%
+{%
+	\leavevmode% 离开垂直模式
+	\hbox{%
+        \begin{beamercolorbox}[wd=.08\paperwidth,ht=5.75ex,dp=.25ex,center]{author in head/foot}
+            \hspace*{0.001em}%
+            \usebeamerfont{author in head/foot} \insertauthor 
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.06\paperwidth,ht=5.75ex,dp=.25ex,center]{framenumber in head/foot} 
+            \hspace*{0.001em}%
+            \usebeamerfont{framenumber in head/foot} \insertframenumber\,/\,\inserttotalframenumber
+            \hspace*{1.175em} \vskip 1.1ex%
+        \end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.72\paperwidth,ht=5.75ex,dp=.25ex]{section in head/foot}%
+			\hspace*{0.01em}%
+			\usebeamerfont{section in head/foot}\insertsectionnavigationhorizontal{.6\textwidth}{}{}%
+			\hspace*{1.175em} \vskip.02ex%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.14\paperwidth,ht=5.75ex,dp=.25ex,center]{section in head/foot}%
+			\pgfuseimage{xx} \vskip -0.24ex  %
+		\end{beamercolorbox}%
+	}%
+}
+\setbeamertemplate{headline}[my headline theme]
+
+
+%-------------
+%
+% Frametitle
+%
+%--------------
+
+\setbeamertemplate{frametitle}{%
+	\vskip-0.002\textheight%
+	\leavevmode%
+    \hspace*{-.08\paperwidth}
+	\hbox{%
+		\begin{beamercolorbox}[wd=0.32\paperwidth,ht=2.75ex,dp=0.25ex,center]{frametitle}%
+			\usebeamerfont{frametitle}\faLeaf\insertframetitle \vskip.025ex%
+		\end{beamercolorbox}% 
+	}
+}
+
+% -----------------------------------------------------%
+
+\AtBeginSection[]{
+\begin{frame}
+        \frametitle{Contents}
+        \transfade
+		\begin{multicols}{2}
+			\tableofcontents[%
+				sectionstyle=show/shaded,%
+				subsectionstyle=show/shaded/hide,%
+				subsubsectionstyle=show/shaded/hide]%
+		\end{multicols}
+        \addtocounter{framenumber}{-1} 
+\end{frame}
+}
+
+% subsection 前加目录.
+\AtBeginSubsection[]{%
+\begingroup
+	\begin{frame}
+		\begin{multicols}{2}
+			\tableofcontents[%
+				sectionstyle=show/shaded,%
+				subsectionstyle=show/shaded/hide,%
+				subsubsectionstyle=show/shaded/hide]%
+		\end{multicols}
+        \addtocounter{framenumber}{-1} 
+	\end{frame}
+\endgroup
+}
+% ----------------
+
+
+\makeatother
+
+% graphics path
+\graphicspath{{./figure/}{./figures/}{./image/}{./images/}{./graphics/}{./graphic/}{./pictures/}{./picture/}}
+
+\mode
+<all>
+
+
