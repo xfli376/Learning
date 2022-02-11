@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  11 FEB 2022 21:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  11 FEB 2022 22:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1791,31 +1791,34 @@ File: images/uestclogo-7.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 19.
+(Font)              scaled to size 12.00128pt on input line 24.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.40088pt on input line 19.
+(Font)              scaled to size 8.40088pt on input line 24.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 19.
+(Font)              scaled to size 6.00064pt on input line 24.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 19.
+(Font)              scaled to size 11.99872pt on input line 24.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.3991pt on input line 19.
+(Font)              scaled to size 8.3991pt on input line 24.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+(Font)              scaled to size 5.99936pt on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \vbox (7.38776pt too high) detected at line 24
+ []
+
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
- [3
+[3
 
 ]
-Overfull \vbox (105.94968pt too high) detected at line 25
+Overfull \vbox (105.94968pt too high) detected at line 30
  []
 
 File: images/uestclogo-7.png Graphic file (type bmp)
@@ -1869,7 +1872,7 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 
 
 LaTeX Font Warning: Font shape `TU/FiraMono(0)/m/it' undefined
-(Font)              using `TU/FiraMono(0)/m/n' instead on input line 77.
+(Font)              using `TU/FiraMono(0)/m/n' instead on input line 82.
 
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
@@ -1922,7 +1925,7 @@ File: images/uestclogo-7.png Graphic file (type bmp)
 ]
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/b/n' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 158.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 163.
 
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
@@ -2000,47 +2003,47 @@ File: images/uestclogo-7.png Graphic file (type bmp)
  [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []\TU/FiraSansLight(0)/m/n/12 Some con-
  []
 
 
-Overfull \vbox (2.0887pt too high) detected at line 325
+Overfull \vbox (2.0887pt too high) detected at line 330
  []
 
 File: images/uestclogo-7.png Graphic file (type bmp)
@@ -2082,10 +2085,10 @@ Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58418 strings out of 476493
- 1416789 string characters out of 5817124
- 2613257 words of memory out of 5000000
- 77666 multiletter control sequences out of 15000+600000
+ 58422 strings out of 476493
+ 1416808 string characters out of 5817124
+ 2614393 words of memory out of 5000000
+ 77670 multiletter control sequences out of 15000+600000
  408123 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,149p,1864b,2177s stack positions out of 5000i,500n,10000p,200000b,80000s
