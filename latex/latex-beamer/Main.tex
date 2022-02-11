@@ -1,9 +1,8 @@
-%%!TEX program = xelatex 
 \documentclass[12pt,UTF8,aspectratio=169]{beamer} 
-
 \RequirePackage{mybeamer}
 %%% sudo vim /usr/local/texlive/2021/texmf-dist/tex/xelatex/mybeamer
 %%%% sudo texhash
+
 
 %-------------------正文-------------------------%
 %                                               %
@@ -14,7 +13,7 @@
 %-----------------------------------------------%
 
 %题目，作者，学校，日期                
-\author{\myfont 李小飞}
+\author{李小飞}
 \title{\textbf{\Huge Beamer 实 例}}
 \subtitle{Examples for Beamer slides}
 \institute[电子科技大学]{{\large 光电科学与工程学院}}
@@ -33,15 +32,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %------------------- 章节-------------------------%
+%
 \include{exam-beamer.tex}
 %\input{exam-md.md}                   %
 %                                               %
 %-----------------------------------------------%
 
 \begin{frame}[plain]
-    \Background[2] 
+    %\Background[2] 
 	\begin{center}
-		{\huge \color{deepred} \textrm{Thanks for your attention!  \\ \vspace{1.0em}
+		{\huge \color{red} {Thanks for your attention!  \\ \vspace{1.0em}
          A \& Q}}
 	\end{center}
     \addtocounter{framenumber}{-1} 

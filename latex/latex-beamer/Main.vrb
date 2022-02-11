@@ -1,6 +1,38 @@
-\frametitle{Sections}
-Sections group slides of the same topic
+\frametitle{2：不单纯的图片，位置+代码}
 
-  \begin{verbatim}    \section{Elements}\end{verbatim}
+  \begin{columns}
 
-  for which provides a nice progress indicator \ldots
+  %%%%%%%%%%%%%%%%%%%%%%
+  \column{0.6\textwidth}
+  方法1：
+  \begin{lstlisting}[language=Gnuplot]
+  set terminal pngcairo
+  set output "plot.png"
+  \end{lstlisting}
+  方法2：
+  %\lstinputlisting[language=Gnuplot,firstline=14, lastline=23]{code/plot.gp}
+
+  %%%%%%%%%%%%%%%%%%%%%
+  \column{0.4\textwidth}
+
+  %\includegraphics[scale=0.13]{figs/plot.png}
+
+  \begin{figure}
+    \resizebox{4cm}{!}  %%%{Horizontal length}{vertical length}
+    {
+
+    \begin{tikzpicture}
+       \begin{axis}
+          \addplot3[surf,]{exp(-x^2-y^2)*x};
+       \end{axis}
+    \end{tikzpicture}
+
+    }
+
+    \caption{Tikz figure}
+    \label{fig:tikz}
+  \end{figure}
+
+  \end{columns}
+  完整的Gnuplot例子请点击：\href{https://zhuanlan.zhihu.com/p/356438078}{一张图急速入门科研绘图 Gnuplot}
+
