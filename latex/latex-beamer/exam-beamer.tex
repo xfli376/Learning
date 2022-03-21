@@ -275,8 +275,8 @@
 
 \begin{frame}
     \frametitle{5.proof}
-    \begin{proof}{}
-      This is a proof
+    \begin{proof}{证明:}
+      {This is a proof}
     \end{proof}
 \end{frame}
 
@@ -294,8 +294,9 @@
   \begin{tcolorbox3}[量子力学基本假设1/5]
     \lipsum[4]
   \end{tcolorbox3}
-  \end{frame}
-  \begin{frame}    
+\end{frame}
+
+\begin{frame}    
     \begin{tcolorbox4}[量子力学基本假设1/5]
     \lipsum[4]
     \end{tcolorbox4}
@@ -339,15 +340,217 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{学术讨论}
-      %\begin{figure}
-         % \centering
-         % \subfigure[]{\includegraphics[width=4.5cm]{figs/ds-1.jpeg}}
-         % \subfigure[]{\includegraphics[width=4.5cm]{figs/ds-2.jpeg}}
-         %\subfigure[]{\includegraphics[width=4.5cm]{figs/ds-3.jpeg}}
-          %\caption{} %图片标题
-          %\label{fig:1}  
-      %    {\color{red} How can electrons be both a particle and a wave?}
-      %\end{figure}
+  \frametitle{量子线路}
+  \begin{figure}
+    \centerline{
+      \begin{tikzpicture}[thick]
+      %
+      % `operator' will only be used by Hadamard (H) gates here.
+      % `phase' is used for controlled phase gates (dots).
+      % `surround' is used for the background box.
+      \tikzstyle{operator} = [draw,fill=white,minimum size=1.5em] 
+      \tikzstyle{phase} = [fill,shape=circle,minimum size=5pt,inner sep=0pt]
+      %\tikzstyle{surround} = [fill=blue!10,thick,draw=black,rounded corners=2mm]
+      %
+      % Qubits
+      \node at (0,0) (q1) {\rs{0}};
+      \node at (0,-1) (q2) {\rs{0}};
+      \node at (0,-2) (q3) {\rs{0}};
+      %
+      % Column 1
+      \node[operator] (op11) at (1,0) {H} edge [-] (q1);
+      \node[operator] (op21) at (1,-1) {H} edge [-] (q2);
+      \node[operator] (op31) at (1,-2) {H} edge [-] (q3);
+      %
+      % Column 3
+      \node[phase] (phase11) at (2,0) {} edge [-] (op11);
+      \node[phase] (phase12) at (2,-1) {} edge [-] (op21);
+      \draw[-] (phase11) -- (phase12);
+      %
+      % Column 4
+      \node[phase] (phase21) at (3,0) {} edge [-] (phase11);
+      \node[phase] (phase23) at (3,-2) {} edge [-] (op31);
+      \draw[-] (phase21) -- (phase23);
+      %
+      % Column 5
+      \node[operator] (op24) at (4,-1) {H} edge [-] (phase12);
+      \node[operator] (op34) at (4,-2) {H} edge [-] (phase23);
+      %
+      % Column 6
+      \node (end1) at (5,0) {} edge [-] (phase21);
+      \node (end2) at (5,-1) {} edge [-] (op24);
+      \node (end3) at (5,-2) {} edge [-] (op34);
+      %
+      % Bracket
+      \draw[decorate,decoration={brace},thick] (5,0.2) to
+    node[midway,right] (bracket) {$\dfrac{\rs{000}+\rs{111}}{\sqrt{2}}$}
+    (5,-2.2);
+      %
+      % Background Box
+      %\begin{pgfonlayer}{background} 
+      %\node[surround] (background) [fit = (q1) (op31) (bracket)] {};
+      %\end{pgfonlayer}
+      %
+      \end{tikzpicture}
+    }
+    \caption{
+      A quantum circuit for producing a GHZ state using
+      Hadamard gates and controlled phase gates.
+    }
+  \end{figure}
 \end{frame}
 
+\begin{frame}
+  \frametitle{}
+  \centering
+  \begin{tikzpicture}
+
+    % define coordinates
+    \coordinate (O) at (0,0) ;
+    \coordinate (A) at (0,4) ;
+    \coordinate (B) at (0,-4) ;
+    
+    % media
+    \fill[blue!25!,opacity=.3] (-4,0) rectangle (4,4);
+    \fill[blue!60!,opacity=.3] (-4,0) rectangle (4,-4);
+    \node[right] at (2,2) {Air};
+    \node[left] at (-2,-2) {Water};
+
+    % axis
+    \draw[dash pattern=on5pt off3pt] (A) -- (B) ;
+
+    % rays
+    \draw[red,ultra thick,reverse directed] (O) -- (130:5.2);
+    \draw[blue,directed,ultra thick] (O) -- (-70:4.24);
+
+    % angles
+    \draw (0,1) arc (90:130:1);
+    \draw (0,-1.4) arc (270:290:1.4) ;
+    \node[] at (280:1.8)  {$\theta_{2}$};
+    \node[] at (110:1.4)  {$\theta_{1}$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Intersecting lines}
+  \begin{tikzpicture}[scale=1.5]
+    % Draw axes
+    \draw [<->,thick] (0,2) node (yaxis) [above] {$y$}
+        |- (3,0) node (xaxis) [right] {$x$};
+    % Draw two intersecting lines
+    \draw (0,0) coordinate (a_1) -- (2,1.8) coordinate (a_2);
+    \draw (0,1.5) coordinate (b_1) -- (2.5,0) coordinate (b_2);
+    % Calculate the intersection of the lines a_1 -- a_2 and b_1 -- b_2
+    % and store the coordinate in c.
+    \coordinate (c) at (intersection of a_1--a_2 and b_1--b_2);
+    % Draw lines indicating intersection with y and x axis. Here we use
+    % the perpendicular coordinate system
+    \draw[dashed] (yaxis |- c) node[left] {$y'$}
+        -| (xaxis -| c) node[below] {$x'$};
+    % Draw a dot to indicate intersection point
+    \fill[red] (c) circle (2pt);
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rigid body dynamics} 
+  \tikzstyle{na} = [baseline=-.5ex]
+  % Below we mix an ordinary equation with TikZ nodes defined by Myitem. Note that we have to
+  % adjust the baseline of the nodes to get proper alignment with the rest of
+  % the equation.
+  \begin{equation*}
+  \vec{a}_p = \vec{a}_o+\frac{{}^b d^2}{dt^2}\vec{r} +
+          \Myitem{t1}{blue}{2\vec{\omega}_{ib}\times\frac{{}^b d}{dt}\vec{r}}
+          +
+          \Myitem{t2}{red}{\vec{\alpha}_{ib}\times\vec{r}}
+          +
+          \Myitem{t3}{green}{\vec{\omega}_{ib}\times(\vec{\omega}_{ib}\times\vec{r})}
+  \end{equation*}
+  \begin{itemize}[<+-| alert@+>]
+    \item Coriolis acceleration
+        \tikz[na] \node[coordinate] (n1) {};
+    \item Transversal acceleration
+        \tikz[na]\node [coordinate] (n2) {};
+    \item Centripetal acceleration
+        \tikz[na]\node [coordinate] (n3) {};
+  \end{itemize}  
+  % Now it's time to draw some edges between the global nodes. Note that we
+  % have to apply the 'overlay' style.
+  \begin{tikzpicture}[overlay]
+          \path[->]<1-> (n1) edge [bend right] (t1);
+          \path[->]<2-> (n2) edge [bend right] (t2);
+          \path[->]<3-> (n3) edge [out=0, in=-90] (t3);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Make Titles Informative.}
+
+  You can create overlays\dots
+  \begin{itemize}
+  \item using the \texttt{pause} command:
+    \begin{itemize}
+    \item
+      First item.
+      \pause
+    \item    
+      Second item.
+    \end{itemize}
+  \item
+    using overlay specifications:
+    \begin{itemize}
+    \item<3->
+      First item.
+    \item<4->
+      Second item.
+    \end{itemize}
+  \item
+    using the general \texttt{uncover} command:
+    \begin{itemize}
+      \uncover<5->{\item
+        First item.}
+      \uncover<6->{\item
+        Second item.}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{}
+  
+  \begin{center} %Optional, but helps to tidy up the layout
+  \begin{tikzpicture}[scale=.1] %Scale must be changed to make the flag fit on letter/A4 paper (scale=1 produces a 30 cm by 20 cm flag)
+  \clip (-15,-10) rectangle (15,10); %Optional, crops the flag to the correct size
+  \draw[black] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Optional, draws a border around the flag
+  \fill[chred] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Red background
+  
+  %Template for a star, this can be shifted, scaled and rotated as you wish
+  \def\star{(0,4)--({sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--({+sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({+sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--(0,{-6+2*sqrt(5)})--({-sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--({-2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({-sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({-sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--cycle}
+  
+  %Outer scope for shifting, scaling and rotation of the entire 5-star pattern
+  \begin{scope}[shift={(-10,5)},scale=1,rotate=0]
+  %Inner scopes for shifting, scaling and rotation of each individual star
+  \begin{scope}[shift={(0,0)},scale=3/4,rotate=0]
+  \fill[chyel] \star; %Large star
+  \end{scope}
+  %Small stars, clockwise from the top
+  \begin{scope}[shift={(5,3)},scale=1/4,rotate=90+atan(3/5)]
+  \fill[chyel] \star;
+  \end{scope}
+  \begin{scope}[shift={(7,1)},scale=1/4,rotate=90+atan(1/7)]
+  \fill[chyel] \star;
+  \end{scope}
+  \begin{scope}[shift={(7,-2)},scale=1/4,rotate=90-atan(2/7)]
+  \fill[chyel] \star;
+  \end{scope}
+  \begin{scope}[shift={(5,-4)},scale=1/4,rotate=90-atan(4/5)]
+  \fill[chyel] \star;
+  \end{scope}
+  \end{scope}
+  \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{}
+  
+\end{frame}

@@ -1,0 +1,996 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"insert main file": {
+		"prefix": "main-beamer",
+		"body": [
+		  "\\documentclass[12pt,UTF8,aspectratio=169]{beamer} ",
+		  "%aspectratio=1610：160mm，100mm",
+		  "%aspectratio=169：160mm，90mm",
+		  "%aspectratio=43：128mm，96mm，默认尺寸",
+		  "\\RequirePackage{mybeamer}",
+		  "%%% sudo vim /usr/local/texlive/2021/texmf-dist/tex/xelatex/mybeamer",
+		  "%%%% sudo texhash",
+		  "",
+		  "%-------------------正文-------------------------%",
+		  "%                                               %",
+		  "%                                               %",
+		  "\\begin{document}                                %",
+		  "%                                               %",
+		  "%                                               %",
+		  "%-----------------------------------------------%",
+		  "",
+		  "%题目，作者，学校，日期                ",
+		  "\\author{李小飞}",
+		  "\\title{\\textbf{\\Huge 量子力学与统计物理}}",
+		  "\\subtitle{Quantum mechanics and statistical physics}",
+		  "\\institute[电子科技大学]{光电科学与工程学院}",
+		  "\\date{\\today}",
+		  "",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "%\\frame[plain]{\\titlepage}",
+		  "\\begin{frame} [plain]",
+		  "    \\setbeamertemplate{headline} {} %",
+		  "    \\Background[17] ",
+		  "    \\maketitle",
+		  "    \\addtocounter{framenumber}{-1} ",
+		  "\\end{frame}",
+		  "%\\maketitle",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "",
+		  "%-----------章节-------------------------%",
+		  "%\\include{chapter1.tex}",
+		  "%\\include{lecture1.tex}",
+		  "%--------------------------------------%",
+		  "",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "",
+		  "\\begin{frame}[plain] ",
+		  "    \\Background[2] ",
+		  "\\begin{center}",
+		  "{\\huge \\color{deepred} \\textrm{Thanks for your attention!  \\\\ \\vspace{1.0em}",
+		  "         A \\& Q}}",
+		  "\\end{center}",
+		  "    \\addtocounter{framenumber}{-1} ",
+		  "\\end{frame}",
+		  "",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\end{document}",
+		  "%---------------THE END-----------------%"
+		],
+		"description": "insert main file for beamer"
+	  },
+
+	"insert introduction of a lecture": {
+		"prefix": "introduction",
+		"body": [
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\section{1.课程简介}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "",
+		  "\\begin{frame}",
+		  "    \\frametitle{课程目标}",
+		  "        \\begin{enumerate}",
+		  "            \\Item $1",
+		  "        \\end{enumerate}",
+		  "\\end{frame}",
+		  "\\begin{frame} ",
+		  "    \\frametitle{分数构成}",
+		  "        \\begin{enumerate}",
+		  "            \\Item Normal results $2\\%",
+		  "            \\Item Midterm examination results $3\\%",
+		  "            \\Item Final examination results $4\\%",
+		  "        \\end{enumerate}",
+		  "\\end{frame}",
+		  "",
+		  "\\begin{frame} ",
+		  "    \\frametitle{教学效果}",
+		  "    \\centering",
+		  "    \\includegraphics[width=1.0\\textwidth,height=5.0cm]{figs/$5.png}",
+		  "\\end{frame}",
+		  "",
+		  "\\begin{frame}",
+		  "    \\frametitle{参考书目}",
+		  "        \\begin{itemize}",
+		  "            \\Item 《量子力学》卷I，II， 曾谨言， 科学出版社， 2008           ",
+		  "            \\Item Principles of quantum mechanics, shankar",
+		  "            \\Item Modern quantum mechanics, shankar",
+		  "            \\Item Lectures on quantum mechanics, weinberg",
+		  "            \\Item Principles of quantum mechanics, Dirac",
+		  "        \\end{itemize}",
+		  "\\end{frame}",
+		  "",
+		  "\\begin{frame}",
+		  "    \\begin{tcolorbox4}[三条军规]",
+		  "        \\begin{enumerate}",
+		  "            \\Item Objects are wave-particles and can be in states of superposition",
+		  "            \\Item Rule 1 holds as long as you don't measure",
+		  "            \\Item Measurement gives random results",
+		  "        \\end{enumerate}",
+		  "    \\end{tcolorbox4} ",
+		  "\\end{frame}"
+		],
+		"description": "insert introduction of a lecture"
+	  },
+
+	"insert chapter-n": {
+		"prefix": ["chapter-n", "\\chapter-n"],
+		"body": [
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\begin{frame} [plain]",
+		  "    \\frametitle{}",
+		  "    \\Background[1] ",
+		  "    \\begin{center}",
+		  "    { {\\huge 第$1章：$2}}",
+		  "    \\end{center}  ",
+		  "    \\addtocounter{framenumber}{-1}   ",
+		  "\\end{frame}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+		],
+		"description": "insert chapter-n for beamer"
+	  },
+	
+	"insert lecture-n": {
+		"prefix": ["lecture-n","\\lecture"],
+		"body": [
+		  "\\begin{frame} [plain]",
+		  "  \\frametitle{}",
+		  "  \\Background[1] ",
+		  "  \\begin{center}",
+		  "  { {\\huge 第$1讲：$2 }}",
+		  "  \\end{center}  ",
+		  "  \\addtocounter{framenumber}{-1}   ",
+		  "\\end{frame}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+		],
+		"description": "insert lecture n for beamer "
+	  },
+	
+	  "insert review": {
+		"prefix": ["review", "\\前情回顾"],
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "    \\begin{tcolorbox3}[前情回顾]",
+		  "\t \\begin{itemize}",
+		  "       \t\t \\item $1",
+		  "    \t \\end{itemize}",
+		  "    \\end{tcolorbox3}",
+		  "\\end{frame}"
+		],
+		"description": "insert review for previous lecture"
+	  },
+	  
+	"insert theorem": {
+		"prefix": ["theorem","\\原理"],
+		"body": [
+		  "\\begin{frame} ",
+		  "    \\begin{tcolorbox4}[$1]",
+		  "    $2",
+		  "    \\end{tcolorbox4}",
+		  "\\end{frame}",
+		  ""
+		],
+		"description": "insert theorem"
+	  },
+	
+	"insert definition ": {
+		"prefix": ["definition","\\定义"],
+		"body": [
+		  "    \\begin{tcolorbox2}[0.86]{定义}",
+		  "      $1: $0",
+		  "    \\end{tcolorbox2}"
+		],
+		"description": ""
+	  },
+	
+	"insert example": {
+		"prefix": ["example", "\\例题"],
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "  \\例[$1.求解如下方程]{",
+		  "   \\[$2\\]",
+		  "}",
+		  "  \\解 ~ $0",
+		  " ",
+		  "\\end{frame}",
+		],
+		"description": "insert example"
+	  },
+	
+	"insert proof": {
+		"prefix": ["proof", "\\证明题"],
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "  \\例[$1.试证明]{",
+		  "   \\[$2\\]",
+		  "}",
+		  "  \\证 ~ $0",
+		  " ",
+		  "\\end{frame}",
+		],
+		"description": "insert proof"
+	  },
+	
+	  "insert exampleblock": {
+		"prefix": "exampleblock",
+		"body": [
+		  "\\begin{frame}",
+		  "\\begin{exampleblock} {例 13、求二阶齐次常微分方程的通解}",
+		  "\t$1",
+		  "\t\\end{exampleblock}",
+		  "\t\\alert{解、}  $2",
+		  "\\end{frame}"
+		],
+		"description": "insert exampleblock"
+	  },
+
+	"insert seatwork": {
+		"prefix": ["seatwork","课堂作业"],
+		"body": [
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\begin{frame}",
+		  "\t\\frametitle{课堂作业}",
+		  "\t \\begin{block}{试证明:}",
+		  "\t \\[",
+		  "\t AB^2=BC^2+AC^2", 
+		  "\t\\]",
+	      "\t \\end{block}",
+		  "\\end{frame}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+		],
+		"description": "insert seatwork for beamer"
+	  },
+
+	"insert discussion": {
+		"prefix": ["discussion","小组讨论"],
+		"body": [
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\begin{frame}",
+		  "\t\\frametitle{}",
+		  "\\begin{tcolorbox1}[0.8]{小组讨论}",
+		  "\t$1",
+		  "\\end{tcolorbox1}",
+		  "\\end{frame}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+		],
+		"description": "insert discussion for beamer"
+	  },
+
+	"insert homework": {
+		"prefix": ["homework","课外作业"],
+		"body": [
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		  "\\begin{frame}",
+		  "    \\frametitle{课外作业}",
+		  "    \\begin{enumerate}",
+		  "        \\item $1",
+		  "        \\item $2",
+		  "        \\item $3",
+		  "    \\end{enumerate}",
+		  "\\end{frame}",
+		  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+		],
+		"description": "insert homework for beamer"
+	  },
+	
+	" insert two columns": {
+		"prefix": "columns",
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "\t\\begin{columns}",
+		  "\t\t\\begin{column}[t]{0.46\\linewidth}",
+		  "\t\t\t$1",
+		  "\t\t\t\\begin{itemize}",
+		  "\t\t\t\t\\Item $3 ",
+		  "\t\t\t\t\\Item $4",
+		  "\t\t\t\\end{itemize}",
+		  "\t\t\\end{column}",
+		  "\t\t\\begin{column}[t]{0.46\\linewidth}",
+		  "\t\t\t$2",
+		  "\t\t\t\\vspace{1ex}",
+		  "\t\t\t\\begin{itemize}",
+		  "\t\t\t\t\\Item  $5",
+		  "\t\t\t\t\\Item  $6",
+		  "\t\t\t\\end{itemize}",
+		  "\t\t\\end{column}",
+		  "\t\\end{columns}",
+		  "\\end{frame}"
+		],
+		"description": "insert two columns"
+	  },
+
+	"insert figure": {
+		"prefix": "figure",
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "  \\begin{center}",
+		  "  \t \\includegraphics[width=0.8\\textwidth,height=2.5in]{figs/$1.png}",
+		  "  \\end{center}",
+		  "\\end{frame}"
+		],
+		"description": "insert figure"
+	  },
+
+	  "insert two subfigures": {
+		"prefix": "subfigure",
+		"body": [
+		  "\\begin{frame}",
+		  "    \\frametitle{}",
+		  "    \\begin{figure}",
+		  "        \\centering",
+		  "        \\subfigure[]{\\includegraphics[width=$1 cm]{figs/$3.png}}",
+		  "        \\subfigure[]{\\includegraphics[width=$2 cm]{figs/$4.png}}",
+		  "        %\\caption{} %图片标题",
+		  "        %\\label{fig:1}  ",
+		  "    \\end{figure} ",
+		  "    \\setcounter{subfigure}{0}",
+		  "\\end{frame}"
+		],
+		"description": "insert two subfigures"
+	  },
+	
+	  "insert text figure mixed": {
+		"prefix": "cutwin",
+		"body": [
+		  "\\opencutright ",
+		  "\\renewcommand{\\windowpagestuff}{\\flushright ",
+		  "\\quad \\includegraphics[width=3cm]{figs/$1.png}}",
+		  "\t\\begin{cutout} {2}{2.2cm}{6.2cm}{6}",
+		  "$2 text",
+		  "\t\\end{cutout} "
+		],
+		"description": ""
+	  },
+
+	"insert quotation": {
+		"prefix": "quotation",
+		"body": [
+		  "\\begin{frame} ",
+		  "    \\begin{quotation}",
+		  "        \"在近代物理学结出硕果的那些重大问题中，很难找到一个问题是爱因斯坦没有做出过重要贡献的。",
+		  "        在他的各种推测中，他有时可能也曾经没有中标的，例如他的光量子假设，就有点迷失了方向\\dots\"  \\\\",
+		  "        \\rightline{$\\cdots$ 普朗克\\hspace{3em}}   ",
+		  "    \\end{quotation}",
+		  "\\end{frame}"
+		],
+		"description": "insert quotation"
+	  },
+	
+	"insert significance": {
+		"prefix": "significance",
+		"body": [
+		  "\\begin{frame}   ",
+		  "    \\begin{tcolorbox3}[Significance]",
+		  "        Prove that:\\\\",
+		  "        {\\Bullet} The light of wavelength ($\\lambda$) possesses a quantum momentum \\[p=\\frac{h}{\\lambda}\\]",
+		  "        {\\Bullet} Momentum conservation law works in subatom scales ",
+		  "    \\end{tcolorbox3}   ",
+		  "    \\color{deepred}{Nobel Prize in physics（1927）}\\\\",
+		  "\\end{frame}"
+		],
+		"description": "insert significance"
+	  },
+	
+	  "insert summary": {
+		"prefix": "",
+		"body": [
+		  "\\begin{frame} ",
+		  "    \\frametitle{Summary}",
+		  "    \\begin{itemize}",
+		  "        \\Item  $1",
+		  "        \\Item  $2",
+		  "        \\Item  $3",
+		  "    \\end{itemize}",
+		  "\\end{frame}"
+		],
+		"description": "insert summary"
+	  },
+
+	// for math
+
+	"math": {
+		"prefix": ["math","cmath"],
+		"body": [
+			"\\[  ",
+			" \t $1 ",
+			" \\] $0",
+		],
+		"description": "central math"
+	},
+
+	"mathin": {
+		"prefix": "inmath",
+		"body": [
+		  "$ $1 $ $0"
+		],
+		"description": "inlinemath"
+	},
+
+	"insert left cases": {
+		"prefix": ["cases", "lcases"],
+		"body": [
+		  "\\[ \\begin{cases}",
+		  "\t\tu_{t} =u_{xx} ~~,~~ 0<x<l, t>0\\\\",
+		  "\t\tu_x (0,t) =0, u_x (l,t)=0 \\\\",
+		  "\t\tu(x,0) =\\psi(x)",
+		  "\\end{cases}$ \\]"
+		],
+		"description": "insert left cases"
+	  },
+	
+	"insert right cases": {
+			"prefix": "rcases",
+			"body": [
+			  "\\[\\left.",
+			  "\\begin{array}{rrr}",
+			  "\t $1 & $2\\\\",
+			  "\t $3 & $4 ",
+			  "\\end{array}\right}\\]"
+			],
+			"description": ""
+		},
+
+	"insert align*": {
+		"prefix": "aligned",
+		"body": [
+		  "    \\[ \\begin{align*}",
+		  "         $1 &=$2\\\\",
+		  "            &=$3",
+		  "    \\end{align*}\\]"
+		],
+		"description": "insert  aligned"
+	  },
+
+	  "insert  expansion": {
+        "prefix": ["expansion", "\\sum"],
+		"body": [
+			"\\[\\sum_{$1: n=1} ^{$2: \\infty} {$3: a_n} {$4: \\varphi_n}"
+		],
+		"description": "Insert a expansion equation."
+    },
+	
+	// END Math 
+
+	"Bold Text": {
+        "prefix": ["bold", "\\bold", "**"],
+        "body": "\\textbf{$1}$0",
+        "description": "Insert bold text."
+    },
+
+	"Itemize": {
+        "prefix": ["- ", "\\itemize", "itemize"],
+        "body": [
+            "\\begin{itemize}",
+            "\t\\item $1",
+            "\\end{itemize}$0"
+        ]
+    },
+	"Insert enumerate":{
+		"prefix": "enumerate",
+		"body":["\\begin{enumerate}\n\t\\item ${1:enumerate1}\n\t\\item ${2:enumerate2}\n\\end{enumerate}"],
+		"description": "insert enumerate snippet"
+	},
+	"Insert table":{
+		"prefix": "table",
+		"body":["\\begin{table}[${1:htbp}]\n\t\\centering\n\t\\caption{${2:caption}}\n\t\t\\begin{tabular}{${3:c|c}}\n\t\t\\hline\n\t\t${4:column1 & column2}\n\t\t\\end{tabular}\n\t\\label{${5:label}}\n\\end{table}"],
+		"description": "insert table snippet"
+	},
+
+	"subscript":{
+		"prefix": ["__"],
+		"body": ["_{$1}$0"],
+		"description": "subscript"
+	},
+	"upscript":{
+		"prefix": ["^^"],
+		"body": ["^{$1}$0"],
+		"description": "upscript"
+	},
+	"leq":{
+		"prefix": ["<=","leq"],
+		"body": ["\\le"],
+		"description": "leq"
+	},
+	"geq":{
+		"prefix": [">=","geq"],
+		"body": ["\\ge"],
+		"description": "geq"
+	},
+	"phin":{
+		"prefix": ["phin"],
+		"body": ["\\phi_{n}"],
+		"description": ""
+	},
+	"psin":{
+		"prefix": ["psin"],
+		"body": ["\\psi_{n}"],
+		"description": ""
+	},
+	"an":{
+		"prefix": ["ann"],
+		"body": ["a_{n}"],
+		"description": ""
+	},
+
+	"an1":{
+		"prefix": ["an1"],
+		"body": ["a_{n+1}"],
+		"description": ""
+	},
+
+	"xx":{
+		"prefix": ["xx"],
+		"body": ["\\times"],
+		"description": "\\times"
+	},
+	"integral":{
+		"prefix": ["dint"],
+		"body": ["\\int_{${1:-\\infty}}^{${2:\\infty}} $0 "],
+		"description": "integral"
+	},
+	"->":{
+		"prefix": ["->"],
+		"body": ["\\to"],
+		"description": "\\to"
+	},
+	"<->":{
+		"prefix": ["<->"],
+		"body": ["\\leftrightarrow"],
+		"description": "\\leftrightarrow"
+	},
+	">>":{
+		"prefix": [">>"],
+		"body": ["\\gg"],
+		"description": ">>"
+	},
+	"<<":{
+		"prefix": ["<<"],
+		"body": ["\\ll"],
+		"description": "<<"
+	},
+	"~~":{
+		"prefix": ["~~"],
+		"body": ["\\sim "],
+		"description": "\\sim"
+	},
+
+	"hat":{
+		"prefix": ["hat"],
+		"body": ["\\hat{$1}$0 "],
+		"description": "hat"
+	},
+
+	// "Insert ldots": {
+    //     "prefix": ["..."],
+    //     "body": ["\\ldots"],
+    //     "description": "Insert ldots"
+    // },
+	// 
+	// " Insert column vector environment":{
+	// 	"prefix": ["cvec", "\\cvec"],
+	// 	"body": [
+	// 		"\\begin{pmatrix} ${1:x}_${2:1} \\\\ \\vdots \\\\ $1_${2:n} \\end{pmatrix}"
+	// 	],
+	// 	"description": "column vector"
+	// },
+	// " Insert row vector environment":{
+	// 	"prefix": ["rvec", "\\rvec"],
+	// 	"body": [
+	// 		"\\begin{pmatrix} ${1:x}_${2:1} & ${1:x}_${3:1} & \\cdots & $1_${4:n} \\end{pmatrix}"
+	// 	],
+	// 	"description": "row vector"
+	// },
+
+	"bar":{
+		"prefix": ["bar"],
+		"body": ["\\overline{$1}$0"],
+		"description": "bar"
+	},
+	"not equal":{
+		"prefix": ["!="],
+		"body": ["\\neq "],
+		"description": "\\neq"
+	},
+	"pmat":{
+		"prefix": ["pmat","\\pmat"],
+		"body": ["\\begin{pmatrix}\n\t $1 \n\t \\end{pmatrix} $0 "],
+		"description": "pmatrix"
+	},
+	"bmat":{
+		"prefix": ["bmat","\\bmat"],
+		"body": ["\\begin{bmatrix}\n\t $1 \n\t \\end{bmatrix} $0 "],
+		"description": "bmatrix"
+	},
+	
+	"partial":{
+		"prefix": ["d/dx"],
+		"body": ["\\frac{\\partial }{\\partial ${1:x}} $0"],
+		"description": "d/dx"
+	},
+	"partial2":{
+		"prefix": ["dy/dx"],
+		"body": ["\\frac{\\partial ${1:y}}{\\partial ${2:x}} $0"],
+		"description": "dy/dx"
+	},
+
+	"F+": {
+		"prefix": "F+",
+		"body": [
+		  "F^{\\dagger}"
+		],
+		"description": ""
+	  },
+
+	"F-1": {
+		"prefix": "F-1",
+		"body": [
+		  "F^{-1}"
+		],
+		"description": ""
+	  },
+
+	"Create 2D Plot environment": {
+        "prefix": ["envi2d", "\\envi2d"],
+        "body": [
+            "\\begin{tikzpicture}",
+            "\\begin{axis}[",
+            "legend pos=outer north east,",
+            "title=${1:Example},",
+            "axis lines =${2| box, left, middle, center, right, none|},",
+            "xlabel = \\$x\\$,",
+            "ylabel = \\$y\\$,",
+            "variable = t,",
+            "trig format plots = rad,",
+            "]",
+            "$3",
+            "\\end{axis}",
+            "\\end{tikzpicture}$0"
+        ],
+        "description": "Create a 2DPlot Environment of pgfplots."
+    },
+	"Plot 2D Graph": {
+        "prefix": ["plot2d", "\\cplot2d"],
+        "body": [
+            "\\addplot [",
+            "\tdomain=${1:-10}:${2:10}," ,
+            "\tsamples=70,", 
+            "\tcolor=${3:blue},",
+            "\t]",
+            "\t{${4:x^2 + 2*x + 1}};",
+            "\\addlegendentry{$${5:x^2 + 2x + 1}$}",
+            "$0"
+        ],
+        "description": "Plot a 2D Graph in the 2D graph environment"
+    },
+	"Create 3D Plot Environment": {
+        "prefix": ["envi3d", "\\envi3d"],
+        "body": [
+            "\\begin{tikzpicture}",
+            "\\begin{axis}[",
+            "legend pos=outer north east,",
+            "title=${1:Example},",
+            "axis lines =${2| box, left, middle, center, right, none|},",
+            "colormap/${3|hot,hot2,jet,blackwhite,bluered,cool,greenyellow,redyellow,violet|},",
+            "xlabel = \\$x\\$,",
+            "ylabel = \\$y\\$,",
+            "zlabel = \\$z\\$,",
+            "variable = t,",
+            "trig format plots = rad,",
+            "]",
+            "$4",
+            "\\end{axis}",
+            "\\end{tikzpicture}$0"
+        ],
+        "description": "Create a 3DPlot Environment of pgfplots. "
+    },
+    "Plot 3D Graph": {
+        "prefix": ["plot3d", "\\plot3d"],
+        "body": [
+            "\\addplot3[",
+            "\t${1|surf,mesh|},",
+            "\tsamples=50,",
+            "]",
+            "{${2:x^2+y^2}};",
+            "\\addlegendentry{\\$${3:x}\\$}$0"
+        ],
+        "description": "Plot a 3D Graph in the 3D graph environment."
+    },
+
+	" Insert table environment":{
+		"prefix": ["table", "\\table"],
+		"body": [
+				"\\begin{table}[${1:htpb}]",
+    			"\\centering",
+    			"\\caption{${2:caption}}",
+    			"\\label{tab:${3:label}}",
+    			"\\begin{tabular}{${5:c}}",
+    			"\\$0${5/((?<=.)c|l|r)|./(?1: & )/g}",
+    			"\\end{tabular}",
+				"\\end{table}"
+		],
+		"description": "Insert table"
+	},
+
+	"mean1": {
+		"prefix": "mean1",
+		"body": [
+		  "\\int \\psi^{*}(x) \\hat{F} \\psi(x) d x"
+		],
+		"description": "average value quation-1"
+	  },
+
+	  "mean2": {
+		"prefix": "mean2",
+		"body": [
+		  "(\\psi, \\hat{F} \\psi)"
+		],
+		"description": "average value quation-2"
+	  },
+
+	  "mean3": {
+		"prefix": "mean3",
+		"body": [
+		  "\\lcr{\\psi}{\\hat{F}}{\\psi}"
+		],
+		"description": "average value quation-3"
+	  },
+
+	  "inner1": {
+		"prefix": "mean1",
+		"body": [
+		  "\\int \\psi^{*}(x) \\hat{F} \\varphi(x) d x"
+		],
+		"description": "inner quation-1"
+	  },
+
+
+	  "inner2": {
+		"prefix": "inner2",
+		"body": [
+		  "(\\psi, \\hat{F} \\varphi)"
+		],
+		"description": "inner quation-2"
+	  },
+	  "inner3": {
+		"prefix": "inner3",
+		"body": [
+		  "\\lcr{\\psi}{\\hat{F}}{\\varphi}"
+		],
+		"description": "inner quation-3"
+	  },
+
+	  "ls": {
+		"prefix": "ls",
+		"body": [
+		  "\\ls{\\psi}"
+		],
+		"description": ""
+	  },
+	  "rs": {
+		"prefix": "rs",
+		"body": [
+		  "\\rs{\\psi}"
+		],
+		"description": ""
+	  },
+	  "rl": {
+		"prefix": "rl",
+		"body": [
+		  "\\rl{$1}{$1}"
+		],
+		"description": ""
+	  },
+	  "lr": {
+		"prefix": "lr",
+		"body": [
+		  "\\lr{$1}{$1}"
+		],
+		"description": ""
+	  },
+	  "lcr": {
+		"prefix": "lcr",
+		"body": [
+		  "\\lcr{$1}{$2}{$1}"
+		],
+		"description": ""
+	  },
+	  "rcl": {
+		"prefix": "lcr",
+		"body": [
+		  "\\rcl{$1}{$2}{$1}"
+		],
+		"description": ""
+	  },
+
+	  "Fmn":{
+		"prefix": ["Fmn"],
+		"body":  "\\lcr{m}{F}{n}",
+		"description": "matrix element equation"
+	},
+	  
+	  "HGate": {
+		"prefix": "HGate",
+		"body": [
+		  " \\frac{1}{\\sqrt{2}}\\begin{bmatrix}",
+		  "    1 & 1 \\\\",
+		  "    1 & -1",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+
+	  "RGate": {
+		"prefix": "RGate",
+		"body": [
+		  " \\begin{bmatrix}",
+		  "   e^{-i\\varphi/2} & 0 \\\\",
+		  "    0 & e^{i\\varphi/2}",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+	  "SGate": {
+		"prefix": "SGate",
+		"body": [
+		  " \\begin{bmatrix}",
+		  "    1 & 0 \\\\",
+		  "    0 & i",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+	  "ZGate": {
+		"prefix": "ZGate",
+		"body": [
+		  " \\begin{bmatrix}",
+		  "    1 & 0 \\\\",
+		  "    0 & -1",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+
+	  "XGate": {
+		"prefix": "XGate",
+		"body": [
+		  "{\\begin{bmatrix}",
+		  "    0 & 1 \\\\",
+		  "    1 & 0",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+	  "Qbit": {
+		"prefix": "Qbit",
+
+		"body": [
+		  "\\begin{bmatrix}",
+		  "    #1 \\\\",
+		  "    #2 ",
+		  " \\end{bmatrix}"
+		],
+		"description": ""
+	  },
+	  "Mstate": {
+		"prefix": "Mstate",
+		"body": [
+		  "\\dfrac{\\rs{0}-\\rs{1}}{\\sqrt{2}}"
+		],
+		"description": ""
+	  },
+	  "Pstate": {
+		"prefix": "Pstate",
+		"body": [
+		  "\\dfrac{\\rs{0}+\\rs{1}}{\\sqrt{2}}"
+		],
+		"description": ""
+	  },
+
+	  "choice": {
+		"prefix": "choice",
+		"body": [
+		  "  1、下列说法正确的是： （\\hspace{0.5em} ）",
+		  "  \\xxxx{$1}{$2}{$3}{$4} "
+		],
+		"description": "Create choice question with A. B. C. and D."
+	  },
+
+	  "Tips": {
+		"prefix": "Tips",
+		"body": [
+		  "\\alert{\\textit{Tips:\\hspace{1em}}}"
+		],
+		"description": "Tips"
+	  },
+	  "Note": {
+		"prefix": "Note",
+		"body": [
+		  "\\alert{\\textit{Note:\\hspace{1em}}}"
+		],
+		"description": ""
+	  },
+	  "Bullet": {
+		"prefix": ["Bullet", "bullet"],
+		"body": [
+		  "{\\color{uestcE}{\\scriptsize \\faCircle } }"
+		],
+		"description": ""
+	  },
+
+	  "note for equation": {
+		"prefix": "notee",
+		"body": [
+		  "\\begin{frame}",
+		  "  \\frametitle{Rigid body dynamics} ",
+		  "  \\tikzstyle{na} = [baseline=-.5ex]",
+		  "  % Below we mix an ordinary equation with TikZ nodes defined by Myitem. Note that we have to",
+		  "  % adjust the baseline of the nodes to get proper alignment with the rest of",
+		  "  % the equation.",
+		  "  \\begin{equation*}",
+		  "  \\vec{a}_p = \\vec{a}_o+\\frac{{}^b d^2}{dt^2}\\vec{r} +",
+		  "          \\Myitem{t1}{blue}{2\\vec{\\omega}_{ib}\\times\\frac{{}^b d}{dt}\\vec{r}}",
+		  "          +",
+		  "          \\Myitem{t2}{red}{\\vec{\\alpha}_{ib}\\times\\vec{r}}",
+		  "          +",
+		  "          \\Myitem{t3}{green}{\\vec{\\omega}_{ib}\\times(\\vec{\\omega}_{ib}\\times\\vec{r})}",
+		  "  \\end{equation*}",
+		  "  \\begin{itemize}[<+-| alert@+>]",
+		  "    \\item Coriolis acceleration",
+		  "        \\tikz[na] \\node[coordinate] (n1) {};",
+		  "    \\item Transversal acceleration",
+		  "        \\tikz[na]\\node [coordinate] (n2) {};",
+		  "    \\item Centripetal acceleration",
+		  "        \\tikz[na]\\node [coordinate] (n3) {};",
+		  "  \\end{itemize}  ",
+		  "  % Now it's time to draw some edges between the global nodes. Note that we",
+		  "  % have to apply the 'overlay' style.",
+		  "  \\begin{tikzpicture}[overlay]",
+		  "          \\path[->]<1-> (n1) edge [bend right] (t1);",
+		  "          \\path[->]<2-> (n2) edge [bend right] (t2);",
+		  "          \\path[->]<3-> (n3) edge [out=0, in=-90] (t3);",
+		  "  \\end{tikzpicture}",
+		  "\\end{frame}"
+		],
+		"description": "create dynamics note for equation"
+	  },
+
+	"vec2":{
+		"prefix": ["vec2"],
+		"body": ["\\vec{$TM_SELECTED_TEXT}"],
+		"description": "hat2"
+	},
+	"bar2":{
+		"prefix": ["bar2"],
+		"body": ["\\overline{$TM_SELECTED_TEXT}"],
+		"description": "hat2"
+	},
+
+	"hat2":{
+		"prefix": ["hat2"],
+		"body": ["\\hat{$TM_SELECTED_TEXT}"],
+		"description": "hat2"
+	},
+
+	"frac2":{
+		"prefix": ["frac2"],
+		"body": ["\\frac{$TM_SELECTED_TEXT}{$1}"],
+		"description": "frac"
+	}		
+	
+}

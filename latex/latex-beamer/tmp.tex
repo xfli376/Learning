@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+
+%This is the minimal setup required to render the flag
+\usepackage[paperwidth=30cm, paperheight=20cm, top=0cm, bottom=0cm, left=0cm, right=0cm]{geometry}
+%Paper width is set to 30cm by 20cm to match the Chinese Government-specified aspect ratio (3:2)
+\usepackage{tikz}
+%\usepackage[dvipsnames]{xcolor} % Optional unless you want to use colors pre-defined by the xcolor package
+
+% Chinese Government-specified colors for the flag
+\definecolor{chred}{HTML}{DE2910}
+\definecolor{chyel}{HTML}{FFDE00}
+
+% Other government specifications include:
+% Diameter of large star is 1/5 flag width, here it is 6 cm
+% Diameter of each small star is 1/15 flag width, here it is 2 cm
+% Each small star is rotated so one point directly faces the center of the large star
+
+%Source: https://www.crwflags.com/fotw/flags/cn.html
+
+%Created by Senan Sekhon, December 9, 2020
+
+\begin{document}
+
+\begin{center} %Optional, but helps to tidy up the layout
+\begin{tikzpicture}[scale=.1] %Scale must be changed to make the flag fit on letter/A4 paper (scale=1 produces a 30 cm by 20 cm flag)
+\clip (-15,-10) rectangle (15,10); %Optional, crops the flag to the correct size
+\draw[black] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Optional, draws a border around the flag
+\fill[chred] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Red background
+
+%Template for a star, this can be shifted, scaled and rotated as you wish
+\def\star{(0,4)--({sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--({+sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({+sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--(0,{-6+2*sqrt(5)})--({-sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--({-2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({-sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({-sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--cycle}
+
+%Outer scope for shifting, scaling and rotation of the entire 5-star pattern
+\begin{scope}[shift={(-10,5)},scale=1,rotate=0]
+%Inner scopes for shifting, scaling and rotation of each individual star
+\begin{scope}[shift={(0,0)},scale=3/4,rotate=0]
+\fill[chyel] \star; %Large star
+\end{scope}
+%Small stars, clockwise from the top
+\begin{scope}[shift={(5,3)},scale=1/4,rotate=90+atan(3/5)]
+\fill[chyel] \star;
+\end{scope}
+\begin{scope}[shift={(7,1)},scale=1/4,rotate=90+atan(1/7)]
+\fill[chyel] \star;
+\end{scope}
+\begin{scope}[shift={(7,-2)},scale=1/4,rotate=90-atan(2/7)]
+\fill[chyel] \star;
+\end{scope}
+\begin{scope}[shift={(5,-4)},scale=1/4,rotate=90-atan(4/5)]
+\fill[chyel] \star;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\end{document}
