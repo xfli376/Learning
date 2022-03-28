@@ -1,3 +1,16 @@
+## 设置
+
+### 正反向搜索
+- TEX / COMMAND / View LaTex PDF / View in VScode tab  (Shift+v)
+- 正向搜索 在tex中选中内容, 右击菜单 /synctex from cursor (OPT+CMD+J)
+- 反向搜索 在pdf中选中内容, Shift+CMD+单击
+  
+### 基本操作
+
+- 多行变一行 ctr+J
+- 代码格式化 shit+opt+F
+- 复制光标 opt+cmd+上/下光标
+
 ## LaTeX 排版国标样式的数学符号
 ### 正体与斜体
 国标要求普通的变量和函数名使用斜体字母表示，数学常数（如 ）和特殊函数使用正体。
@@ -89,6 +102,10 @@ HyperSnips 将 Vim Ultisnips 的大部分功能搬到了VSCode上。并用 JavaS
 基本结构如下:
 
 ```
+global
+// JavaScript code
+endglobal
+
 context expression
 snippet trigger "description" flags
 body
@@ -110,22 +127,132 @@ endsnippet
 ```
 - 触发器为 dategreeting, 在用户输入这个内容时触发body展开.
 - body 是 Hello from your hsnip at ``rv = new Date().toDateString()``! . 其中"new Date()" 返回当天日期, 通过"toDateString()" 确定日期格式串, 再返回给 "rv"
-- JavaScript片段得使用四个 `` ... ``括起来, 
+- JavaScript片段得使用四个 \``  \``括起来, 
+- body 中用到的三个变量
+	- rv: 块的返回值，该返回值 将会替代 ````中的内容
+	- t: 每个tab 中输入的内容，比如 $1、$2中的内容，可以使用它来动态更改代码段内容。需要注意从 t[0] 开始索引
+	- m: 如果 trigger 使用正则表达式（regular expressio），m 包含每个正则表达式每块的匹配内容，m[0] 开始索引
 
-这是一个自动对后数字转下标的 snippet
+使用实例：
 
-```
-	snippet `(?<=[A-Za-z])(\d)` "auto subscript" iA
-	_``rv = m[1]``
-	endsnippet
-```
+- `$D` $\to$ `$\displaystyle   $`
+- `$B` $\to$ `$$  $$`
+- `...` $\to$ `\cdots` for $\cdots  $
+- `,,,` $\to$ `\vdots` for $ \vdots $
+- `:::` $\to$ `\ddots` for $ \ddots $
+- `int` $\to$ `\int`for $ \int $
+- `intd` $\to$ `\int_{}^{}`for $ \int_{1}^{2} $
+- `iint` $\to$ `\iint ` for $ \iint  $
+- `iiint` $\to$ `\iiint ` for $ \iiint $
+- `oint` $\to$ `\oint ` for $ \oint $
+- `oiint` $\to$ `\oiint ` for $ \oiint  $
+- `lim` $\to$ `\lim ` for $ \lim  $
+- `limd` $\to$ `\lim_{ \to  } ` for $ \lim_{ x\to 0 }  $
+- `sum` $\to$ `\sum ` for $ \lim_{ \to }  $
+- `sumd` $\to$ `\sum_{}^{} ` for $ \sum_{1}^{n}  $
+- `oo` $\to$ `\infty ` for $ \infty  $
+- `oop` $\to$ `+\infty ` for $ +\infty  $
+- `oom` $\to$ `-\infty ` for $ -\infty  $
+- `DD` $\to$ `\frac{\mathrm{d}}{\mathrm{d}} ` for $ \frac{\mathrm{d}}{\mathrm{d}}  $
+- `PP` $\to$ `\frac{\partial }{\partial } ` for $ \frac{\partial }{\partial }  $
+- `drm` $\to$ `\mathrm{\,d}  ` for $ \mathrm{\,d}  $
+- `ptl` $\to$ `\partial ` for $ \partial  $
+- `ra;` $\to$ `\rightarrow ` for $ \rightarrow  $
+- `ia;` $\to$ `\implies ` for $ \implies  $
+- `fa;` $\to$ `\iff  ` for $ \iff   $
+- `to;` $\to$ `\to   ` for $ \to    $
+- `>=` $\to$ `\geq   ` for $ \geq     $
+- `<=` $\to$ `\leq    ` for $ \leq      $
+- `<<` $\to$ `\ll   ` for $ \ll      $
+- `>>` $\to$ `\gg   ` for $ \gg      $
+- `>~` $\to$ `\gtrsim  ` for $ \gtrsim     $
+- `<~` $\to$ `\lesssim  ` for $ \lesssim    $
+- `sq` $\to$ `\sqrt{}  ` for $ \sqrt{2}    $ * 带选择功能
+- `RR` $\to$ `\mathbb{R}  ` for $ \mathbb{R}    $ 
+- `CC` $\to$ `\mathbb{C}  ` for $ \mathbb{C}    $ 
+- `ZZ` $\to$ `\mathbb{Z}  ` for $ \mathbb{Z}    $ 
+- `RR+` $\to$ `\mathbb{R}_+  ` for $ \mathbb{R}_+    $ 
+- `RRn` $\to$ `\mathbb{R}^{n}  ` for $ \mathbb{R}^{n} $ 
+- `RR3` $\to$ `\mathbb{R}^{3} ` for $ \mathbb{R}^{3}$ 
+- `CCn` $\to$ `\mathbb{C}^{n}  ` for $ \mathbb{C}^{n} $ 
+- `CC2` $\to$ `\mathbb{C}^{2} ` for $ \mathbb{C}^{2}$  used in QM  
+- `sin` $\to$ `\sin ` for $ \sin $ 
+- `sinh` $\to$ `\sinh ` for $ \sinh $ 
+- `arcsin` $\to$ `\arcsin ` for $ \arcsin $ 
+- `curl` $\to$ `\mathrm{Curl.} ` for $\mathrm{Curl.} $
+- `div` $\to$ `\mathrm{Div.} ` for $ \mathrm{Div.} $ 
+- `grad` $\to$ `\mathrm{Grad.} ` for $ \mathrm{Grad.} $  
+- `==` $\to$ `\equiv ` for $ \equiv $  
+- `!=` $\to$ `\not = ` for $ \not = $  
+- `OO` $\to$ `\cdot ` for $ \cdot $
+- `~~` $\to$ `\sim ` for $ \sim $
+- `NN` $\to$ `\cap ` for $ \cap $
+- `UU` $\to$ `\cup ` for $ \cup $
+- `II` $\to$ `\in` for $ \in $
+- `SS` $\to$ `\subset` for $ \subset  $
+- `XX` $\to$ `\times` for $ \times $
+- `opo` $\to$ `\oplus ` for $ \oplus $
+- `oxo` $\to$ `\otimes` for $ \otimes $
+- `omo` $\to$ `\ominus ` for $ \ominus  $ 
+- `opro` $\to$ `\propto ` for $ \propto  $ 
+- `nbl` $\to$ `\nabla ` for $ \nabla  $  非常重要
+- `nabla` $\to$ `\nabla ` for $ \nabla  $  非常重要
+- `n;` $\to$ `\nabla ` for $ \nabla  $  非常重要
+- `abs` $\to$ ` \left|\right| ` for $  \left|\right|  $  
+- `||` $\to$ ` \left|\right| ` for $  \left|\right|  $  
+- `alpha` $\to$ ` \alpha ` for $  \alpha  $ 
+- `a;` $\to$ ` \alpha ` for $  \alpha  $ 
+- `a;a` $\to$ ` \alpha ` for $  \alpha a  $ 
+- `a;n` $\to$ ` \alpha ` for $  \alpha_n  $ 
+- `b;` $\to$ ` \beta ` for $  \beta  $ 
+- `c;` $\to$ ` \chi ` for $  \chi $ 
+- `d;` $\to$ ` \delta ` for $  \delta $ 
+- `D;` $\to$ ` \Delta ` for $  \Delta $ 
+- `p;` $\to$ ` \psi ` for $  \psi $ 
+- `P;` $\to$ ` \Psi ` for $  \Psi $ 
+- `v;` $\to$ ` \varphi ` for $  \varphi $ 
+- `V;` $\to$ ` \Phi ` for $  \Phi $ 
+- `w;` $\to$ ` \omega ` for $  \omega $  not use o;
+- `W;` $\to$ ` \Omega ` for $  \Omega $ 
+- `mat22` $\to$ `\begin{matrix}   &  \\   &  \\ \end{matrix} ` for  matrix $  2\times 2 $ 
+- `bmat22` $\to$ `\begin{bmatrix}   &  \\   &  \\ \end{bmatrix} ` for  bmatrix $  2\times 2 $ 
+- `pmat22` $\to$ `\begin{pmatrix}   &  \\   &  \\ \end{pmatrix}  ` for  pmatrix $  2\times 2 $ 
+- `vmat22` $\to$ `\begin{vmatrix}   &  \\   &  \\\end{vmatrix}`  for vmatrix $  2\times 2 $ 
+-  `cv2` $\to$ `begin{bmatrix}   \\   \\ \end{bmatrix}` for column vector $ 
+-  `rv2` $\to$ `\begin{bmatrix}   &  \\ \end{bmatrix}` for row vector $ 
+-  `//` $\to$ ` \frac{}{} ` for $  \frac{1}{2} $ * 带选择功能
+-  `1/` $\to$ ` \frac{1}{} ` for $  \frac{1}{} $
+-  `a/` $\to$ ` \frac{a}{} ` for $  \frac{a}{} $
+-  `ab/` $\to$ ` \frac{ab}{} ` for $  \frac{ab}{} $
+-  `pw` $\to$ ` ^{} ` for $ x^{n} $ 
+-  `sr` $\to$ ` ^{2} ` for $ x^{2} $ 
+-  `th` $\to$ ` ^{3} ` for $ x^{3} $ 
+-  `dag` $\to$ `^\dagger ` for $ F^{\dagger} $ 
+-  `coj` $\to$ `^* ` for $ F^* $ 
+-  `inv` $\to$ `^{-1} ` for $ F^{-1} $ 
+-  `trs` $\to$ `^T ` for $ F^T $ 
+-  `exp` $\to$ `\mathrm{e}^{} ` for $ \mathrm{e}^{2} $ * 带选择功能
+-   `sub` $\to$ ` _{} `for $ x_{n} $ 
+-   `a1` $\to$ ` a_1`for $ a_1 $ 
+-   `a12` $\to$ ` a_{12}`for $ a_{12} $ 
+-   `ann` $\to$ ` a_n`for $ a_n $ 
+-   `ann1` $\to$ `a_{n1}`for $ a_{n1} $ 
+-   `annmm` $\to$ `a_{nm}`for $ a_{nm} $
+-   `aiijj` $\to$ `a_{ij}`for $ a_{ij} $
+-   `asuba;` $\to$ `a_{\alpha}`for $ a_{\alpha} $
+-   `d;nnmm` $\to$ `\delta_{nm}`for $ \delta_{nm} $
+-   `rnn` $\to$ ` r_n`for $ r_n $ 
+-   
+-   `ahat` $\to$ ` \hat{a}`for $ \hat{a} $ 
+-   `Fhat` $\to$ ` \hat{F}`for $ \hat{F} $ 
+-   `avec` $\to$ ` \vec{a}`for $ \vec{a} $ 
+-   `abar` $\to$ ` \overline{a}`for $ \overline{a} $ 
+-   `hbar` $\to$ ` \hbar`for $ \hbar $ 
+-   `arm` $\to$ ` \mathrm{a}`for $ \mathrm{a} $
+-   `a;hat` $\to$ ` \hat{\alpha }`for $ \hat{\alpha }$
+-   
 
-- 使用二个 ` ... ` 括起来的个正则表达式型的触发器,
-- 其中的两个() () 号代表它由有两个部分组成,  
-- [A-Za-z]代表可匹配字符所在的区域, [^ABC]代表不可匹配字符所在的区域
-- (?=xxxxx),正向预搜索,
-- (?<=xxxxx),反向预搜索,
-- \d 匹配从0到9的一个数字,
-- \w 匹配字母，数字或下划线字符 (A-Z,a-z,0-9,_) 中任意一个
-  
-\[  \]
+$$
+\begin{vmatrix}   &  \\   &  \\ \end{vmatrix}
+$$
+ $\displaystyle \subset     $
