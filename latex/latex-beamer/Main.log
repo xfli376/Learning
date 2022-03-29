@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  23 MAR 2022 12:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  29 MAR 2022 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1511,26 +1511,26 @@ Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON te
 ) (./Main.aux (./exam-beamer.aux))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1566,7 +1566,7 @@ LaTeX Font Info:    ... okay on input line 9.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 9.
+Package hyperref Info: Link coloring OFF on input line 11.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1576,9 +1576,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count449
 )
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
  (./Main.out) (./Main.out)
 \@outlinefile=\write6
 \openout6 = `Main.out'.
@@ -1600,11 +1600,11 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 
 \c@lstlisting=\count450
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 9.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 11.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 9.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 11.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 9.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 11.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -1636,13 +1636,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 9.
+(Font)              `operators' in the math version `normal' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 9.
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 11.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 9.
+(Font)              `operators' in the math version `bold' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 9.
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 11.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1706,13 +1706,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 9.
+(Font)              `symbols' in the math version `normal' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 9.
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 11.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 9.
+(Font)              `symbols' in the math version `bold' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 9.
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 11.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1758,20 +1758,20 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 9.
+(Font)              `largesymbols' in the math version `normal' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 9.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 11.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 9.
+(Font)              `largesymbols' in the math version `bold' on input line 11.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 9.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 11.
 (./Main.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 15.
+(hyperref)                setting the option has no effect on input line 17.
 
 
-Overfull \vbox (15.63992pt too high) detected at line 29
+Overfull \vbox (15.63992pt too high) detected at line 31
  []
 
 File: images/uestclogo-7.png Graphic file (type bmp)
@@ -2123,11 +2123,6 @@ File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
  [42
 
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [43
-
 ])
 \tf@nav=\write7
 \openout7 = `Main.nav'.
@@ -2146,12 +2141,12 @@ Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59168 strings out of 476493
- 1432716 string characters out of 5817124
- 2623272 words of memory out of 5000000
- 78407 multiletter control sequences out of 15000+600000
+ 59185 strings out of 476493
+ 1433141 string characters out of 5817124
+ 2623253 words of memory out of 5000000
+ 78424 multiletter control sequences out of 15000+600000
  408151 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,13n,149p,1913b,2179s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,13n,149p,1864b,2179s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (43 pages).
+Output written on Main.pdf (42 pages).

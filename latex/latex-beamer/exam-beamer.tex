@@ -552,34 +552,21 @@
 
 \begin{frame}
     \frametitle{}
-\[ \beta_{00}=\frac{1}{\sqrt{2}}
-\begin{bmatrix}
-    1 \\
-    0 \\
-    0 \\
-    1
-\end{bmatrix} \beta_{01}=\frac{1}{\sqrt{2}}
-\begin{bmatrix}
-    1 \\
-    0 \\
-    0 \\
-    -1
-\end{bmatrix}  \]
-\end{frame}
-
-\begin{frame}
-    \frametitle{}
-$$
-\left.
-\begin{array}{r}
-   \\
-  \alpha_{nn}
-\end{array}\right\}
-$$
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{}
-
+    \tcbset{enhanced jigsaw,fonttitle=\bfseries,opacityback=0.35,colback=blue!5!white,
+        frame style={left color=red!75!black,right color=red!10!yellow}}
+    \begin{tikzpicture}% draw two balls
+      \path[use as bounding box] (0,0.8) rectangle +(0.1,0.1);
+      \shadedraw [shading=ball] (0,0.3) circle (1cm);
+      %\shadedraw [ball color=yellow!20] (3,-2.2) circle (1cm);
+    \end{tikzpicture}
+    \begin{tcolorbox}[title=\faEnvira\hspace{1em} 结论,
+      overlay=
+      {\begin{tcbinvclipframe}
+      \draw[red,line width=1cm] ([xshift=-2mm,yshift=2mm]frame.north west)
+      --([xshift=2mm,yshift=-2mm]frame.south east);
+      \draw[red,line width=1cm] ([xshift=-2mm,yshift=-2mm]frame.south west)
+      --([xshift=2mm,yshift=2mm]frame.north east);
+      \end{tcbinvclipframe}}]
+      \lipsum[2]
+      \end{tcolorbox}
 \end{frame}
