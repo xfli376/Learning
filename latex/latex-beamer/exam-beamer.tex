@@ -10,6 +10,47 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
+ \frametitle{多页enumerate}    
+    \begin{enumerate}
+      \item enumerate1
+      \item enumerate2
+      \item enumerate2 
+      \item enumerate2
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{}    
+     \begin{enumerate}
+      \setcounter{enumi}{5}
+       \item enumerate1
+       \item enumerate2
+       \item enumerate2 
+       \item enumerate2
+     \end{enumerate}
+ \end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    多行公式
+    \begin{multline}
+            A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right.\label{eq:reset}\\
+            +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right)\\
+            +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right)\\
+            +\ldots\\
+            \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right)\\
+            =\frac{1}{3}\left(b^{3}-a^{3}\right)
+    \end{multline}\\
+    \begin{align}
+      E=m&c^2 & &E=mc^2\\
+      E=~&mc^2 & E&=mc^2 \notag \\
+      E&=mc^2 & E=~&mc^2\\
+      &E=mc^2 & E=m&c^2
+\end{align}
+\end{frame}
+
+\begin{frame}
   \frametitle{自定义求解}
   \例[1]{求解如下方程
       \[x^2+y^2=z^2\]}
