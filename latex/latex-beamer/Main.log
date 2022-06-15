@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  11 MAY 2022 03:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  14 JUN 2022 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1023,6 +1023,46 @@ Package: boxedminipage 2020/04/19 v1.1 Boxed LaTeX2e minipages
 \bmp@box=\box179
 \bmp@width=\skip81
 \bmp@height=\skip82
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2021/09/02 PDF & SVG animations from files and inline graphics
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count399
+Package zref Info: New property: abspage on input line 66.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
+Package: pdfbase 2021/09/12 v0.53 driver independent access to low-level PDF features
+\g_pbs_page_int=\count400
+\g_pbs_obj_int=\count401
+\g_pbs_oc_int=\count402
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2021/06/11 v0.20 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count403
+)
+\@anim@box=\box180
+\@anim@measbox=\box181
+\@anim@tmpdima=\dimen359
+\@anim@tmpdimb=\dimen360
+\@anim@num=\count404
+\@anim@curframe=\count405
+\@anim@curframe@zb=\count406
+\@anim@resizeflags=\count407
+\@anim@skipfram=\count408
+\@anim@mulframecnt=\count409
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count410
+\c@@anim@ltxcnt=\count411
+\@anim@curlayer=\count412
+\@anim@lineno=\count413
+\@anim@curfield=\count414
+\@anim@@resizeflags=\count415
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write5
  Excluding comment 'comment') (/usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
@@ -1030,7 +1070,7 @@ Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count399
+\c@AlgoLine=\count416
 \algocf@hangindent=\skip83
  (/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -1043,108 +1083,84 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip89
 \algomargin=\skip90
 \skipalgocfslide=\skip91
-\algowidth=\dimen359
-\inoutsize=\dimen360
-\inoutindent=\dimen361
-\interspacetitleruled=\dimen362
-\interspacealgoruled=\dimen363
-\interspacetitleboxruled=\dimen364
+\algowidth=\dimen361
+\inoutsize=\dimen362
+\inoutindent=\dimen363
+\interspacetitleruled=\dimen364
+\interspacealgoruled=\dimen365
+\interspacetitleboxruled=\dimen366
 \algocf@ruledwidth=\skip92
-\algocf@inoutbox=\box180
-\algocf@inputbox=\box181
+\algocf@inoutbox=\box182
+\algocf@inputbox=\box183
 \AlCapSkip=\skip93
 \AlCapHSkip=\skip94
 \algoskipindent=\skip95
-\algocf@nlbox=\box182
-\algocf@hangingbox=\box183
-\algocf@untilbox=\box184
+\algocf@nlbox=\box184
+\algocf@hangingbox=\box185
+\algocf@untilbox=\box186
 \algocf@skipuntil=\skip96
-\algocf@capbox=\box185
+\algocf@capbox=\box187
 \algocf@lcaptionbox=\skip97
 \algoheightruledefault=\skip98
 \algoheightrule=\skip99
 \algotitleheightruledefault=\skip100
 \algotitleheightrule=\skip101
-\c@algocfline=\count400
-\c@algocfproc=\count401
-\c@algocf=\count402
-\algocf@algoframe=\box186
-\algocf@algobox=\box187
+\c@algocfline=\count417
+\c@algocfproc=\count418
+\c@algocf=\count419
+\algocf@algoframe=\box188
+\algocf@algobox=\box189
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count403
+\c@float@type=\count420
 \float@exts=\toks63
-\float@box=\box188
+\float@box=\box190
 \@float@everytoks=\toks64
-\@floatcapt=\box189
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/media9.sty
-Package: media9 2021/09/12 v1.22 acrobat-9/X compatible media
-\g_mix_pkgresizeflag_int=\count404
- (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
-Package: pdfbase 2021/09/12 v0.53 driver independent access to low-level PDF features
-\g_pbs_page_int=\count405
-\g_pbs_obj_int=\count406
-\g_pbs_oc_int=\count407
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
-Package: ocgbase 2021/06/11 v0.20 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count408
-)
-\l_mix_poster_box=\box190
-\g_mix_wd_dim=\dimen365
-\g_mix_ht_dim=\dimen366
-\g_mix_dp_dim=\dimen367
-\g_mix_rmcnt_int=\count409
-\l_mix_viewcnt_int=\count410
-\g@mix@page@int=\count411
-\g_mix_resizeflag_int=\count412
-\l_mix_lineno_int=\count413
-\l_mix_pbtn_box=\box191
-\g_mix_mbtncnt_int=\count414
-\mix@btn@dim=\dimen368
+\@floatcapt=\box191
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen369
-\WF@size=\dimen370
-\c@WF@wrappedlines=\count415
+\wrapoverhang=\dimen367
+\WF@size=\dimen368
+\c@WF@wrappedlines=\count421
 \WF@box=\box192
 \WF@everypar=\toks65
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen371
-\lightrulewidth=\dimen372
-\cmidrulewidth=\dimen373
-\belowrulesep=\dimen374
-\belowbottomsep=\dimen375
-\aboverulesep=\dimen376
-\abovetopsep=\dimen377
-\cmidrulesep=\dimen378
-\cmidrulekern=\dimen379
-\defaultaddspace=\dimen380
-\@cmidla=\count416
-\@cmidlb=\count417
-\@aboverulesep=\dimen381
-\@belowrulesep=\dimen382
-\@thisruleclass=\count418
-\@lastruleclass=\count419
-\@thisrulewidth=\dimen383
+\heavyrulewidth=\dimen369
+\lightrulewidth=\dimen370
+\cmidrulewidth=\dimen371
+\belowrulesep=\dimen372
+\belowbottomsep=\dimen373
+\aboverulesep=\dimen374
+\abovetopsep=\dimen375
+\cmidrulesep=\dimen376
+\cmidrulekern=\dimen377
+\defaultaddspace=\dimen378
+\@cmidla=\count422
+\@cmidlb=\count423
+\@aboverulesep=\dimen379
+\@belowrulesep=\dimen380
+\@thisruleclass=\count424
+\@lastruleclass=\count425
+\@thisrulewidth=\dimen381
 ) (/usr/local/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2021/06/20 v3.8.7 Typesetting CJK scripts with XeLaTeX
  (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2021/06/20 v2.5.7 Document and package hooks (CTEX)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2021-08-27 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen384
-\l__xtemplate_tmp_int=\count420
+\l__xtemplate_tmp_dim=\dimen382
+\l__xtemplate_tmp_int=\count426
 \l__xtemplate_tmp_muskip=\muskip18
 \l__xtemplate_tmp_skip=\skip102
 )
-\l__xeCJK_tmp_int=\count421
+\l__xeCJK_tmp_int=\count427
 \l__xeCJK_tmp_box=\box193
-\l__xeCJK_tmp_dim=\dimen385
+\l__xeCJK_tmp_dim=\dimen383
 \l__xeCJK_tmp_skip=\skip103
-\g__xeCJK_space_factor_int=\count422
-\l__xeCJK_begin_int=\count423
-\l__xeCJK_end_int=\count424
+\g__xeCJK_space_factor_int=\count428
+\l__xeCJK_begin_int=\count429
+\l__xeCJK_end_int=\count430
 \c__xeCJK_CJK_class_int=\XeTeXcharclass1
 \c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
 \c__xeCJK_FullRight_class_int=\XeTeXcharclass3
@@ -1154,72 +1170,72 @@ Package: xtemplate 2021-08-27 L3 Experimental prototype document functions
 \c__xeCJK_CM_class_int=\XeTeXcharclass7
 \c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
 \l__xeCJK_last_skip=\skip104
-\g__xeCJK_node_int=\count425
-\c__xeCJK_CJK_node_dim=\dimen386
-\c__xeCJK_CJK-space_node_dim=\dimen387
-\c__xeCJK_default_node_dim=\dimen388
-\c__xeCJK_default-space_node_dim=\dimen389
-\c__xeCJK_CJK-widow_node_dim=\dimen390
-\c__xeCJK_normalspace_node_dim=\dimen391
+\g__xeCJK_node_int=\count431
+\c__xeCJK_CJK_node_dim=\dimen384
+\c__xeCJK_CJK-space_node_dim=\dimen385
+\c__xeCJK_default_node_dim=\dimen386
+\c__xeCJK_default-space_node_dim=\dimen387
+\c__xeCJK_CJK-widow_node_dim=\dimen388
+\c__xeCJK_normalspace_node_dim=\dimen389
 \l__xeCJK_ccglue_skip=\skip105
 \l__xeCJK_ecglue_skip=\skip106
 \l__xeCJK_punct_kern_skip=\skip107
-\l__xeCJK_last_penalty_int=\count426
-\l__xeCJK_last_bound_dim=\dimen392
-\l__xeCJK_last_kern_dim=\dimen393
-\l__xeCJK_widow_penalty_int=\count427
+\l__xeCJK_last_penalty_int=\count432
+\l__xeCJK_last_bound_dim=\dimen390
+\l__xeCJK_last_kern_dim=\dimen391
+\l__xeCJK_widow_penalty_int=\count433
 
 Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 (xtemplate)             argument(s) on line 2335.
 
-\l__xeCJK_fixed_punct_width_dim=\dimen394
-\l__xeCJK_mixed_punct_width_dim=\dimen395
-\l__xeCJK_middle_punct_width_dim=\dimen396
-\l__xeCJK_fixed_margin_width_dim=\dimen397
-\l__xeCJK_mixed_margin_width_dim=\dimen398
-\l__xeCJK_middle_margin_width_dim=\dimen399
-\l__xeCJK_bound_punct_width_dim=\dimen400
-\l__xeCJK_bound_margin_width_dim=\dimen401
-\l__xeCJK_margin_minimum_dim=\dimen402
-\l__xeCJK_kerning_total_width_dim=\dimen403
-\l__xeCJK_same_align_margin_dim=\dimen404
-\l__xeCJK_different_align_margin_dim=\dimen405
-\l__xeCJK_kerning_margin_width_dim=\dimen406
-\l__xeCJK_kerning_margin_minimum_dim=\dimen407
-\l__xeCJK_bound_dim=\dimen408
-\l__xeCJK_reverse_bound_dim=\dimen409
-\l__xeCJK_margin_dim=\dimen410
-\l__xeCJK_minimum_bound_dim=\dimen411
-\l__xeCJK_kerning_margin_dim=\dimen412
-\g__xeCJK_family_int=\count428
-\l__xeCJK_fam_int=\count429
-\g__xeCJK_fam_allocation_int=\count430
-\l__xeCJK_verb_case_int=\count431
+\l__xeCJK_fixed_punct_width_dim=\dimen392
+\l__xeCJK_mixed_punct_width_dim=\dimen393
+\l__xeCJK_middle_punct_width_dim=\dimen394
+\l__xeCJK_fixed_margin_width_dim=\dimen395
+\l__xeCJK_mixed_margin_width_dim=\dimen396
+\l__xeCJK_middle_margin_width_dim=\dimen397
+\l__xeCJK_bound_punct_width_dim=\dimen398
+\l__xeCJK_bound_margin_width_dim=\dimen399
+\l__xeCJK_margin_minimum_dim=\dimen400
+\l__xeCJK_kerning_total_width_dim=\dimen401
+\l__xeCJK_same_align_margin_dim=\dimen402
+\l__xeCJK_different_align_margin_dim=\dimen403
+\l__xeCJK_kerning_margin_width_dim=\dimen404
+\l__xeCJK_kerning_margin_minimum_dim=\dimen405
+\l__xeCJK_bound_dim=\dimen406
+\l__xeCJK_reverse_bound_dim=\dimen407
+\l__xeCJK_margin_dim=\dimen408
+\l__xeCJK_minimum_bound_dim=\dimen409
+\l__xeCJK_kerning_margin_dim=\dimen410
+\g__xeCJK_family_int=\count434
+\l__xeCJK_fam_int=\count435
+\g__xeCJK_fam_allocation_int=\count436
+\l__xeCJK_verb_case_int=\count437
 \l__xeCJK_verb_exspace_skip=\skip108
  (/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count432
-\l__fontspec_language_int=\count433
-\l__fontspec_strnum_int=\count434
-\l__fontspec_tmp_int=\count435
-\l__fontspec_tmpa_int=\count436
-\l__fontspec_tmpb_int=\count437
-\l__fontspec_tmpc_int=\count438
-\l__fontspec_em_int=\count439
-\l__fontspec_emdef_int=\count440
-\l__fontspec_strong_int=\count441
-\l__fontspec_strongdef_int=\count442
-\l__fontspec_tmpa_dim=\dimen413
-\l__fontspec_tmpb_dim=\dimen414
-\l__fontspec_tmpc_dim=\dimen415
+\l__fontspec_script_int=\count438
+\l__fontspec_language_int=\count439
+\l__fontspec_strnum_int=\count440
+\l__fontspec_tmp_int=\count441
+\l__fontspec_tmpa_int=\count442
+\l__fontspec_tmpb_int=\count443
+\l__fontspec_tmpc_int=\count444
+\l__fontspec_em_int=\count445
+\l__fontspec_emdef_int=\count446
+\l__fontspec_strong_int=\count447
+\l__fontspec_strongdef_int=\count448
+\l__fontspec_tmpa_dim=\dimen411
+\l__fontspec_tmpb_dim=\dimen412
+\l__fontspec_tmpc_dim=\dimen413
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2021/06/20 v3.8.7 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count443
-\l__xeCJK_listings_flag_int=\count444
+\l__xeCJK_listings_max_char_int=\count449
+\l__xeCJK_listings_flag_int=\count450
 ) (/usr/local/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2021/06/20 v3.8.7 Configuration file for xeCJK package
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math.sty
@@ -1232,9 +1248,9 @@ Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count445
-\g__um_fonts_used_int=\count446
-\l__um_primecount_int=\count447
+\g__um_fam_int=\count451
+\g__um_fonts_used_int=\count452
+\l__um_primecount_int=\count453
 \g__um_primekern_muskip=\muskip19
  (/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
@@ -1325,7 +1341,7 @@ Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
 Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
 ) (/Users/xfli/Library/texmf/tex/latex/metropolis/beamerfontthememetropolis.sty
 Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
-\c@fontsnotfound=\count448
+\c@fontsnotfound=\count454
 
 Package fontspec Info: Font family 'FiraSansLight(0)' created for font 'Fira
 (fontspec)             Sans Light' with options
@@ -1488,36 +1504,29 @@ Package fontspec Info: Font family 'WeibeiSC-Bold(0)' created for font
 
  (/Users/xfli/Library/texmf/tex/latex/metropolis/pgfplotsthemetol.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON technical note
-) (./Main.aux (./exam-beamer.aux
-
-LaTeX Warning: Label `current<1>' multiply defined.
-
-
-LaTeX Warning: Label `current' multiply defined.
-
-))
+) (./Main.aux (./exam-beamer.aux))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1553,7 +1562,7 @@ LaTeX Font Info:    ... okay on input line 12.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 13.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1561,11 +1570,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count449
+\c@section@level=\count455
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
  (./Main.out) (./Main.out)
 \@outlinefile=\write6
 \openout6 = `Main.out'.
@@ -1585,13 +1594,13 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-\c@lstlisting=\count450
+\c@lstlisting=\count456
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 12.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 13.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 12.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 13.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 12.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 13.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -1623,13 +1632,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 12.
+(Font)              `operators' in the math version `normal' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 12.
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 13.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 12.
+(Font)              `operators' in the math version `bold' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 12.
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 13.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1693,13 +1702,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 12.
+(Font)              `symbols' in the math version `normal' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 12.
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 13.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 12.
+(Font)              `symbols' in the math version `bold' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 12.
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 13.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1745,43 +1754,345 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 12.
+(Font)              `largesymbols' in the math version `normal' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 12.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 13.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 12.
+(Font)              `largesymbols' in the math version `bold' on input line 13.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 12.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 13.
 (./Main.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 18.
+(hyperref)                setting the option has no effect on input line 19.
 
+
+Overfull \vbox (15.63992pt too high) detected at line 33
+ []
+
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[1
+
+]
 \openout2 = `exam-beamer.aux'.
 
-(./exam-beamer.tex
+ (./exam-beamer.tex
 File: images/uestclogo-1.png Graphic file (type bmp)
 <images/uestclogo-1.png>
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [2
+
+
+]
+File: figs/gif/test-1.jpeg Graphic file (type bmp)
+<figs/gif/test-1.jpeg>
+ <a0,fr0>
+File: figs/gif/test-2.jpeg Graphic file (type bmp)
+<figs/gif/test-2.jpeg>
+ <a0,fr1>
+File: figs/gif/test-3.jpeg Graphic file (type bmp)
+<figs/gif/test-3.jpeg>
+ <a0,fr2>
+File: figs/gif/test-4.jpeg Graphic file (type bmp)
+<figs/gif/test-4.jpeg>
+ <a0,fr3>
+File: figs/gif/test-5.jpeg Graphic file (type bmp)
+<figs/gif/test-5.jpeg>
+ <a0,fr4>
+File: figs/gif/test-6.jpeg Graphic file (type bmp)
+<figs/gif/test-6.jpeg>
+ <a0,fr5>
+File: figs/gif/test-7.jpeg Graphic file (type bmp)
+<figs/gif/test-7.jpeg>
+ <a0,fr6>
+File: figs/gif/test-8.jpeg Graphic file (type bmp)
+<figs/gif/test-8.jpeg>
+ <a0,fr7>
+File: figs/gif/test-9.jpeg Graphic file (type bmp)
+<figs/gif/test-9.jpeg>
+ <a0,fr8>
+File: figs/gif/test-10.jpeg Graphic file (type bmp)
+<figs/gif/test-10.jpeg>
+ <a0,fr9>
+File: figs/gif/test-11.jpeg Graphic file (type bmp)
+<figs/gif/test-11.jpeg>
+ <a0,fr10>
+File: figs/gif/test-12.jpeg Graphic file (type bmp)
+<figs/gif/test-12.jpeg>
+ <a0,fr11>
+File: figs/gif/test-13.jpeg Graphic file (type bmp)
+<figs/gif/test-13.jpeg>
+ <a0,fr12>
+File: figs/gif/test-14.jpeg Graphic file (type bmp)
+<figs/gif/test-14.jpeg>
+ <a0,fr13>
+File: figs/gif/test-15.jpeg Graphic file (type bmp)
+<figs/gif/test-15.jpeg>
+ <a0,fr14>
+File: figs/gif/test-16.jpeg Graphic file (type bmp)
+<figs/gif/test-16.jpeg>
+ <a0,fr15>
+File: figs/gif/test-17.jpeg Graphic file (type bmp)
+<figs/gif/test-17.jpeg>
+ <a0,fr16>
+File: figs/gif/test-18.jpeg Graphic file (type bmp)
+<figs/gif/test-18.jpeg>
+ <a0,fr17>
+File: figs/gif/test-19.jpeg Graphic file (type bmp)
+<figs/gif/test-19.jpeg>
+ <a0,fr18>
+File: figs/gif/test-20.jpeg Graphic file (type bmp)
+<figs/gif/test-20.jpeg>
+ <a0,fr19>
+File: figs/gif/test-21.jpeg Graphic file (type bmp)
+<figs/gif/test-21.jpeg>
+ <a0,fr20>
+File: figs/gif/test-22.jpeg Graphic file (type bmp)
+<figs/gif/test-22.jpeg>
+ <a0,fr21>
+File: figs/gif/test-23.jpeg Graphic file (type bmp)
+<figs/gif/test-23.jpeg>
+ <a0,fr22>
+File: figs/gif/test-24.jpeg Graphic file (type bmp)
+<figs/gif/test-24.jpeg>
+ <a0,fr23>
+File: figs/gif/test-25.jpeg Graphic file (type bmp)
+<figs/gif/test-25.jpeg>
+ <a0,fr24>
+File: figs/gif/test-26.jpeg Graphic file (type bmp)
+<figs/gif/test-26.jpeg>
+ <a0,fr25>
+File: figs/gif/test-27.jpeg Graphic file (type bmp)
+<figs/gif/test-27.jpeg>
+ <a0,fr26>
+File: figs/gif/test-28.jpeg Graphic file (type bmp)
+<figs/gif/test-28.jpeg>
+ <a0,fr27>
+File: figs/gif/test-29.jpeg Graphic file (type bmp)
+<figs/gif/test-29.jpeg>
+ <a0,fr28>
+File: figs/gif/test-30.jpeg Graphic file (type bmp)
+<figs/gif/test-30.jpeg>
+ <a0,fr29>
+File: figs/gif/test-31.jpeg Graphic file (type bmp)
+<figs/gif/test-31.jpeg>
+ <a0,fr30>
+File: figs/gif/test-32.jpeg Graphic file (type bmp)
+<figs/gif/test-32.jpeg>
+ <a0,fr31>
+File: figs/gif/test-33.jpeg Graphic file (type bmp)
+<figs/gif/test-33.jpeg>
+ <a0,fr32>
+File: figs/gif/test-34.jpeg Graphic file (type bmp)
+<figs/gif/test-34.jpeg>
+ <a0,fr33>
+File: figs/gif/test-35.jpeg Graphic file (type bmp)
+<figs/gif/test-35.jpeg>
+ <a0,fr34>
+File: figs/gif/test-36.jpeg Graphic file (type bmp)
+<figs/gif/test-36.jpeg>
+ <a0,fr35>
+File: figs/gif/test-37.jpeg Graphic file (type bmp)
+<figs/gif/test-37.jpeg>
+ <a0,fr36>
+File: figs/gif/test-38.jpeg Graphic file (type bmp)
+<figs/gif/test-38.jpeg>
+ <a0,fr37>
+File: figs/gif/test-39.jpeg Graphic file (type bmp)
+<figs/gif/test-39.jpeg>
+ <a0,fr38>
+File: figs/gif/test-40.jpeg Graphic file (type bmp)
+<figs/gif/test-40.jpeg>
+ <a0,fr39>
+File: figs/gif/test-41.jpeg Graphic file (type bmp)
+<figs/gif/test-41.jpeg>
+ <a0,fr40> <a0,fr41> <a0,fr42> <a0,fr43>
+File: figs/gif/test-45.jpeg Graphic file (type bmp)
+<figs/gif/test-45.jpeg>
+ <a0,fr44>
+File: figs/gif/test-46.jpeg Graphic file (type bmp)
+<figs/gif/test-46.jpeg>
+ <a0,fr45>
+File: figs/gif/test-47.jpeg Graphic file (type bmp)
+<figs/gif/test-47.jpeg>
+ <a0,fr46>
+File: figs/gif/test-48.jpeg Graphic file (type bmp)
+<figs/gif/test-48.jpeg>
+ <a0,fr47>
+File: figs/gif/test-49.jpeg Graphic file (type bmp)
+<figs/gif/test-49.jpeg>
+ <a0,fr48>
+File: figs/gif/test-50.jpeg Graphic file (type bmp)
+<figs/gif/test-50.jpeg>
+ <a0,fr49>
+File: figs/gif/test-51.jpeg Graphic file (type bmp)
+<figs/gif/test-51.jpeg>
+ <a0,fr50>
+File: figs/gif/test-52.jpeg Graphic file (type bmp)
+<figs/gif/test-52.jpeg>
+ <a0,fr51>
+File: figs/gif/test-53.jpeg Graphic file (type bmp)
+<figs/gif/test-53.jpeg>
+ <a0,fr52>
+File: figs/gif/test-54.jpeg Graphic file (type bmp)
+<figs/gif/test-54.jpeg>
+ <a0,fr53>
+File: figs/gif/test-55.jpeg Graphic file (type bmp)
+<figs/gif/test-55.jpeg>
+ <a0,fr54>
+File: figs/gif/test-56.jpeg Graphic file (type bmp)
+<figs/gif/test-56.jpeg>
+ <a0,fr55>
+File: figs/gif/test-57.jpeg Graphic file (type bmp)
+<figs/gif/test-57.jpeg>
+ <a0,fr56>
+File: figs/gif/test-58.jpeg Graphic file (type bmp)
+<figs/gif/test-58.jpeg>
+ <a0,fr57>
+File: figs/gif/test-59.jpeg Graphic file (type bmp)
+<figs/gif/test-59.jpeg>
+ <a0,fr58>
+File: figs/gif/test-60.jpeg Graphic file (type bmp)
+<figs/gif/test-60.jpeg>
+ <a0,fr59>
+File: figs/gif/test-61.jpeg Graphic file (type bmp)
+<figs/gif/test-61.jpeg>
+ <a0,fr60>
+File: figs/gif/test-62.jpeg Graphic file (type bmp)
+<figs/gif/test-62.jpeg>
+ <a0,fr61>
+File: figs/gif/test-63.jpeg Graphic file (type bmp)
+<figs/gif/test-63.jpeg>
+ <a0,fr62>
+File: figs/gif/test-64.jpeg Graphic file (type bmp)
+<figs/gif/test-64.jpeg>
+ <a0,fr63>
+File: figs/gif/test-65.jpeg Graphic file (type bmp)
+<figs/gif/test-65.jpeg>
+ <a0,fr64>
+File: figs/gif/test-66.jpeg Graphic file (type bmp)
+<figs/gif/test-66.jpeg>
+ <a0,fr65>
+File: figs/gif/test-67.jpeg Graphic file (type bmp)
+<figs/gif/test-67.jpeg>
+ <a0,fr66>
+File: figs/gif/test-68.jpeg Graphic file (type bmp)
+<figs/gif/test-68.jpeg>
+ <a0,fr67>
+File: figs/gif/test-69.jpeg Graphic file (type bmp)
+<figs/gif/test-69.jpeg>
+ <a0,fr68>
+File: figs/gif/test-70.jpeg Graphic file (type bmp)
+<figs/gif/test-70.jpeg>
+ <a0,fr69>
+File: figs/gif/test-71.jpeg Graphic file (type bmp)
+<figs/gif/test-71.jpeg>
+ <a0,fr70>
+File: figs/gif/test-72.jpeg Graphic file (type bmp)
+<figs/gif/test-72.jpeg>
+ <a0,fr71>
+File: figs/gif/test-73.jpeg Graphic file (type bmp)
+<figs/gif/test-73.jpeg>
+ <a0,fr72>
+File: figs/gif/test-74.jpeg Graphic file (type bmp)
+<figs/gif/test-74.jpeg>
+ <a0,fr73>
+File: figs/gif/test-75.jpeg Graphic file (type bmp)
+<figs/gif/test-75.jpeg>
+ <a0,fr74>
+File: figs/gif/test-76.jpeg Graphic file (type bmp)
+<figs/gif/test-76.jpeg>
+ <a0,fr75>
+File: figs/gif/test-77.jpeg Graphic file (type bmp)
+<figs/gif/test-77.jpeg>
+ <a0,fr76>
+File: figs/gif/test-78.jpeg Graphic file (type bmp)
+<figs/gif/test-78.jpeg>
+ <a0,fr77>
+File: figs/gif/test-79.jpeg Graphic file (type bmp)
+<figs/gif/test-79.jpeg>
+ <a0,fr78>
+File: figs/gif/test-80.jpeg Graphic file (type bmp)
+<figs/gif/test-80.jpeg>
+ <a0,fr79>
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [3
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [4
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [5
+
+]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 51.
+(Font)              scaled to size 10.95116pt on input line 57.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 51.
+(Font)              scaled to size 7.6658pt on input line 57.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 51.
+(Font)              scaled to size 5.47559pt on input line 57.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 51.
+(Font)              scaled to size 10.94882pt on input line 57.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 51.
+(Font)              scaled to size 7.66417pt on input line 57.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 51.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+(Font)              scaled to size 5.47441pt on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \vbox (31.18933pt too high) detected at line 57
+ []
+
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[6
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [7
+
+]
+Overfull \vbox (102.20555pt too high) detected at line 77
+ []
+
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[8
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [9
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [10
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [11
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [12
+
+]
 
 Package fontspec Info: Could not resolve font "KaiTi/BI" (it probably doesn't
 (fontspec)             exist).
@@ -1808,8 +2119,18 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 
 
 LaTeX Font Warning: Font shape `TU/FiraMono(0)/m/it' undefined
-(Font)              using `TU/FiraMono(0)/m/n' instead on input line 123.
+(Font)              using `TU/FiraMono(0)/m/n' instead on input line 129.
 
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[13
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [14
+
+]
 
 Package fontspec Info: Font family 'FiraSansLight(2)' created for font 'Fira
 (fontspec)             Sans Light' with options
@@ -1839,58 +2160,220 @@ Package fontspec Info: Font family 'FiraSansLight(2)' created for font 'Fira
 (fontspec)             <->"Fira Sans
 (fontspec)             Italic/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
 
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [15
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [16
+
+]
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/b/n' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 204.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 210.
 
-\c@density=\count451
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[17
+
+]
+\c@density=\count457
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [18
+
+]
 Missing character: There is no . ("2E) in font nullfont!
 Missing character: There is no 0 ("30) in font nullfont!
 Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no p ("70) in font nullfont!
 Missing character: There is no t ("74) in font nullfont!
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [19
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [20
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [21
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [22
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [23
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [24
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [25
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [26
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [27
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [28
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [29
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [30
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []\TU/FiraSansLight(0)/m/n/10.95 Some con-
  []
 
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[31
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [32
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [33
+
+]
 Missing character: There is no ; ("3B) in font nullfont!
-)
+
+Overfull \vbox (6.41803pt too high) detected at line 479
+ []
+
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+[34
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [35
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [36
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [37
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [38
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [39
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [40
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [41
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [42
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [43
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [44
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [45
+
+]
+File: images/uestclogo-7.png Graphic file (type bmp)
+<images/uestclogo-7.png>
+ [46
+
+])
 \tf@nav=\write7
 \openout7 = `Main.nav'.
 
@@ -1904,19 +2387,16 @@ Missing character: There is no ; ("3B) in font nullfont!
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58791 strings out of 476493
- 1424584 string characters out of 5817124
- 2573471 words of memory out of 5000000
- 78056 multiletter control sequences out of 15000+600000
- 408143 words of font info for 126 fonts, out of 8000000 for 9000
+ 61112 strings out of 476493
+ 1474138 string characters out of 5817124
+ 2625001 words of memory out of 5000000
+ 80271 multiletter control sequences out of 15000+600000
+ 408151 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,14n,149p,1891b,2147s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,13n,149p,1864b,2179s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-No pages of output.
+Output written on Main.pdf (46 pages).
