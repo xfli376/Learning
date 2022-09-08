@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  14 JUN 2022 17:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.15)  16 JUN 2022 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1504,7 +1504,7 @@ Package fontspec Info: Font family 'WeibeiSC-Bold(0)' created for font
 
  (/Users/xfli/Library/texmf/tex/latex/metropolis/pgfplotsthemetol.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON technical note
-) (./Main.aux (./exam-beamer.aux))
+) (./Main.aux (./tmp.aux))
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -1775,605 +1775,53 @@ File: images/uestclogo-7.png Graphic file (type bmp)
 [1
 
 ]
-\openout2 = `exam-beamer.aux'.
+\openout2 = `tmp.aux'.
 
- (./exam-beamer.tex
-File: images/uestclogo-1.png Graphic file (type bmp)
-<images/uestclogo-1.png>
+ (./tmp.tex
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.6658pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.47559pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
  [2
 
 
 ]
-File: figs/gif/test-1.jpeg Graphic file (type bmp)
-<figs/gif/test-1.jpeg>
- <a0,fr0>
-File: figs/gif/test-2.jpeg Graphic file (type bmp)
-<figs/gif/test-2.jpeg>
- <a0,fr1>
-File: figs/gif/test-3.jpeg Graphic file (type bmp)
-<figs/gif/test-3.jpeg>
- <a0,fr2>
-File: figs/gif/test-4.jpeg Graphic file (type bmp)
-<figs/gif/test-4.jpeg>
- <a0,fr3>
-File: figs/gif/test-5.jpeg Graphic file (type bmp)
-<figs/gif/test-5.jpeg>
- <a0,fr4>
-File: figs/gif/test-6.jpeg Graphic file (type bmp)
-<figs/gif/test-6.jpeg>
- <a0,fr5>
-File: figs/gif/test-7.jpeg Graphic file (type bmp)
-<figs/gif/test-7.jpeg>
- <a0,fr6>
-File: figs/gif/test-8.jpeg Graphic file (type bmp)
-<figs/gif/test-8.jpeg>
- <a0,fr7>
-File: figs/gif/test-9.jpeg Graphic file (type bmp)
-<figs/gif/test-9.jpeg>
- <a0,fr8>
-File: figs/gif/test-10.jpeg Graphic file (type bmp)
-<figs/gif/test-10.jpeg>
- <a0,fr9>
-File: figs/gif/test-11.jpeg Graphic file (type bmp)
-<figs/gif/test-11.jpeg>
- <a0,fr10>
-File: figs/gif/test-12.jpeg Graphic file (type bmp)
-<figs/gif/test-12.jpeg>
- <a0,fr11>
-File: figs/gif/test-13.jpeg Graphic file (type bmp)
-<figs/gif/test-13.jpeg>
- <a0,fr12>
-File: figs/gif/test-14.jpeg Graphic file (type bmp)
-<figs/gif/test-14.jpeg>
- <a0,fr13>
-File: figs/gif/test-15.jpeg Graphic file (type bmp)
-<figs/gif/test-15.jpeg>
- <a0,fr14>
-File: figs/gif/test-16.jpeg Graphic file (type bmp)
-<figs/gif/test-16.jpeg>
- <a0,fr15>
-File: figs/gif/test-17.jpeg Graphic file (type bmp)
-<figs/gif/test-17.jpeg>
- <a0,fr16>
-File: figs/gif/test-18.jpeg Graphic file (type bmp)
-<figs/gif/test-18.jpeg>
- <a0,fr17>
-File: figs/gif/test-19.jpeg Graphic file (type bmp)
-<figs/gif/test-19.jpeg>
- <a0,fr18>
-File: figs/gif/test-20.jpeg Graphic file (type bmp)
-<figs/gif/test-20.jpeg>
- <a0,fr19>
-File: figs/gif/test-21.jpeg Graphic file (type bmp)
-<figs/gif/test-21.jpeg>
- <a0,fr20>
-File: figs/gif/test-22.jpeg Graphic file (type bmp)
-<figs/gif/test-22.jpeg>
- <a0,fr21>
-File: figs/gif/test-23.jpeg Graphic file (type bmp)
-<figs/gif/test-23.jpeg>
- <a0,fr22>
-File: figs/gif/test-24.jpeg Graphic file (type bmp)
-<figs/gif/test-24.jpeg>
- <a0,fr23>
-File: figs/gif/test-25.jpeg Graphic file (type bmp)
-<figs/gif/test-25.jpeg>
- <a0,fr24>
-File: figs/gif/test-26.jpeg Graphic file (type bmp)
-<figs/gif/test-26.jpeg>
- <a0,fr25>
-File: figs/gif/test-27.jpeg Graphic file (type bmp)
-<figs/gif/test-27.jpeg>
- <a0,fr26>
-File: figs/gif/test-28.jpeg Graphic file (type bmp)
-<figs/gif/test-28.jpeg>
- <a0,fr27>
-File: figs/gif/test-29.jpeg Graphic file (type bmp)
-<figs/gif/test-29.jpeg>
- <a0,fr28>
-File: figs/gif/test-30.jpeg Graphic file (type bmp)
-<figs/gif/test-30.jpeg>
- <a0,fr29>
-File: figs/gif/test-31.jpeg Graphic file (type bmp)
-<figs/gif/test-31.jpeg>
- <a0,fr30>
-File: figs/gif/test-32.jpeg Graphic file (type bmp)
-<figs/gif/test-32.jpeg>
- <a0,fr31>
-File: figs/gif/test-33.jpeg Graphic file (type bmp)
-<figs/gif/test-33.jpeg>
- <a0,fr32>
-File: figs/gif/test-34.jpeg Graphic file (type bmp)
-<figs/gif/test-34.jpeg>
- <a0,fr33>
-File: figs/gif/test-35.jpeg Graphic file (type bmp)
-<figs/gif/test-35.jpeg>
- <a0,fr34>
-File: figs/gif/test-36.jpeg Graphic file (type bmp)
-<figs/gif/test-36.jpeg>
- <a0,fr35>
-File: figs/gif/test-37.jpeg Graphic file (type bmp)
-<figs/gif/test-37.jpeg>
- <a0,fr36>
-File: figs/gif/test-38.jpeg Graphic file (type bmp)
-<figs/gif/test-38.jpeg>
- <a0,fr37>
-File: figs/gif/test-39.jpeg Graphic file (type bmp)
-<figs/gif/test-39.jpeg>
- <a0,fr38>
-File: figs/gif/test-40.jpeg Graphic file (type bmp)
-<figs/gif/test-40.jpeg>
- <a0,fr39>
-File: figs/gif/test-41.jpeg Graphic file (type bmp)
-<figs/gif/test-41.jpeg>
- <a0,fr40> <a0,fr41> <a0,fr42> <a0,fr43>
-File: figs/gif/test-45.jpeg Graphic file (type bmp)
-<figs/gif/test-45.jpeg>
- <a0,fr44>
-File: figs/gif/test-46.jpeg Graphic file (type bmp)
-<figs/gif/test-46.jpeg>
- <a0,fr45>
-File: figs/gif/test-47.jpeg Graphic file (type bmp)
-<figs/gif/test-47.jpeg>
- <a0,fr46>
-File: figs/gif/test-48.jpeg Graphic file (type bmp)
-<figs/gif/test-48.jpeg>
- <a0,fr47>
-File: figs/gif/test-49.jpeg Graphic file (type bmp)
-<figs/gif/test-49.jpeg>
- <a0,fr48>
-File: figs/gif/test-50.jpeg Graphic file (type bmp)
-<figs/gif/test-50.jpeg>
- <a0,fr49>
-File: figs/gif/test-51.jpeg Graphic file (type bmp)
-<figs/gif/test-51.jpeg>
- <a0,fr50>
-File: figs/gif/test-52.jpeg Graphic file (type bmp)
-<figs/gif/test-52.jpeg>
- <a0,fr51>
-File: figs/gif/test-53.jpeg Graphic file (type bmp)
-<figs/gif/test-53.jpeg>
- <a0,fr52>
-File: figs/gif/test-54.jpeg Graphic file (type bmp)
-<figs/gif/test-54.jpeg>
- <a0,fr53>
-File: figs/gif/test-55.jpeg Graphic file (type bmp)
-<figs/gif/test-55.jpeg>
- <a0,fr54>
-File: figs/gif/test-56.jpeg Graphic file (type bmp)
-<figs/gif/test-56.jpeg>
- <a0,fr55>
-File: figs/gif/test-57.jpeg Graphic file (type bmp)
-<figs/gif/test-57.jpeg>
- <a0,fr56>
-File: figs/gif/test-58.jpeg Graphic file (type bmp)
-<figs/gif/test-58.jpeg>
- <a0,fr57>
-File: figs/gif/test-59.jpeg Graphic file (type bmp)
-<figs/gif/test-59.jpeg>
- <a0,fr58>
-File: figs/gif/test-60.jpeg Graphic file (type bmp)
-<figs/gif/test-60.jpeg>
- <a0,fr59>
-File: figs/gif/test-61.jpeg Graphic file (type bmp)
-<figs/gif/test-61.jpeg>
- <a0,fr60>
-File: figs/gif/test-62.jpeg Graphic file (type bmp)
-<figs/gif/test-62.jpeg>
- <a0,fr61>
-File: figs/gif/test-63.jpeg Graphic file (type bmp)
-<figs/gif/test-63.jpeg>
- <a0,fr62>
-File: figs/gif/test-64.jpeg Graphic file (type bmp)
-<figs/gif/test-64.jpeg>
- <a0,fr63>
-File: figs/gif/test-65.jpeg Graphic file (type bmp)
-<figs/gif/test-65.jpeg>
- <a0,fr64>
-File: figs/gif/test-66.jpeg Graphic file (type bmp)
-<figs/gif/test-66.jpeg>
- <a0,fr65>
-File: figs/gif/test-67.jpeg Graphic file (type bmp)
-<figs/gif/test-67.jpeg>
- <a0,fr66>
-File: figs/gif/test-68.jpeg Graphic file (type bmp)
-<figs/gif/test-68.jpeg>
- <a0,fr67>
-File: figs/gif/test-69.jpeg Graphic file (type bmp)
-<figs/gif/test-69.jpeg>
- <a0,fr68>
-File: figs/gif/test-70.jpeg Graphic file (type bmp)
-<figs/gif/test-70.jpeg>
- <a0,fr69>
-File: figs/gif/test-71.jpeg Graphic file (type bmp)
-<figs/gif/test-71.jpeg>
- <a0,fr70>
-File: figs/gif/test-72.jpeg Graphic file (type bmp)
-<figs/gif/test-72.jpeg>
- <a0,fr71>
-File: figs/gif/test-73.jpeg Graphic file (type bmp)
-<figs/gif/test-73.jpeg>
- <a0,fr72>
-File: figs/gif/test-74.jpeg Graphic file (type bmp)
-<figs/gif/test-74.jpeg>
- <a0,fr73>
-File: figs/gif/test-75.jpeg Graphic file (type bmp)
-<figs/gif/test-75.jpeg>
- <a0,fr74>
-File: figs/gif/test-76.jpeg Graphic file (type bmp)
-<figs/gif/test-76.jpeg>
- <a0,fr75>
-File: figs/gif/test-77.jpeg Graphic file (type bmp)
-<figs/gif/test-77.jpeg>
- <a0,fr76>
-File: figs/gif/test-78.jpeg Graphic file (type bmp)
-<figs/gif/test-78.jpeg>
- <a0,fr77>
-File: figs/gif/test-79.jpeg Graphic file (type bmp)
-<figs/gif/test-79.jpeg>
- <a0,fr78>
-File: figs/gif/test-80.jpeg Graphic file (type bmp)
-<figs/gif/test-80.jpeg>
- <a0,fr79>
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
- [3
-
-]
+ [3]
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
- [4
+ [4]
 
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [5
+Package amsmath Warning: Bracket group [V, p_x] at formula start!
+(amsmath)                It could be a misspelled positional argument.
+(amsmath)                If it belongs to the formula add a \relax in
+(amsmath)                front to hide it on input line 41.
 
-]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 57.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 57.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 57.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 57.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 57.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 57.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \vbox (31.18933pt too high) detected at line 57
- []
-
 File: images/uestclogo-7.png Graphic file (type bmp)
 <images/uestclogo-7.png>
-[6
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [7
-
-]
-Overfull \vbox (102.20555pt too high) detected at line 77
- []
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
-[8
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [9
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [10
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [11
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [12
-
-]
-
-Package fontspec Info: Could not resolve font "KaiTi/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "KaiTi/B" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "KaiTi/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
-(fontspec)             options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
-
-
-LaTeX Font Warning: Font shape `TU/FiraMono(0)/m/it' undefined
-(Font)              using `TU/FiraMono(0)/m/n' instead on input line 129.
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
-[13
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [14
-
-]
-
-Package fontspec Info: Font family 'FiraSansLight(2)' created for font 'Fira
-(fontspec)             Sans Light' with options
-(fontspec)             [Ligatures=TeX,ItalicFont={Fira Sans Light
-(fontspec)             Italic},BoldFont={Fira Sans},BoldItalicFont={Fira Sans
-(fontspec)             Italic},Numbers={Monospaced}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Fira Sans
-(fontspec)             Light/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Fira Sans
-(fontspec)             Light/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Fira
-(fontspec)             Sans/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Fira
-(fontspec)             Sans/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Fira Sans Light
-(fontspec)             Italic/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"Fira Sans Light
-(fontspec)             Italic/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Fira Sans
-(fontspec)             Italic/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Fira Sans
-(fontspec)             Italic/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [15
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [16
-
-]
-
-LaTeX Font Warning: Font shape `TU/FontAwesome(0)/b/n' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 210.
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
-[17
-
-]
-\c@density=\count457
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [18
-
-]
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no p ("70) in font nullfont!
-Missing character: There is no t ("74) in font nullfont!
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [19
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [20
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [21
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [22
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [23
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [24
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [25
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [26
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [27
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [28
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [29
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [30
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
-[]\TU/FiraSansLight(0)/m/n/10.95 Some con-
- []
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
-[31
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [32
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [33
-
-]
-Missing character: There is no ; ("3B) in font nullfont!
-
-Overfull \vbox (6.41803pt too high) detected at line 479
- []
-
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
-[34
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [35
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [36
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [37
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [38
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [39
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [40
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [41
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [42
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [43
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [44
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [45
-
-]
-File: images/uestclogo-7.png Graphic file (type bmp)
-<images/uestclogo-7.png>
- [46
-
-])
+ [5]
 \tf@nav=\write7
 \openout7 = `Main.nav'.
 
@@ -2383,20 +1831,17 @@ File: images/uestclogo-7.png Graphic file (type bmp)
 \tf@snm=\write9
 \openout9 = `Main.snm'.
 
- (./Main.aux (./exam-beamer.aux))
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+ (./Main.aux (./tmp.aux))
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 61112 strings out of 476493
- 1474138 string characters out of 5817124
- 2625001 words of memory out of 5000000
- 80271 multiletter control sequences out of 15000+600000
- 408151 words of font info for 127 fonts, out of 8000000 for 9000
+ 57367 strings out of 476493
+ 1381792 string characters out of 5817124
+ 2131990 words of memory out of 5000000
+ 76640 multiletter control sequences out of 15000+600000
+ 408039 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,13n,149p,1864b,2179s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,14n,149p,1864b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (46 pages).
+Output written on Main.pdf (5 pages).

@@ -1,5 +1,5 @@
+# 第一课 简介
 ## Anaconda
-### Anaconda 启动不了解决方案
 - 设置镜像
 >conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
 conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
