@@ -135,71 +135,60 @@ endsnippet
 
 使用实例：
 
-- `$D` $\to$ `$\displaystyle   $`
-- `$B` $\to$ `$$  $$`
-- `...` $\to$ `\cdots` for $\cdots  $
+- `$4` $\to$ `$\displaystyle   $`     
+- `$$` $\to$ `$$  $$`
+- `...` $\to$ `\cdots` for $\cdots  $ 
 - `,,,` $\to$ `\vdots` for $ \vdots $
-- `:::` $\to$ `\ddots` for $ \ddots $
-- `int` $\to$ `\int`for $ \int $
-- `intd` $\to$ `\int_{}^{}`for $ \int_{1}^{2} $
-- `iint` $\to$ `\iint ` for $ \iint  $
-- `iiint` $\to$ `\iiint ` for $ \iiint $
-- `oint` $\to$ `\oint ` for $ \oint $
-- `oiint` $\to$ `\oiint ` for $ \oiint  $
-- `lim` $\to$ `\lim ` for $ \lim  $
-- `limd` $\to$ `\lim_{ \to  } ` for $ \lim_{ x\to 0 }  $
-- `sum` $\to$ `\sum ` for $ \lim_{ \to }  $
-- `sumd` $\to$ `\sum_{}^{} ` for $ \sum_{1}^{n}  $
-- `oo` $\to$ `\infty ` for $ \infty  $
-- `oop` $\to$ `+\infty ` for $ +\infty  $
-- `oom` $\to$ `-\infty ` for $ -\infty  $
-- `DD` $\to$ `\frac{\mathrm{d}}{\mathrm{d}} ` for $ \frac{\mathrm{d}}{\mathrm{d}}  $
+- `int` $\to$ `\int`for $ \int $   
+- `iint` $\to$ `\iint ` for $ \iint  $  
+- `oint` $\to$ `\oint ` for $ \oint $ 
+- `dint` $\to$ `\int_{-\infty}^{\infty}  \mathrm{\,d}x` 
+- `dlint` $\to$ `\int\limits_{-\infty}^{\infty}  \mathrm{\,d}x`   
+- `c(o|n)?(l|n)?(b|c)?int` $\to$  `\oiint\limits_{R} \mathrm{\,d}A}, \oiiint\limits_{E} \mathrm{\,d}V} `
+- `lim` $\to$ `\lim  ` for $ \lim  $  
+- `dlim` $\to$ `\lim\limits_{n \to \infty} `  $ \lim\limits_{n \to \infty}$
+- `sum` $\to$ `\sum_{n}` 
+- `dsum` $\to$ `\sum_{n \to \infty} ` 
+- `dlsum` $\to$ `\sum\limits_{n \to \infty} ` 
+- `oo` $\to$ `\infty ` for $ \infty  $   
+- `dd` $\to$  `\mathrm{\,d}` 
+- `DD`$\to$`\frac{\mathrm{\,d}y}{\mathrm{\,d}x}` $\displaystyle  \frac{\mathrm{\,d}y}{\mathrm{\,d}x} $  
 - `PP` $\to$ `\frac{\partial }{\partial } ` for $ \frac{\partial }{\partial }  $
-- `drm` $\to$ `\mathrm{\,d}  ` for $ \mathrm{\,d}  $
-- `ptl` $\to$ `\partial ` for $ \partial  $
-- `ra;` $\to$ `\rightarrow ` for $ \rightarrow  $
-- `ia;` $\to$ `\implies ` for $ \implies  $
-- `fa;` $\to$ `\iff  ` for $ \iff   $
-- `to;` $\to$ `\to   ` for $ \to    $
-- `>=` $\to$ `\geq   ` for $ \geq     $
-- `<=` $\to$ `\leq    ` for $ \leq      $
-- `<<` $\to$ `\ll   ` for $ \ll      $
+- `rta` $\to$ `\rightarrow ` for $ \rightarrow  $ \rightarrow
+- `iff` $\to$ `\iff  ` for $ \iff   $ 
+- `=>` $\to$ `\implies ` for $ \implies  $ \implies
+- `>=` $\to$ `\geq   ` for $ \geq     $ 
+- `<=` $\to$ `\leq    ` for $ \leq      $ 
+- `<;` $\to$ `\ll   ` for $ \ll     $ 
 - `>>` $\to$ `\gg   ` for $ \gg      $
 - `>~` $\to$ `\gtrsim  ` for $ \gtrsim     $
 - `<~` $\to$ `\lesssim  ` for $ \lesssim    $
-- `sq` $\to$ `\sqrt{}  ` for $ \sqrt{2}    $ * 带选择功能
-- `RR` $\to$ `\mathbb{R}  ` for $ \mathbb{R}    $ 
+- `-.` $\to$ `\setminus  ` for $ \setminus   $ 
+- `sq` $\to$ `\sqrt{}  ` for $ \sqrt{2}    $  
+- `RR` $\to$ `\mathbb{R}  ` for $ \mathbb{R}    $  
 - `CC` $\to$ `\mathbb{C}  ` for $ \mathbb{C}    $ 
-- `ZZ` $\to$ `\mathbb{Z}  ` for $ \mathbb{Z}    $ 
-- `RR+` $\to$ `\mathbb{R}_+  ` for $ \mathbb{R}_+    $ 
-- `RRn` $\to$ `\mathbb{R}^{n}  ` for $ \mathbb{R}^{n} $ 
-- `RR3` $\to$ `\mathbb{R}^{3} ` for $ \mathbb{R}^{3}$ 
-- `CCn` $\to$ `\mathbb{C}^{n}  ` for $ \mathbb{C}^{n} $ 
-- `CC2` $\to$ `\mathbb{C}^{2} ` for $ \mathbb{C}^{2}$  used in QM  
+- `ZZ` $\to$ `\mathbb{Z}  ` for $ \mathbb{Z}    $   
 - `sin` $\to$ `\sin ` for $ \sin $ 
-- `sinh` $\to$ `\sinh ` for $ \sinh $ 
-- `arcsin` $\to$ `\arcsin ` for $ \arcsin $ 
-- `curl` $\to$ `\mathrm{Curl.} ` for $\mathrm{Curl.} $
-- `div` $\to$ `\mathrm{Div.} ` for $ \mathrm{Div.} $ 
-- `grad` $\to$ `\mathrm{Grad.} ` for $ \mathrm{Grad.} $  
+- `arcsin` $\to$ `\arcsin ` for $ \arcsin $  
 - `==` $\to$ `\equiv ` for $ \equiv $  
-- `!=` $\to$ `\not = ` for $ \not = $  
-- `OO` $\to$ `\cdot ` for $ \cdot $
-- `~~` $\to$ `\sim ` for $ \sim $
-- `NN` $\to$ `\cap ` for $ \cap $
-- `UU` $\to$ `\cup ` for $ \cup $
+- `!=` $\to$ `\neq ` for $ \not =  $  
+- `~~` $\to$ `\thickapprox ` for $ \thickapprox  $  
+- `AA` $\to$ `\forall  ` for $ \forall $ 
 - `II` $\to$ `\in` for $ \in $
 - `SS` $\to$ `\subset` for $ \subset  $
-- `XX` $\to$ `\times` for $ \times $
-- `opo` $\to$ `\oplus ` for $ \oplus $
-- `oxo` $\to$ `\otimes` for $ \otimes $
-- `omo` $\to$ `\ominus ` for $ \ominus  $ 
-- `opro` $\to$ `\propto ` for $ \propto  $ 
-- `nbl` $\to$ `\nabla ` for $ \nabla  $  非常重要
+- `propto` $\to$ `\propto ` for $ \propto  $ 
+
+- `times ` $\to$ `\times` for $ \times $
+- `otimes ` $\to$ `\otimes` for $ \otimes $
+- `oplus` $\to$ `\oplus ` for $ \oplus $
+
+- `nbl` $\to$ `\nabla ` for $ \nabla  $  非常重要 
 - `nabla` $\to$ `\nabla ` for $ \nabla  $  非常重要
 - `n;` $\to$ `\nabla ` for $ \nabla  $  非常重要
+- 
 - `abs` $\to$ ` \left|\right| ` for $  \left|\right|  $  
 - `||` $\to$ ` \left|\right| ` for $  \left|\right|  $  
+- 
 - `alpha` $\to$ ` \alpha ` for $  \alpha  $ 
 - `a;` $\to$ ` \alpha ` for $  \alpha  $ 
 - `a;a` $\to$ ` \alpha ` for $  \alpha a  $ 
@@ -219,11 +208,13 @@ endsnippet
 - `pmat22` $\to$ `\begin{pmatrix}   &  \\   &  \\ \end{pmatrix}  ` for  pmatrix $  2\times 2 $ 
 - `vmat22` $\to$ `\begin{vmatrix}   &  \\   &  \\\end{vmatrix}`  for vmatrix $  2\times 2 $ 
 -  `cv2` $\to$ `begin{bmatrix}   \\   \\ \end{bmatrix}` for column vector $ 
--  `rv2` $\to$ `\begin{bmatrix}   &  \\ \end{bmatrix}` for row vector $ 
--  `//` $\to$ ` \frac{}{} ` for $  \frac{1}{2} $ * 带选择功能
--  `1/` $\to$ ` \frac{1}{} ` for $  \frac{1}{} $
--  `a/` $\to$ ` \frac{a}{} ` for $  \frac{a}{} $
--  `ab/` $\to$ ` \frac{ab}{} ` for $  \frac{ab}{} $
+-  `rv2` $\to$ `\begin{bmatrix}   &  \\ \end{bmatrix}` for row vector $
+-   
+-  `//` $\to$ ` \frac{}{} ` for $  \frac{}{} $  
+-  `1/` $\to$ ` \frac{1}{} ` for $  \frac{1}{} $  
+-  `\alpha/`} $\to$ `\frac{\alpha}{}` 
+-  `(1+2)/`} $\to$ `(1+2)/` \frac{(1+2)}{}  \overline{b}
+-  
 -  `pw` $\to$ ` ^{} ` for $ x^{n} $ 
 -  `sr` $\to$ ` ^{2} ` for $ x^{2} $ 
 -  `th` $\to$ ` ^{3} ` for $ x^{3} $ 
@@ -249,10 +240,18 @@ endsnippet
 -   `abar` $\to$ ` \overline{a}`for $ \overline{a} $ 
 -   `hbar` $\to$ ` \hbar`for $ \hbar $ 
 -   `arm` $\to$ ` \mathrm{a}`for $ \mathrm{a} $
--   `a;hat` $\to$ ` \hat{\alpha }`for $ \hat{\alpha }$
 -   
+-   `a;hat` $\to$ ` \hat{\alpha }`for $ \hat{\alpha }$ 
+- 
 
-$$
-\begin{vmatrix}   &  \\   &  \\ \end{vmatrix}
-$$
- $\displaystyle \subset     $
+$\displaystyle     $  $$\displaystyle     $$  
+
+
+
+
+$\displaystyle \hbar \hat{a}, \hat{F} \vec{a} \overline{a} \mathrm{a} $ 
+
+
+
+
+
