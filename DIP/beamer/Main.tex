@@ -1,0 +1,62 @@
+\documentclass[12pt,UTF8,aspectratio=169]{beamer} 
+%aspectratio=1610：160mm，100mm
+%aspectratio=169：160mm，90mm
+%aspectratio=43：128mm，96mm，默认尺寸
+\RequirePackage{mybeamer}
+%\includeonlyframes{current} % 只编译 \begin{frame}[label=current] \end{frame}
+%%% sudo vim /usr/local/texlive/2021/texmf-dist/tex/xelatex/mybeamer
+%%%% sudo texhash
+
+%-------------------正文-------------------------%
+%                                               %
+%                                               %
+\begin{document}                                %
+%                                               %
+%                                               %
+%-----------------------------------------------%
+
+%题目，作者，学校，日期                
+\author{李小飞}
+\title{数字图像处理}
+\subtitle{Digital Image Processing}
+\institute[电子科技大学]{光电科学与工程学院}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame[plain]{\titlepage}
+\begin{frame} [plain]
+    \setbeamertemplate{headline} {} %
+    \Background[19] 
+    \maketitle % use this page as the titlepage
+    \addtocounter{framenumber}{-1} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------章节-------------------------%
+%\include{beamerexamples.tex} 
+%
+\include{chapter1.tex}  
+%\include{chapter2.tex}     
+%\include{chapter3.tex}    
+%\include{chapter4.tex} 
+%\include{chapter5.tex}  
+%\include{chapter6.tex} 
+%\include{chapter7.tex}   
+%
+%\include{chapter8.tex}    
+%--------------------------------------%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]
+    \Background[2] 
+	\begin{center}
+		{\huge \color{deepred} \textrm{Thanks for your attention!  \\ \vspace{1.0em}
+         A \& Q}}
+	\end{center}
+    \addtocounter{framenumber}{-1} 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%---------------THE END-----------------%

@@ -8,12 +8,108 @@
   \addtocounter{framenumber}{-1}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame} 
-  \begin{center}
-    \animategraphics[height=2in,loop]{30}{figs/gif/test-}{1}{80} 
-    \end{center} 
+\begin{frame}[allowframebreaks]
+\frametitle{}
+ using allowframebreaks to automatically split a frame to multiple slides. \\
+ A) Once you use allowframebreaks then you cannot use overlays. \\
+ 
 \end{frame}
+\begin{frame}
+\frametitle{叠图}
+\begin{overpic}[scale=0.35]{figs/gif/test-1.jpg}
+
+    \put(5,52){\huge \color{red}{\bf \LaTeX}}
+
+    \put(5,42){\huge \color{red}{\bf Graphics}}
+
+    \put(5,32){\huge $\textcolor{red}{\int_a^b f(x)=A}$}
+
+\end{overpic}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{使用lstlisting}
+    \lstinline|mycodes123|
+    \begin{lstlisting}[language=python]
+        %matplotlib inline
+        import numpy as np
+        import scipy as sp
+        import matplotlib.pyplot as plt
+        from qutip import *
+        from ipywidgets import interact, interactive, fixed
+        
+        def plot_state2(theta=0,varphi=0):
+            b = Bloch()
+            spin_up = basis(2,0)
+            spin_dn = basis(2,1)
+            varphi= complex(0,varphi)
+            tmp_state = (np.cos(0.5*theta)*spin_up + np.exp(varphi)*np.sin(0.5*theta)*spin_dn).unit()
+            b.add_states([tmp_state])
+            b.render()
+            return b
+        
+        plot_state2(1,0)
+        interact(plot_state2, theta=(0,np.pi+0.001,0.01), varphi=(0,2*np.pi+0.001,0.1));
+    \end{lstlisting} 
+\end{frame} 
+
+\begin{frame}[fragile]
+    \frametitle{}
+    \begin{lstlisting}[language=tex]
+        %%------------------------
+        % Define Some Commonds
+        %-------------------------
+        \newcommand{\EXP}[2][1]{\begin{exampleblock}{Example-#1：}
+                        {\hspace{2em}#2}
+                        \end{exampleblock}}
+        \newcommand{\例}[2][1]{\begin{exampleblock}{例-#1：#2}
+                        \end{exampleblock}}
+        \newcommand{\emf}[1][1]{\alert{\color{deepred} {#1 \hspace{1em}}}}
+        \newcommand{\性}[2][1]{\alert{\color{BSblue} {性质-#1 ：#2 \\}}}
+        %for example \性[2]{固有函数}
+        \newcommand{\解}{\alert{解:\hspace{1em}}}
+        \newcommand{\分}{\alert{分析:\hspace{1em}}}
+        \newcommand{\Solution}{\alert{Solution:\hspace{1em}}}
+        \newcommand{\证}{\alert{证明:\hspace{1em}}}
+        \newcommand{\Tips}{\alert{\textit{Tips:\hspace{1em}}}}
+        \newcommand{\Note}{\alert{\textit{Note:\hspace{1em}}}}
+    \end{lstlisting}
+  \end{frame} 
+
+%\begin{frame} 
+%  \frametitle{动画}
+%  提取图片
+%  \begin{lstlisting}
+%  ffmpeg -i jj.gif -r 30 -f image2  jj%d.jpeg
+%\end{lstlisting}
+%  加载图片
+%  \begin{lstlisting}
+%  \begin{center}
+%    \animategraphics[height=2in,loop]{30}{figs/%gif/jj}{1}{99} 
+%  \end{center} 
+%  \end{lstlisting} 
+%\end{frame}
+
+
+\begin{frame}
+  \frametitle{gif动画}
+ \begin{center}
+    \animategraphics[height=2in,loop]{30}{figs/gif/test-}{1}{80} 
+  \end{center} 
+\end{frame} 
+
+
+\begin{frame}
+  \frametitle{mp4动画}
+\begin{center}
+\includemedia[width=10cm,
+height=5cm,
+  activate=pageopen,
+  addresource=figs/movies/doubleslite-n.mp4,
+  flashvars={source=figs/movies/doubleslite-n.mp4}]{}{VPlayer.swf}
+\end{center}
+\end{frame}
+
 
 \begin{frame}
  \frametitle{多页enumerate}    
@@ -561,41 +657,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{}
-
-  \begin{center} %Optional, but helps to tidy up the layout
-  \begin{tikzpicture}[scale=.1] %Scale must be changed to make the flag fit on letter/A4 paper (scale=1 produces a 30 cm by 20 cm flag)
-  \clip (-15,-10) rectangle (15,10); %Optional, crops the flag to the correct size
-  \draw[black] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Optional, draws a border around the flag
-  \fill[chred] (-15,-10)--(15,-10)--(15,10)--(-15,10)--cycle; %Red background
-
-  %Template for a star, this can be shifted, scaled and rotated as you wish
-  \def\star{(0,4)--({sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--({+sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({+sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--(0,{-6+2*sqrt(5)})--({-sqrt(10-2*sqrt(5))},{-1-sqrt(5)})--({-2*sqrt(5-2*sqrt(5))},{+4-2*sqrt(5)})--({-sqrt(10+2*sqrt(5))},{-1+sqrt(5)})--({-sqrt(50-22*sqrt(5))},{-1+sqrt(5)})--cycle}
-
-  %Outer scope for shifting, scaling and rotation of the entire 5-star pattern
-  \begin{scope}[shift={(-10,5)},scale=1,rotate=0]
-  %Inner scopes for shifting, scaling and rotation of each individual star
-  \begin{scope}[shift={(0,0)},scale=3/4,rotate=0]
-  \fill[chyel] \star; %Large star
-  \end{scope}
-  %Small stars, clockwise from the top
-  \begin{scope}[shift={(5,3)},scale=1/4,rotate=90+atan(3/5)]
-  \fill[chyel] \star;
-  \end{scope}
-  \begin{scope}[shift={(7,1)},scale=1/4,rotate=90+atan(1/7)]
-  \fill[chyel] \star;
-  \end{scope}
-  \begin{scope}[shift={(7,-2)},scale=1/4,rotate=90-atan(2/7)]
-  \fill[chyel] \star;
-  \end{scope}
-  \begin{scope}[shift={(5,-4)},scale=1/4,rotate=90-atan(4/5)]
-  \fill[chyel] \star;
-  \end{scope}
-  \end{scope}
-  \end{tikzpicture}
-  \end{center}
-\end{frame}
 
 \begin{frame}
     \frametitle{}

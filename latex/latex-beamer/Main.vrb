@@ -1,38 +1,20 @@
-\frametitle{2：不单纯的图片，位置+代码}
-
-  \begin{columns}
-
-  %%%%%%%%%%%%%%%%%%%%%%
-  \column{0.6\textwidth}
-  方法1：
-  \begin{lstlisting}[language=Gnuplot]
-  set terminal pngcairo
-  set output "plot.png"
-  \end{lstlisting}
-  方法2：
-  %\lstinputlisting[language=Gnuplot,firstline=14, lastline=23]{code/plot.gp}
-
-  %%%%%%%%%%%%%%%%%%%%%
-  \column{0.4\textwidth}
-
-  %\includegraphics[scale=0.13]{figs/plot.png}
-
-  \begin{figure}
-    \resizebox{4cm}{!}  %%%{Horizontal length}{vertical length}
-    {
-
-    \begin{tikzpicture}
-       \begin{axis}
-          \addplot3[surf,]{exp(-x^2-y^2)*x};
-       \end{axis}
-    \end{tikzpicture}
-
-    }
-
-    \caption{Tikz figure}
-    \label{fig:tikz}
-  \end{figure}
-
-  \end{columns}
-  完整的Gnuplot例子请点击：\href{https://zhuanlan.zhihu.com/p/356438078}{一张图急速入门科研绘图 Gnuplot}
-
+\frametitle{}
+    \begin{lstlisting}[language=tex]
+        %%------------------------
+        % Define Some Commonds
+        %-------------------------
+        \newcommand{\EXP}[2][1]{\begin{exampleblock}{Example-#1：}
+                        {\hspace{2em}#2}
+                        \end{exampleblock}}
+        \newcommand{\例}[2][1]{\begin{exampleblock}{例-#1：#2}
+                        \end{exampleblock}}
+        \newcommand{\emf}[1][1]{\alert{\color{deepred} {#1 \hspace{1em}}}}
+        \newcommand{\性}[2][1]{\alert{\color{BSblue} {性质-#1 ：#2 \\}}}
+        %for example \性[2]{固有函数}
+        \newcommand{\解}{\alert{解:\hspace{1em}}}
+        \newcommand{\分}{\alert{分析:\hspace{1em}}}
+        \newcommand{\Solution}{\alert{Solution:\hspace{1em}}}
+        \newcommand{\证}{\alert{证明:\hspace{1em}}}
+        \newcommand{\Tips}{\alert{\textit{Tips:\hspace{1em}}}}
+        \newcommand{\Note}{\alert{\textit{Note:\hspace{1em}}}}
+    \end{lstlisting}

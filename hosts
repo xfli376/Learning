@@ -1,0 +1,17 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost xflideMacBook-Pro.local
+255.255.255.255	broadcasthost
+::1             localhost
+
+64.13.192.74 github.global.ssl.fastly.Net
+20.205.243.166 github.com
+
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section

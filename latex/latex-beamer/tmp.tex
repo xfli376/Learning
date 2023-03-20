@@ -1,46 +1,7 @@
-~\\
-\解~(1) 宽度为a的一维无限深势阱, 波函数为：
-\[ \psi_n(x) = \begin{cases}
-\sqrt{\frac{2}{a}} \sin (\frac{n\pi x}{a}), \quad (0<x<a) \\ 
-0, \qquad \qquad \qquad (x<0, x>a)    \qquad   (\text{2 分})
-\end{cases} \]
-(2) 宽度为2a的一维无限深势阱, 波函数为：
-\[ \Psi_n(x) = \begin{cases}
-\sqrt{\frac{1}{a}} \sin (\frac{n\pi x}{2a}), \quad (0<x<2a) \\ 
-0, \qquad \qquad \qquad (x<0, x>2a)  \qquad   (\text{2 分})
-\end{cases} \]
-(3) 处于第二激发态的概率:
-\[ \begin{aligned}
-    P_{31} &= \left\langle \Psi_3(x) | \psi_1(x) \right\rangle ^2  \qquad   (\text{2 分}) \\
-    &= \left|\int _0 ^a \sin (\frac{3\pi x}{2a}) \sin (\frac{\pi x}{a}) dx \right|^2 \\
-    &= \frac{32}{25\pi^2}\sin ^2 (\frac{5}{2}\pi) \\ 
-    &= \frac{32}{25\pi^2}  \qquad   (\text{2 分}) 
-\end{aligned}\] 
 
-\解~(1) 自由粒子的势函数$U=0$，其哈密顿为
-\[ \begin{aligned} H &= T+U = \frac{p^2}{2m} \\ 
-    &=\frac{p_x^2 + p_y^2 + p_z^2 }{2m} = H(x) + H(y) 
-    + H(z) \qquad (\text{1 分})
-\end{aligned}\]
-能量可表示为
-\[ E = E_x +E_y +E_z  \]
-（2）把 $H(x)$ 代入一维薛定谔方程
-\[ \begin{aligned}
-    H(x)\psi(x) &=E_x\psi(x) \\
-    \frac{p_x^2}{2m}\psi(x) &= E_x\psi(x) \\
-    - \frac{\hbar^2}{2m} \frac{d ^2 \psi(x)}{d x ^2 } &= E_x\psi(x) \qquad (\text{2 分}) \\
-\end{aligned}\] 
-解方程得：(式中取 $p_x = \sqrt{ 2m E_x}$)
-\[ \psi(x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{i}{\hbar}p_x x} \qquad (\text{2 分}) \]
-三维薛定谔方程的解为：
-\[ \psi(\vec{r}) =  (\frac{1}{2\pi})^\frac{3}{2} e^{-\frac{i}{\hbar}\vec{p}\cdot \vec{r}} \qquad (\text{1 分}) \]
-（3）波函数为： 
-\[ \psi(\vec{r},t) =  (\frac{1}{2\pi})^\frac{3}{2} e^{-\frac{i}{\hbar}(\vec{p}\cdot \vec{r}+Et)} \qquad (\text{2 分}) \]
-
-\[ \begin{aligned}
-    [V, p_x]\psi &= (Vp_x -p_x V)\psi \\
-    &= Vp_x \psi -p_x V\psi  \qquad  (\text{ 2 分}) \\
-    &= -i \hbar V \frac{\partial \psi}{\partial x } - (-i \hbar  \frac{\partial }{\partial x })(V\psi) \\ 
-    &=  i\hbar\frac{\partial V }{\partial x }\psi
-\end{aligned}\] 
-因此， 有 $ [V, p_x] = i\hbar\frac{\partial V }{\partial x }  \qquad (\text{2 分})$
+\begin{frame}
+  \frametitle{ latex 中用python}
+ \begin{pycode}
+print("Hello, I'm Pythontex")
+ \end{pycode}
+\end{frame} 
